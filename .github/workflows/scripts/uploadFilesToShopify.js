@@ -5,7 +5,7 @@ const FormData = require("form-data");
 
 // === CONFIGURATION ===
 const SHOP_DOMAIN = process.env.SHOPIFY_STORE; // Replace with your domain
-const ACCESS_TOKENS = process.env.SHOPIFY_ACCESS_TOKENS; // Replace with real tokens
+const ACCESS_TOKENS = JSON.parse(process.env.SHOPIFY_ACCESS_TOKENS ?? []); // Replace with real tokens
 const UNIQUE_IDENTIFIER = process.env.SHOPIFY_UNIQUE_IDENTIFIER ?? process.env.SHOPIFY_STORE.split(".")[0]
 const API_VERSION = "2025-04";
 const UPLOAD_DIR = process.argv[2];
