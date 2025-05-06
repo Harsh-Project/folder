@@ -72,11 +72,18 @@ async function uploadSingleFile(filename, token) {
   if (filename.endsWith(".css")) mimeType = "text/css";
 
   // 1. Check and delete existing file
-  const searchQuery = `filename:${JSON.stringify(filename)}`;
+  const searchQuery = `filename:${filename}`;
   const checkQuery = `
     query FileExists($query: String!) {
       files(first: 1, query: $query) {
-        edges { node { id filename } }
+        edges { node { 
+          id
+          alt
+          ... on GenericFile {
+            id
+            url
+          }
+           } }
       }
     }`;
   const checkResult = await graphqlRequest(
@@ -88,15 +95,15 @@ async function uploadSingleFile(filename, token) {
   const existing = checkResult?.data?.files?.edges?.[0]?.node;
   if (existing) {
     const deleteMutation = `
-      mutation FileDelete($ids: [ID!]!) {
-        fileDelete(fileIds: $ids) {
+      mutation fileDelete($input: [ID!]!) {
+        fileDelete(fileIds: $input) {
           deletedFileIds
           userErrors { field message }
         }
       }`;
     await graphqlRequest(
       deleteMutation,
-      { ids: [existing.id] },
+      { input: [existing.id] },
       token,
       `Deleting ${filename}`
     );
@@ -146,7 +153,7 @@ async function uploadSingleFile(filename, token) {
 
   // 3. Create file
   const createMutation = `
-    mutation FileCreate($files: [FileCreateInput!]!) {
+    mutation fileCreate($files: [FileCreateInput!]!) {
       fileCreate(files: $files) {
         files { id fileStatus alt}
         userErrors { field message }
@@ -156,7 +163,7 @@ async function uploadSingleFile(filename, token) {
     files: {
       filename,
       contentType: "FILE",
-      alt: UNIQUE_IDENTIFIER,
+      alt: `${UNIQUE_IDENTIFIER}${filename}`,
       originalSource: target.resourceUrl,
     },
   };
@@ -166,6 +173,7 @@ async function uploadSingleFile(filename, token) {
     token,
     `Create file ${filename}`
   );
+  // console.log(res)
   console.log(`✅ Uploaded: ${filename}`);
 }
 
