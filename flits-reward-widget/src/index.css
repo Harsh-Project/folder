@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --flitsWidgetPrimaryTextColor: rgba(37, 37, 37, 1);
+  --flitsWidgetPrimarySecondaryColor: rgba(134, 137, 140, 1);
+  --flitsWidgetPrimaryButtonBg: #000654;
+  --flitsWidgetPrimaryButtonText: #fff;
+  --flitsWidgetActivityBtnBg: #000654;
+  --flitsWidgetActivityBtnText: #fff;
+  --flitsWidgetPrimaryLinkColor: rgba(27, 89, 248, 1);
+  --flitsWidgetHeaderBg: #000654;
+  --flitsWidgetPrimaryColor: #d63434;
+  --flitsWidgetPrimaryColorBackGround: #d6343410;
+  --flitsWidgetHeaderText: #fff;
+  --flitsWidgetShadowBoxBg: rgba(255, 255, 255, 1);
+  --flitsWidgetShadowBoxText: rgba(23, 23, 23, 1);
+  --flitsWidgetShadowIconBg: rgba(241, 241, 241, 1);
+  --flitsWidgetShadowIconText: rgba(23, 23, 23, 1);
+  --flitsWidgetShadowBoxAvailableRule: rgba(52, 199, 89, 1);
+  --flitsWidgetCommonBoxShadow: 0px 4px 24px -4px #0000001f;
+  --flitsWidgetRewardOpenBtnBg: #000654;
+  --flitsWidgetRewardOpenBtnText: #fff;
+  --flitsWidgetRewardCloseBtnBg: #000654;
+  --flitsWidgetRewardCloseBtnText: #fff;
+}
+/* :root{
+  --flitsWidgetPrimaryTextColor: rgba(23, 23, 23, 1);
+  --flitsWidgetPrimarySecondaryColor: rgba(134, 137, 140, 1);
+  --flitsWidgetPrimaryColor: rgba(241, 241, 241, 1);
+  --flitsWidgetPrimaryButtonText: rgba(23, 23, 23, 1);
+  --flitsWidgetPrimaryColor: rgba(213, 212, 212, 1);
+  --flitsWidgetActivityBtnText: #fff;
+  --flitsWidgetPrimaryLinkColor: rgba(27, 89, 248, 1);
+  --flitsWidgetPrimaryColor: rgba(241, 241, 241, 1);
+  --flitsWidgetHeaderText: rgba(23, 23, 23, 1);
+  --flitsWidgetShadowBoxBg: rgba(255, 255, 255, 1);
+  --flitsWidgetShadowBoxText: rgba(23, 23, 23, 1);
+  --flitsWidgetShadowIconBg: rgba(241, 241, 241, 1);
+  --flitsWidgetShadowIconText: rgba(23, 23, 23, 1);
+  --flitsWidgetShadowBoxAvailableRule: rgba(52, 199, 89, 1);
+  --flitsWidgetCommonBoxShadow: 0px 4px 24px -4px #0000001F;
+  --flitsWidgetPrimaryColor: #000654;
+  --flitsWidgetRewardOpenBtnText: #fff;
+  --flitsWidgetPrimaryColor: rgba(238, 238, 238, 1);
+  --flitsWidgetRewardCloseBtnText: #000654;
+} */

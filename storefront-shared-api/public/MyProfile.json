@@ -1,0 +1,57 @@
+[
+  {
+    "component": "FirstName",
+    "type": "text",
+    "label": "flits.profile_page.first_name",
+    "placeholder": "",
+    "name": "first_name",
+    "renderType": "local"
+  },
+  {
+    "component": "LastName",
+    "type": "text",
+    "label": "flits.profile_page.last_name",
+    "placeholder": "",
+    "renderType": "local",
+    "name": "last_name"
+  },
+  {
+    "component": "Email",
+    "type": "email",
+    "label": "flits.profile_page.email",
+    "placeholder": "",
+    "renderType": "local",
+    "name": "email"
+  },
+  {
+    "component": "Contact",
+    "type": "tel",
+    "label": "flits.profile_page.contact_number",
+    "placeholder": "",
+    "renderType": "local",
+    "name": "phone"
+  },
+  {
+    "component": "BirthDate",
+    "type": "date",
+    "label": "flits.profile_page.birthdate",
+    "placeholder": "",
+    "renderType": "local",
+    "name": "birthdate"
+  },
+  {
+    "component": "Gender",
+    "id": "flits-profile-gender",
+    "label": "flits.profile_page.gender",
+    "name": "gender",
+    "renderType": "local"
+  },
+  {
+    "component": "ButtonSection",
+    "renderType": "local"
+  },
+  {
+    "component": "CUstomeSnitch",
+    "renderType": "local"
+  }
+]

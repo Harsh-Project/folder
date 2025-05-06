@@ -1,0 +1,30 @@
+.flits_nav_item {
+  margin: 0 5px;
+}
+
+.flits_nav_pil_link {
+  display: block;
+  padding: 8px 16px;
+  background-color: var(--navigationBGColor);
+  color: var(--navigationTextColor);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer !important;
+  line-height: 1.5;
+  border-radius: 5px;
+  text-transform: uppercas;
+}
+
+.flits_nav_pil_link_active::after {
+  border-bottom: 5px solid var(--navigationHoverBGColor);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 5px 5px;
+}

@@ -1,0 +1,73 @@
+.flits_product_quantity {
+  position: relative;
+  display: block;
+}
+
+.flits_mt_10 {
+  margin-top: 10px;
+}
+
+.flits_input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 7px;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: unset;
+  appearance: none;
+  position: relative;
+  margin: 0 !important;
+  cursor: text;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  background: 0 0 !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  height: 36px;
+  font-size: 16px;
+  color: var(--contentTextColor) !important;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  padding: 8px 38px;
+}
+
+.flits_quantity_btn {
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 30px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 25px;
+  color: var(--contentTextColor) !important;
+}
+
+.flits_quantity_btn[data-flits-qty-btn="plus"] {
+  top: 0;
+  right: 0;
+  border-left: 1px solid;
+  border-color: var(--borderColor);
+}
+
+.flits_quantity_btn[data-flits-qty-btn="minus"] {
+  top: 0;
+  left: 0;
+  border-right: 1px solid;
+  border-color: var(--borderColor);
+}
+
+.flits_disabled {
+  pointer-events: none!important;
+  opacity: .45!important;
+  cursor: not-allowed!important;
+}
+
+.flits_remove {
+  margin-top: 0;
+}

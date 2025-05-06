@@ -1,0 +1,114 @@
+.flits_input[type="tel"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  appearance: none;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: 0!important;
+  cursor: text;
+  border: 1px solid;
+  border-color: var(--inputBGColor);
+  background: 0 0!important;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  line-height: 1.2!important;
+  height: 36px;
+  font-size: 16px;
+  opacity: 1;
+  -webkit-opacity: 1;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+
+.flits_input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  appearance: none;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: 0!important;
+  cursor: text;
+  border: 1px solid;
+  border-color: var(--inputBGColor);
+  background: 0 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  line-height: 1.2!important;
+  height: 36px;
+  font-size: 16px;
+  color: var(--contentTextColor)!important;
+  -webkit-text-fill-color: var(--contentTextColor)!important;
+  opacity: 1;
+  -webkit-opacity: 1;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+
+.flits_input[type="tel"] {
+  padding: 8px 73px 8px 8px;
+  background: var(--inputBGColor)!important;
+}
+
+.flits_country_code_textbox {
+  position: absolute !important;
+  width: 50px;
+  bottom: 0;
+  left: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.flits_input[type="text"]:disabled {
+  cursor: not-allowed;
+  border-color: var(--inputBGColor);
+  color: var(--contentTextColor)!important;
+  -webkit-text-fill-color: var(--contentTextColor)!important;
+}
+
+.flits_country_code_textbox:disabled {
+  background: 0 0!important;
+  cursor: auto!important;
+  opacity: 1!important;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_input[type="tel"],
+  .flits_input[type="text"] {
+    background: 0 0 !important;
+  }
+  .flits_input:not([type="checkbox"]) {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+

@@ -1,0 +1,67 @@
+.flits_loading_div {
+  background: 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 350px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+.flits_loading_div .flits_spinner {
+  margin: 0 auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 3px solid #dee2e6;
+  border-right: 3px solid #dee2e6;
+  border-bottom: 3px solid #dee2e6;
+  border-left: 3px solid var(--navigationBGColor);
+  transform: translateZ(0);
+  animation: FlitsSpinnerAnimation 1.1s infinite linear;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.flits_loading_div .flits_loading_message {
+  margin-top: 10px;
+}
+
+@keyframes FlitsSpinnerAnimation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .flits_loading_div {
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+    -webkit-transform: none;
+    transform: none;
+  }
+}

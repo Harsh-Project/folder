@@ -1,0 +1,9 @@
+.flits_customer_account_page_router_wrapper {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_customer_account_page_router_wrapper {
+    flex-direction: column;
+  }
+}

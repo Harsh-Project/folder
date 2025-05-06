@@ -1,0 +1,268 @@
+name: "Monorepo Build and Deploy"
+
+on:
+  workflow_dispatch:
+    inputs:
+      projects:
+        description: 'Comma-separated list of projects to build (excluding storefront-container)'
+        required: false
+        default: '["flits-reward-page","flits-reward-widget","storefront-change-password","storefront-delivery-address","storefront-how-to-manage-credit","storefront-navigation","storefront-order","storefront-profile","storefront-recently-viewed-products","storefront-refer-friend","storefront-shared-api","storefront-shared-component-duo","storefront-shared-component-uno","storefront-social-login","storefront-store-credit","storefront-top-ordered-products","storefront-wishlist","storefront-container"]'
+        type: string
+      code_build_version:
+        description: 'Code build version'
+        required: false
+        type: string
+      shopify1:
+        description: 'Shopify store'
+        required: false
+        type: string
+      shopify2:
+        description: 'Shopify'
+        required: false
+        type: string
+
+jobs:
+  build_projects:
+    name: Build ${{ matrix.project }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJSON(github.event.inputs.projects) }}
+        exclude:
+          - project: "storefront-container"
+          - project: "storefront-shared-api"
+          - project: "storefront-shared-component-uno"
+          - project: "storefront-shared-component-duo"
+    env:
+      REACT_APP_CODE_BUILD_VERSION: ${{ github.event.inputs.code_build_version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '21'
+          cache: 'npm'
+
+      - name: Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ matrix.project }}/node_modules
+          key: ${{ runner.os }}-node-${{ matrix.project }}-${{ hashFiles(format('{0}/package-lock.json', matrix.project)) }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ matrix.project }}-
+
+      - name: Install dependencies ${{ matrix.project }}
+        working-directory: ${{ matrix.project }}
+        run: npm install && npx browserslist@latest --update-db
+
+      - name: Build the project
+        working-directory: ${{ matrix.project }}
+        run: CI=false npm run build
+
+      - name: Clean up unnecessary files
+        run: |
+          rm -f ${{ matrix.project }}/build/assets/*LICENSE*.txt
+          rm -f ${{ matrix.project }}/build/assets/*.log
+
+      - name: Collect build outputs
+        run: |
+          mkdir -p storefront-files/${{ matrix.project }}
+          cp -R ${{ matrix.project }}/build/assets/* storefront-files/${{ matrix.project }}/
+
+      - name: Save build log
+        working-directory: ${{ matrix.project }}
+        run: |
+          npm run build > ../storefront-files/${{ matrix.project }}/build.log 2>&1 || true
+
+      - name: Upload build artifact for ${{ matrix.project }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ matrix.project }}
+          path: storefront-files/${{ matrix.project }}
+
+  container_process_build_and_assemble:
+    name: Build container and Assemble
+    if: contains(github.event.inputs.projects, 'storefront-container')
+    needs: build_projects
+    runs-on: ubuntu-latest
+    env:
+      REACT_APP_CODE_BUILD_VERSION: ${{ github.event.inputs.code_build_version }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download all project artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: storefront-files/
+
+      - name: Restore node_modules cache - storefront-shared-api
+        uses: actions/cache@v4
+        with:
+          path: storefront-shared-api/node_modules
+          key: ${{ runner.os }}-node-storefront-shared-api-${{ hashFiles('storefront-shared-api/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-storefront-shared-api-
+
+      - name: Build and pack storefront-shared-api
+        run: |
+          cd storefront-shared-api
+          npm version ${{ github.event.inputs.code_build_version }} --no-git-tag-version
+          npm install && npx browserslist@latest --update-db
+          npm pack
+          cd ..
+
+      - name: Restore node_modules cache - storefront-shared-component-duo
+        uses: actions/cache@v4
+        with:
+          path: storefront-shared-component-duo/node_modules
+          key: ${{ runner.os }}-node-storefront-shared-component-duo-${{ hashFiles('storefront-shared-component-duo/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-storefront-shared-component-duo-
+
+      - name: Build and pack storefront-shared-component-duo
+        run: |
+          cd storefront-shared-component-duo
+          npm version ${{ github.event.inputs.code_build_version }} --no-git-tag-version
+          npm install && npx browserslist@latest --update-db
+          npm pack
+          cd ..
+
+      - name: Restore node_modules cache - storefront-shared-component-uno
+        uses: actions/cache@v4
+        with:
+          path: storefront-shared-component-uno/node_modules
+          key: ${{ runner.os }}-node-storefront-shared-component-uno-${{ hashFiles('storefront-shared-component-uno/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-storefront-shared-component-uno-
+
+      - name: Build and pack storefront-shared-component-uno
+        run: |
+          cd storefront-shared-component-uno
+          npm version ${{ github.event.inputs.code_build_version }} --no-git-tag-version
+          npm install && npx browserslist@latest --update-db
+          npm pack
+          cd ..
+
+      - name: Replace tgz paths in container package.json
+        run: |
+          sed -i 's|##API_BUILD_PATH##|../storefront-shared-api/getflits-storefront-shared-api-${{ github.event.inputs.code_build_version }}.tgz|g' storefront-container/package.json
+          sed -i 's|##UNO_BUILD_PATH##|../storefront-shared-component-uno/getflits-storefront-shared-component-uno-${{ github.event.inputs.code_build_version }}.tgz|g' storefront-container/package.json
+          sed -i 's|##DUO_BUILD_PATH##|../storefront-shared-component-duo/getflits-storefront-shared-component-duo-${{ github.event.inputs.code_build_version }}.tgz|g' storefront-container/package.json
+
+      - name: Restore node_modules cache - storefront-container
+        uses: actions/cache@v4
+        with:
+          path: storefront-container/node_modules
+          key: ${{ runner.os }}-node-storefront-container-${{ hashFiles('storefront-container/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-storefront-container-
+
+      - name: Build storefront-container
+        run: |
+          cd storefront-container
+          npm install && npx browserslist@latest --update-db
+          CI=false npm run build
+          rm -f build/assets/*LICENSE*.txt build/assets/*.log
+          mkdir -p ../storefront-files/storefront-container
+          cp -R build/assets/* ../storefront-files/storefront-container/
+
+      - name: Upload storefront-container artifact\
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-storefront-container
+          path: storefront-files/storefront-container
+
+      - name: Zip the combined storefront files
+        run: zip -r storefront-files.zip storefront-files
+
+      - name: Upload combined storefront files artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: storefront-files
+          path: storefront-files.zip
+
+  upload_to_shopify:
+    name: Upload to Shopify
+    needs: container_process_build_and_assemble
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download storefront-files artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: storefront-files
+          path: .
+
+      - name: Unzip storefront-files
+        run: unzip -o storefront-files.zip -d ./extracted
+
+      - name: Install dependencies for upload script
+        run: npm install axios form-data mime-types p-limit
+
+      - name: Run Shopify upload script
+        env:
+          SHOPIFY1: ${{ github.event.inputs.shopify1 }}      # e.g. your-store.myshopify.com
+          SHOPIFY2: ${{ github.event.inputs.shopify2 }}
+        run: node .github/workflows/scripts/uploadStorefrontFiles.js ./extracted
+
+      - name: Upload logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: upload-logs
+          path: |
+            success.log
+            failure.log
+
+        # Upload the zip as a workflow artifact:contentReference[oaicite:8]{index=8}
+
+
+  # (Optional) Upload to Shopify
+  # deploy_shopify:
+  #   name: Deploy to Shopify (optional)
+  #   needs: assemble
+  #   runs-on: ubuntu-latest
+  #   if: ${{ github.ref == 'refs/heads/main' }}
+  #   steps:
+  #     - name: Download storefront-files artifact
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         path: storefront-files.zip
+
+  #     - name: Upload to Shopify
+  #       run: |
+  #         # Example: use Shopify CLI or API to upload
+  #         shopify app upload --path storefront-files.zip --shop ${{ secrets.SHOPIFY_STORE_URL }} --password ${{ secrets.SHOPIFY_API_PASSWORD }}
+  #       env:
+  #         SHOPIFY_STORE_URL: ${{ secrets.SHOPIFY_STORE_URL }}
+  #         SHOPIFY_API_PASSWORD: ${{ secrets.SHOPIFY_API_PASSWORD }}
+
+  # (Optional) Upload to AWS S3
+  # deploy_s3:
+  #   name: Upload to S3 (optional)
+  #   needs: assemble
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Download storefront-files artifact
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         path: storefront-files.zip
+
+  #     - name: Configure AWS credentials
+  #       uses: aws-actions/configure-aws-credentials@v2
+  #       with:
+  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         aws-region: us-east-1
+
+  #     - name: Upload to S3
+  #       run: aws s3 cp storefront-files.zip s3://my-shopify-artifacts/storefront-files-${{ github.sha }}.zip
+        # Adjust the S3 bucket/path as needed.

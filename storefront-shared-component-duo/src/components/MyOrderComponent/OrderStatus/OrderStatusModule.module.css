@@ -1,0 +1,70 @@
+.flits_order_status_row {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  border-color: var(--borderColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flits_label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--contentTextColor) !important;
+}
+
+.flits_text_right {
+    text-align: right;
+}
+
+.flits_value {
+  margin: 0;
+  color: var(--contentTextColor) !important;
+  font-weight: 700;
+}
+
+.flits_order_detail_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 468px) {
+  .flits_order_status_row {
+    -webkit-box-orient: vertical!important;
+    -webkit-box-direction: normal!important;
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+    -webkit-box-align: start!important;
+    -ms-flex-align: start;
+    align-items: flex-start!important;
+  }
+  .flits_order_detail_row {
+    -webkit-box-orient: vertical!important;
+    -webkit-box-direction: normal!important;
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+    -webkit-box-align: start!important;
+    -ms-flex-align: start!important;
+    align-items: flex-start!important;
+  }
+  .flits_text_right {
+    text-align: left;
+  }
+}

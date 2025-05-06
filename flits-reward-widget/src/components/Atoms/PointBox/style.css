@@ -1,0 +1,71 @@
+.flits-reward-point-box {
+  background: #ffffff;
+  /* border: 1px solid #E2E2E259; */
+  border: 1px solid rgba(226, 226, 226, 0.72);
+  box-shadow: 0px 4px 24px -4px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 16px 15px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: var(--flitsWidgetCommonBoxShadow);
+  background: var(--flitsWidgetShadowBoxBg);
+}
+.flits-reward-point-box:hover .flits-reward-point-box-forward-icon {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+.flits-reward-point-box .flits-reward-point-box-icon {
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.flits-reward-point-box-text h4 {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  margin-top: 0;
+  color: var(--flitsWidgetShadowBoxText);
+}
+.flits-reward-point-box-text p {
+  color: #34c759;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: var(--flitsWidgetShadowBoxAvailableRule);
+}
+.flits-reward-point-box-icon {
+  padding: 10px;
+  background: var(--flitsWidgetPrimaryColorBackGround);
+  border-radius: 50%;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.flits-reward-point-box-header svg path {
+  stroke: var(--flitsWidgetPrimaryColor) !important;
+}
+.flits-reward-point-box-forward-icon {
+  padding: 10px;
+  border-radius: 50%;
+  line-height: 1;
+  position: absolute;
+  right: 10px;
+  display: inline-flex;
+  /* background: var(--flitsWidgetShadowIconBg); */
+}
+.flits-reward-point-box-forward-icon svg path {
+  stroke: var(--flitsWidgetShadowIconText) !important;
+}
+.flits-reward-point-box-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}

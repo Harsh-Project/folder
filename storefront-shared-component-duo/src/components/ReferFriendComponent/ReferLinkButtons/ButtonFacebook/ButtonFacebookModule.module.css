@@ -1,0 +1,17 @@
+.flits_button_icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.flits_button_icon svg {
+  display: block;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_button_icon {
+    width: 15px;
+    height: 15px;
+  }
+}

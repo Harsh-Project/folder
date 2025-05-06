@@ -1,0 +1,66 @@
+.flits_button {
+  cursor: pointer;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2;
+  color: #0009;
+  margin: 0;
+  padding: 10px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.flits_button:disabled {
+  cursor: default;
+  opacity: 0.45 !important;
+  background-image: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+  outline-offset: 0px !important;
+  outline: unset !important;
+}
+
+.flits_primary_btn {
+  background: var(--primaryButtonBGColor) !important;
+  border: 1px solid var(--primaryButtonBGColor) !important;
+  color: var(--primaryButtonTextColor) !important;
+}
+
+.flits_add_to_cart {
+  font-size: 14px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.flits_primary_btn:hover {
+  background: var(--primaryButtonHoverBGColor)!important;
+  border: 1px solid var(--primaryButtonHoverBGColor)!important;
+  color: var(--primaryButtonTextColor)!important;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_add_to_cart {
+    font-size: 12px;
+  }
+}

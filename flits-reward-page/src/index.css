@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* General css start */
+.flits-reward-page-main{
+  color: #000;
+  visibility: visible !important;
+}
+.flits-reward-page-main *{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+:root{
+  --flitsrewardpagePrimaryButtonBg: rgba(23, 23, 23, 1);
+  --flitsrewardpagePrimaryButtonText: rgba(255, 255, 255, 1);
+  --flitsrewardpagePrimaryTextColor: rgba(23, 23, 23, 1);
+  --flitsrewardpageSecondaryTextColor: rgba(71, 70, 70, 1);
+}

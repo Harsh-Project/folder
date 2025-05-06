@@ -1,0 +1,8 @@
+.flits_tab_pane {
+  display: none;
+  flex-direction: column;
+}
+
+.flits_nav_tab_active {
+  display: flex;
+}

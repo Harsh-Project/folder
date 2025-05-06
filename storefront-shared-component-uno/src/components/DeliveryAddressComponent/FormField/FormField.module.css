@@ -1,0 +1,14 @@
+.flits_row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.flits_row::before,
+.flits_row::after {
+  content: " ";
+  display: table;
+}
+
+.flits_row::after {
+  clear: both;
+}

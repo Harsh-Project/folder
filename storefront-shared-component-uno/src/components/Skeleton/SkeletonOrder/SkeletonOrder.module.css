@@ -1,0 +1,126 @@
+.flits_order_card {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.flits_order_status_row {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  border-color: var(--borderColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flits_skeleton_order_box {
+  position: relative;
+  margin: 5px;
+  width: 70px;
+  height: 25px;
+}
+
+.flits_skeleton_order_box::after {
+  content: " " !important;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: #dfe3e8;
+  -webkit-animation: SkeletonShimmerAnimation 0.8s linear infinite alternate;
+  animation: SkeletonShimmerAnimation 0.8s linear infinite alternate;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.flits_order_detail_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.flits_text_right {
+  text-align: right;
+}
+
+.flits_order_item_row {
+  margin-top: 10px;
+}
+
+.flits_order_item {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.flits_order_item:first-of-type {
+  margin-bottom: 0;
+}
+
+.flits_item_img {
+  padding: 10px;
+  width: 100px;
+  min-height: 100px;
+  height: auto;
+  text-align: center;
+  border-right: 1px solid;
+  border-color: var(--borderColor);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flits_item_details {
+  width: clac(100% - 100px);
+  padding: 10px;
+}
+
+.flits_left {
+  float: left;
+}
+
+.flits_link {
+  color: var(--linkColor) !important;
+}
+
+.flits_item_title {
+  margin-bottom: 10px !important;
+}
+
+.flits_item_price {
+  color: var(--contentTextColor) !important;
+}
+
+.flits_clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}

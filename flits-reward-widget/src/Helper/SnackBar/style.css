@@ -1,0 +1,95 @@
+.flits-widget-otp-snackbar {
+    visibility: hidden;
+    min-width: 330px;
+    margin-left: -125px;
+    background-color: #333;
+    background-color: var(--flitsWidgetPrimaryColor);
+    color: #fff;
+    color: var(--flitsWidgetPrimaryButtonText);
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 9999999;
+    right: 45px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 330px;
+    bottom: 100px;
+    font-size: 16px;
+  }
+  .flits-widget-otp-snackbar.show {
+    visibility: visible;
+    -webkit-animation: sfadein 0.5s;
+    animation: sfadein 0.5s;
+    display: block !important;
+  }
+  .flits-widget-otp-snackbar.show.alert {
+    background-color: rgb(255, 0, 0);
+    background-color: rgba(224, 69, 69, 1);
+    color: white;
+  }
+  .flits-widget-otp-snackbar.show.success {
+    background-color: rgb(57, 167, 6);
+    background-color: var(--flitsWidgetShadowBoxAvailableRule);
+    color: white;
+  }
+  .flits-reward-otp-input-wrapper .flits-reward-input-otp-box:hover,
+  .flits-reward-otp-input-wrapper .flits-reward-input-otp-box:active {
+    border: 0;
+  }
+  @media (max-width: 381px) {
+    .flits-widget-otp-snackbar {
+      right: 25px;
+    }
+  }
+  @media (max-width: 361px) {
+    .flits-widget-otp-snackbar {
+      right: 15px;
+    }
+  }
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes sfadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 80px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes sfadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 80px;
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 80px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeout {
+    from {
+      bottom: 80px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+  

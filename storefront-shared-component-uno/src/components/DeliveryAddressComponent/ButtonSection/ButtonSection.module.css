@@ -1,0 +1,30 @@
+.flits_address_card_action {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(20px, 0, 0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.flits_address_card_action ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flits_show {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
+}
+
+@media screen and (max-width: 992px) {
+  .flits_address_card_action {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
+  }
+}

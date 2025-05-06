@@ -1,0 +1,6 @@
+.flits_menu_divider{
+    height: 0;
+    margin: 8px 0;
+    overflow: hidden;
+    border-top: 2px solid #e9ecef;
+}

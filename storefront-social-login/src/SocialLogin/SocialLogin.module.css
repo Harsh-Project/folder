@@ -1,0 +1,116 @@
+.flits_social_login_container {
+  display: inline-block;
+  width: 100%;
+}
+
+.flits_social_login_container * {
+  font-family: inherit !important;
+}
+
+.flits_social_login_btn_grp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flits_social_login_btn {
+  width: 150px !important;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-decoration: none !important;
+  text-align: left;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  outline: 0;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+  margin-top: 10px !important;
+}
+
+.flits_social_login_btn_facebook {
+  color: var(--facebookTextColor) !important;
+  background: var(--facebookBGColor) !important;
+  border: 1px solid var(--facebookBGColor) !important;
+}
+
+.flits_social_login_btn_img {
+  background: rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 3px 0 0 3px;
+  margin: -7px 12px -7px -13px;
+}
+
+.flits_social_login_btn_img img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.flits_social_login_btn_googleplus {
+    color: var(--googleplusTextColor)!important;
+    background: var(--googleplusBGColor)!important;
+    border: 1px solid var(--googleplusBGColor)!important;
+}
+
+.flits_social_login_btn_googleplus .flits_social_login_btn_img {
+    background: #fff;
+    border-radius: 4px;
+    margin: -6px 12px -6px -12px;
+}
+
+.flits_social_login_btn_img svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+.flits_social_login_btn_twitter {
+    color: var(--twitterTextColor)!important;
+    background: var(--twitterBGColor)!important;
+    border: 1px solid var(--twitterBGColor)!important;
+}
+
+.flits_social_login_btn_amazon {
+    color: var(--amazoneTextColor)!important;
+    background: var(--amazoneBGColor)!important;
+    border: 1px solid var(--amazoneBGColor)!important;
+}
+
+.flits_social_login_error {
+  color: red !important;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+}

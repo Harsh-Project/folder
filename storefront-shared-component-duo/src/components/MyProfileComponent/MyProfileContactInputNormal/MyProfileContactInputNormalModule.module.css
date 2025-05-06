@@ -1,0 +1,61 @@
+.flits_input[type="text"],
+.flits_input[type="email"],
+.flits_input[type="tel"],
+.flits_input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  appearance: none;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: 0 !important;
+  cursor: text;
+  border: 1px solid;
+  border-color: var(--inputBGColor);
+  background: 0 0 !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  height: 36px;
+  font-size: 16px;
+  color: var(--contentTextColor) !important;
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+  opacity: 1;
+  -webkit-opacity: 1;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  background: var(--inputBGColor) !important;
+}
+
+.flits_input[type="tel"]:disabled,
+.flits_input[type="text"]:disabled {
+  cursor: not-allowed;
+  border-color: var(--inputBGColor);
+  color: var(--contentTextColor) !important;
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_input[type="text"],
+  .flits_input[type="tel"],
+  .flits_input[type="email"] {
+    padding: 8px;
+    background: 0 0!important;
+    border: 0;
+    text-align: right;
+    width: 100%;
+  }
+}

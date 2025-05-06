@@ -1,0 +1,101 @@
+.flits_d_none {
+  display: none;
+}
+
+.flits_select_row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  width: auto;
+}
+
+.flits_input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px 25px 8px 8px;
+  outline: 0;
+  display: -webkit-box;
+  appearance: none;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid;
+  border-color: var(--inputBGColor);
+  background: 0 0 !important;
+  color: var(--contentTextColor);
+  -webkit-text-fill-color: var(--contentTextColor);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  font-size: 16px;
+  height: 36px;
+  padding: 8px;
+  border: 0;
+  border-radius: 0;
+  background: 0 0 !important;
+  padding: 8px;
+  background: 0 0 !important;
+  border: 0 !important;
+  text-align: right;
+  width: 100%;
+}
+
+.flits_input:disabled {
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
+
+.flits_select_arrow {
+  position: absolute;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.flits_input_edit_mode:focus, .flits_input[type="date"]:focus, .flits_input[type="email"]:focus, .flits_input[type="number"]:focus, .flits_input[type="password"]:focus, .flits_input[type="tel"]:focus, .flits_input[type="text"]:focus, .flits_textarea:focus {
+  -webkit-box-shadow: var(--inputBoxShadow);
+  box-shadow: var(--inputBoxShadow);
+  border-color: var(--inputBGColor);
+}
+
+@media screen and (max-width: 767px) {
+  .flits_input_edit_mode {
+    padding: 8px 25px 8px 8px !important;
+    text-align: left;
+  }
+  .flits_input_edit_mode {
+    border: 0;
+    border-radius: 0;
+  }
+  .flits_select_row {
+    width: 100%;
+  }
+}

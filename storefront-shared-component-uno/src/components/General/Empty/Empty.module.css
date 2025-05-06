@@ -1,0 +1,103 @@
+.flits_empty_section {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: flitsFadeIn 0.7s;
+}.flits_relative {
+  position: relative;
+}
+
+.flits_button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: #0009;
+  font-family: inherit;
+  margin: 0 0 0 3.5px;
+  padding: 10px 20px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s all;
+}
+
+.flits_primary_btn {
+  background: var(--primaryButtonBGColor) !important;
+  border: 1px solid var(--primaryButtonBGColor) !important;
+  color: var(--primaryButtonTextColor) !important;
+}
+
+.flits_empty_text_message {
+  margin: 0;
+  font-size: 16px;
+  color: var(--contentTextColor);
+  text-align: center;
+  margin: 0;
+  color: var(--contentTextColor) !important;
+}
+.flits_empty_icon_box svg path {
+  fill: var(--contentTextColor);
+  opacity: .5
+}
+.flits_mt_10 {
+  margin-top: 10px !important;
+}
+
+.flits_ml_0 {
+  margin-left: 0px !important;
+}
+
+@media screen and (max-width: 992px) {
+  .flits_empty_section {
+    top: 0 !important;
+    left: 0 !important;
+    -webkit-transform: translate(0, 0) !important;
+    transform: translate(0) !important;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,56 @@
+.flits_user_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0px;
+  width: 50%;
+}
+
+.flits_h4 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 1.5rem;
+}
+
+.flits_greeting_title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--contentTextColor);
+  margin: 0;
+  line-height: 1;
+}
+
+.flits_user_name {
+  margin: 0 0 5px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--navigationTextColor);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flits_mt {
+  margin-top: 23px;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_user_name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--contentTextColor);
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

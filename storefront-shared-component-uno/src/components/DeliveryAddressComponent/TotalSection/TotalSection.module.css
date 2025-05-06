@@ -1,0 +1,32 @@
+.flits_address_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flits_hr {
+  position: relative;
+  margin-top: 5px;
+  padding-top: 15px;
+}
+
+.flits_hr::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 15px);
+  height: 0;
+  top: 0;
+  border: 1px solid #e9ecef;
+}
+
+@media screen and (max-width: 992px) {
+  .flits_address_list {
+    justify-content: center;
+  }
+}

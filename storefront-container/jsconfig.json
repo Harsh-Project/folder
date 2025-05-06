@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "paths": {
+        "Remote/*": ["./Remote/*"]
+      }
+    },
+    "exclude": ["node_modules", "build"]
+  }

@@ -1,0 +1,16 @@
+.flits_input_label {
+    margin-left: 0;
+    position: relative;
+    margin-bottom: 3px;
+    display: block;
+    font-size: 15px;
+    color: var(--contentTextColor);
+    font-family: inherit;
+    font-weight: 400;
+    cursor: auto;
+    text-align: left;
+}
+
+.flits_require_sign {
+    color: red;
+}

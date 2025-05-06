@@ -1,0 +1,15 @@
+.flits_credit_log_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  top: -1px;
+  height: calc(100% - 80px);
+  height: calc(100% - 123px);
+}
+
+.flits_credit_log_header {
+  overflow: hidden;
+  top: unset;
+  min-height: unset;
+  height: auto;
+}

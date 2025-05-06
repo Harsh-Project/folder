@@ -1,0 +1,166 @@
+.flits_input_wrap {
+  position: relative;
+  width: 100%;
+}
+
+.flits_referral_link_input_wrap {
+  width: 300px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  border-radius: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.flits_input_icon_group {
+  position: relative;
+}
+
+.flits_input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  appearance: none;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: 0 !important;
+  cursor: text;
+  border: 1px solid;
+  border-color: var(--inputBGColor);
+  background: 0 0 !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  height: 36px;
+  font-size: 16px;
+  color: var(--contentTextColor) !important;
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+  opacity: 1;
+  -webkit-opacity: 1;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+
+.flits_input[type="text"][readonly] {
+  cursor: not-allowed;
+  border-color: var(--inputBGColor);
+  color: var(--contentTextColor) !important;
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+  border: 0;
+  font-size: 14px;
+}
+
+.flits_button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2;
+  color: #0009;
+  margin: 0;
+  padding: 10px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px !important;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2;
+  color: #0009;
+  margin: 0;
+  padding: 10px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.flits_primary_btn {
+  background: var(--primaryButtonBGColor) !important;
+  border: 1px solid var(--primaryButtonBGColor) !important;
+  color: var(--primaryButtonTextColor) !important;
+}
+
+.flits_copy_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.flits_primary_btn:hover {
+  background: var(--primaryButtonHoverBGColor)!important;
+  border: 1px solid var(--primaryButtonHoverBGColor)!important;
+  color: var(--primaryButtonTextColor)!important;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_input {
+    font-size: 10px !important;
+    height: 31px !important;
+  }
+  .flits_copy_btn {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+  .flits_referral_link_input_wrap {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_input_wrap {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 0 7.5px;
+  }
+}

@@ -1,0 +1,163 @@
+.flits_modal {
+  margin: 70px 15px 30px !important;
+  padding: 20px !important;
+  background: #fff;
+  border-radius: 5px;
+  width: auto;
+  overflow: hidden !important;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.flits_modal * {
+  font-family: inherit !important;
+}
+
+.flits_close_button {
+  position: absolute !important;
+  right: 9px;
+  top: 5px;
+  font-size: 30px !important;
+  width: 22px !important;
+  height: 19px !important;
+  font-family: inherit !important;
+  color: rgb(0, 0, 0) !important;
+  cursor: pointer !important;
+}
+
+.flits_success_popup_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.flits_paper_plane {
+  position: absolute;
+  opacity: 0.3;
+}
+
+.flits_paper_plane_2 {
+  bottom: -21px;
+  left: 12px;
+  transform: rotate(-15deg);
+}
+
+.flits_paper_plane_1 {
+  top: 20px;
+  right: 51px;
+  transform: rotate(-20deg);
+}
+
+.flits_bg_bubble {
+  background: #c3c3c3;
+  display: none;
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.2;
+}
+
+.flits_bubble_1 {
+  height: 50px;
+  width: 50px;
+  top: -10px;
+  left: 20px;
+}
+
+.flits_bubble_2 {
+  height: 100px;
+  width: 100px;
+  top: -49px;
+  right: 47px;
+}
+
+.flits_bubble_3 {
+  height: 100px;
+  width: 100px;
+  bottom: -63px;
+  left: 29px;
+}
+
+.flits_bubble_4 {
+  height: 80px;
+  width: 80px;
+  bottom: 8px;
+  right: 60px;
+}
+
+.flits_form_success {
+  position: relative;
+}
+
+.flits_form_success_icon {
+  line-height: 1.5;
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.flits_form_success_icon svg {
+  width: 100px;
+  height: 100px;
+}
+
+.flits_popup_message {
+  line-height: 1.5;
+  font-size: 15px;
+  color: #2d2626;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.flits_popup_message_1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.flits_contactus_success_btn {
+  min-width: 120px;
+  width: auto;
+  border-radius: 50px;
+  padding: 8px 10px;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #009960 !important;
+  background: #009960 !important;
+  margin-top: 15px;
+  padding: 8px 10px !important;
+}
+
+@media screen and (min-width: 520px) {
+  .flits_modal {
+    max-width: 500px !important;
+    margin: 70px auto 0 !important;
+  }
+}

@@ -1,0 +1,29 @@
+.flits_primary_button {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 14px;
+    outline: 0;
+    vertical-align: baseline;
+    font-family: inherit;
+    padding: 10px 20px;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    background: var(--primaryButtonBGColor)!important;
+    border: 1px solid var(--primaryButtonBGColor)!important;
+    color: var(--primaryButtonTextColor)!important;
+    font-size: 14px;
+    line-height: 14px;
+    font-style: normal;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s all;
+}
+
+.flits_primary_button:hover {
+    background: var(--primaryButtonHoverBGColor)!important;
+    border: 1px solid var(--primaryButtonHoverBGColor)!important;
+    color: var(--primaryButtonTextColor)!important;
+}

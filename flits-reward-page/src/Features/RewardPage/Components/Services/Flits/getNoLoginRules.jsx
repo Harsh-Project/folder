@@ -1,0 +1,27 @@
+import { useDispatch } from "react-redux";
+import { setNoLoginRules } from "../../../../../redux/reducer/rewardPageSlice";
+import { apiCallTrackingHeader } from "./apiCallTrackingHeader";
+
+export const useNoLoginRules = () => {
+  const dispatch = useDispatch();
+  const getNoLoginRules = async (props) => {
+    try {
+      let requestOptions = {
+        method: "GET",
+        headers: apiCallTrackingHeader,
+        redirect: "follow",
+      };
+      let result = await fetch(
+        `${window.location.origin}${window.flitsRewardPageObjects?.base_url}/get-rules?token=${window.flitsRewardPageObjects.token}`,
+        requestOptions
+      );
+      let resultJson = await result.json();
+      dispatch(setNoLoginRules(resultJson));
+      localStorage.setItem("flitsNoLoginRules", JSON.stringify(resultJson));
+      localStorage.setItem("flitsNoLoginRulesTime", new Date());
+    } catch (error) {
+      dispatch(setNoLoginRules(error.message));
+    }
+  };
+  return { getNoLoginRules };
+};

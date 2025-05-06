@@ -1,0 +1,38 @@
+.flits_action_item {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flits_address_default_btn {
+  width: auto;
+  font-size: 11px;
+  height: auto;
+  background: #25d872;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-right: auto;
+  text-align: center;
+}
+@media screen and (max-width: 1025px) {
+  .flits_address_default_btn {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_address_default_btn {
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,30 @@
+.flits_address_list_container {
+  -webkit-animation: flitsFadeIn 0.7s;
+  animation: flitsFadeIn 0.7s;
+}
+
+.flits_clearfix::before,
+.flits_clearfix::after {
+  display: table;
+  content: " ";
+}
+
+.flits_clearfix::after {
+  clear: both;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_clearfix::after,
+  .flits_clearfix::before {
+    display: none;
+  }
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

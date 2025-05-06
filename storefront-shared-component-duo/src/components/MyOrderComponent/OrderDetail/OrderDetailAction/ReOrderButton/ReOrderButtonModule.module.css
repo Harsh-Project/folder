@@ -1,0 +1,70 @@
+.flits_mx_15 {
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+
+.flis_my_10 {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.flits_button {    cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2;
+  color: #0009;
+  margin: 0;
+  padding: 10px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity .1s ease,background-color .1s ease,color .1s ease,background .1s ease,-webkit-box-shadow .1s ease;
+  transition: opacity .1s ease,background-color .1s ease,color .1s ease,background .1s ease,-webkit-box-shadow .1s ease;
+  transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+  transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease,-webkit-box-shadow .1s ease;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.flits_button:disabled {
+  cursor: default;
+  opacity: .45!important;
+  background-image: none!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  pointer-events: none!important;
+  outline-offset: 0px!important;
+  outline: unset!important;
+}
+
+.flits_primary_btn {
+  background: var(--primaryButtonBGColor);
+  border: 1px solid var(--primaryButtonBGColor);
+  color: var(--primaryButtonTextColor);
+}
+
+.flits_primary_btn:hover {
+  background: var(--primaryButtonHoverBGColor) !important;
+  border: 1px solid var(--primaryButtonHoverBGColor) !important;
+  color: var(--primaryButtonTextColor) !important;
+}
+
+.flits_margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

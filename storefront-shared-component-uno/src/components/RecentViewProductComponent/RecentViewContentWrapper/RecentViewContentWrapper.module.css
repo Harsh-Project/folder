@@ -1,0 +1,45 @@
+.flits_tab_box_body {
+    padding: 0 10px;
+    height: 100%;
+  }
+
+  .flits_wishlist_list_div {
+    animation: flitsFadeIn .7s;
+  }
+
+  .flits_wishlist_product_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 992px) {
+    .flits_wishlist_product_list {
+        justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .flits_tab_box_body {
+      padding: 10px;
+    }
+  }
+
+  @keyframes flitsFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  

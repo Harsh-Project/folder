@@ -1,0 +1,36 @@
+.flits_svg_clock{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+  .flits_svg_clock .flits_clock_circle {
+    stroke: var(--navigationTextColor);
+    stroke-width: 2px;
+    fill: transparent;
+  }
+  
+  .flits_svg_clock line {
+    stroke: var(--navigationTextColor);
+  }
+  
+  .flits_svg_clock .flits_clock_hande #flits-hourhand {
+    stroke-width: 1.5px;
+  }
+  
+  .flits_svg_clock .flits_clock_hande #flits-minutehand {
+    stroke-width: 1.5px;
+  }
+  
+  .flits_svg_clock .flits_clock_hande #flits-secondhand {
+    stroke-width: 0.5px;
+  }
+
+  .flits_svg_clock .flits_clock_hand_center {
+    stroke: var(--navigationTextColor);
+    stroke-width: 1px;
+  }
+  .flits_current_time{
+    margin: 0;
+    font-size: 14px;
+    color: var(--navigationTextColor);
+  }

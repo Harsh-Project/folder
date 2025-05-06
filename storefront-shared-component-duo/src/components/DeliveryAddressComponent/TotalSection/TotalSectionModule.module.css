@@ -1,0 +1,44 @@
+.flits_address_list_pagination_row {
+  -webkit-animation: flitsFadeIn 0.7s;
+  animation: flitsFadeIn 0.7s;
+}
+
+.flits_address_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-bottom: -15px;
+}
+
+.flits_address_list_pagination_row {
+  padding-top: 15px;
+  position: relative;
+}
+
+.flits_hr {
+  margin-top: 15px;
+}
+
+.flits_hr::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 15px);
+  height: 0;
+  top: 0;
+  border: 1px solid #e9ecef;
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

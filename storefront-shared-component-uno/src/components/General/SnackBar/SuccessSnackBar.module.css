@@ -1,0 +1,86 @@
+.flits_snackbar_popup_box {
+  width: 280px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.flits_snackbar_header {
+  margin-bottom: 20px;
+}
+
+.flits_snackbar_header svg {
+  width: 50px;
+}
+
+.flits_snackbar_body {
+  font-size: 14px;
+  color: var(--contentTextColor);
+}
+
+.flits_wls_snackbar {
+  border: 1px solid var(--ALERT_SUCCESS);
+  background: #e1e1e1;
+  color: #000;
+  background: #fff;
+  width: 100%;
+}
+
+.flits_wls_snackbar_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  padding: 0;
+  font-size: 14px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding: 10px 20px;
+  background: var(--ALERT_SUCCESS);
+  font-weight: 700;
+}
+
+.flits_wls_snackbar_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.flits_wls_snackbar_product_img {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1 0 55px;
+  width: 55px;
+  height: 55px;
+  display: block !important;
+  max-width: 55px;
+  max-height: 50px;
+}
+
+.flits_wls_snackbar_product_name {
+  padding-left: 5px;
+  font-weight: 400;
+  color: #000;
+  overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 640px) {
+  .flits_wls_snackbar_product_name {
+    white-space: unset;
+  }
+}

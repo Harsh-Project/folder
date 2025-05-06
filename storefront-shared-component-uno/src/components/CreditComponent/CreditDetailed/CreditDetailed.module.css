@@ -1,0 +1,124 @@
+.flits_credit_details {
+  color: var(--contentTextColor) !important;
+  font-weight: normal;
+}
+
+.flits_row {
+  margin-left: -15px;
+  padding: 10px 15px 0;
+  margin-right: -15px;
+}
+
+.flits_row::before {
+  content: " ";
+  display: table;
+}
+
+.flits_row::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.flits_col_md_6,
+.flits_col_md_3 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flits_text_center {
+  text-align: center;
+}
+
+.flits_product_tag_credit {
+  margin: 0;
+  color: var(--contentTextColor) !important;
+  color: var(--contentTextColor) !important;
+  font-weight: normal;
+}
+
+.flits_text_nowrap {
+  text-decoration: none;
+  color: var(--contentTextColor) !important;
+  font-weight: normal;
+}
+
+.flits_product_title {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden !important;
+}
+
+.flits_product_tag {
+  color: var(--contentTextColor) !important;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.flits_product_tag_svg {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+}
+
+.flits_product_tag_svg svg {
+  color: var(--contentTextColor) !important;
+}
+
+.flits_col_md_3 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 992px) {
+  .flits_product_tag_credit {
+    white-space: pre-wrap;
+  }
+  .flits_product_title {
+    white-space: pre-wrap;
+  }
+  .flits_text_nowrap {
+    text-align: left;
+  }
+  .flits_product_tag {
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .flits_col_md_3 {
+    float: left;
+    align-items: center;
+    display: flex;
+    width: 25%;
+  }
+  .flits_col_md_6 {
+    float: left;
+    width: 50%;
+  }
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

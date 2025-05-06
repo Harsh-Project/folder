@@ -1,0 +1,104 @@
+.flits_popup_mb_15 {
+  margin-bottom: 15px !important;
+}
+
+.flits_col_md_6,
+.flits_col_sm_6, 
+.flits_col_sm_12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flits_input_wrap {
+  position: relative;
+  width: 100%;
+}
+
+.flits_input_icon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--contentTextColor);
+    height: 36px;
+    width: 36px;
+    border-right: 1px solid;
+    border-color: var(--borderColor);
+}
+
+.flits_input_wrap label {
+  font-size: 14px;
+}
+
+.flits_input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    border-radius: 7px;
+    padding: 8px;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: unset;
+    position: relative;
+    margin: 0!important;
+    cursor: text;
+    border: 1px solid;
+    border-color: var(--borderColor);
+    background: 0 0!important;
+    appearance: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    line-height: 1.2!important;
+    height: 36px;
+    font-size: 16px;
+    color: var(--contentTextColor)!important;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    padding: 8px 8px 8px 44px;
+}
+
+.flits_form_alert {
+  color: #d20000;
+  position: relative;
+  font-size: 12px;
+}
+
+.flits_error_icon::before {
+  content: "*";
+}
+
+.flits_adjust_width {
+  width: 100% !important;
+}
+
+.flits_input_error {
+  border: 1px solid!important;
+  border-color: #d20000!important;
+  background-color: #fff!important;
+}
+
+@media screen and (min-width: 768px) {
+  .flits_col_sm_6, 
+  .flits_col_sm_12 {
+    width: 50%;
+    float: left;
+  }
+
+  .flits_col_sm_12  {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .flits_col_md_6 {
+    width: 50%;
+  }
+}

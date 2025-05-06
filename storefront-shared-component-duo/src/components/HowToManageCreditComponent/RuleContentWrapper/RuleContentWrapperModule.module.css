@@ -1,0 +1,32 @@
+.flits_rule_card {
+  margin: 0 auto 20px;
+  max-width: 500px;
+  font-size: 16px;
+  color: var(--contentTextColor) !important;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.flits_rule_box {
+  -webkit-box-shadow: 0 10px 25px 0 rgba(49, 49, 93, 0.1);
+  box-shadow: 0 10px 25px #31315d1a;
+  border-radius: 5px;
+  text-align: left;
+  padding: 15px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.flits_crad_rule_content {
+  position: relative;
+}
+
+.flits_z_dept_1 {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 2px #00000024,0 1px 5px #0000001f,0 3px 1px -2px #0003;
+}
+
+.flits_earned_rule {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}

@@ -1,0 +1,267 @@
+image: node:16
+
+pipelines:
+  custom:
+    dev1:
+      - step:
+          name: Build
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "$DEV1_AWS_CDN_S3_BUCKET/theme_code/default/storefront-social-login"
+                LOCAL_PATH: 'build'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=static/*"
+      - step:
+          name: Building Zip
+          script:
+            - apt-get update -y
+            - apt-get install zip unzip -y
+            - zip -r public/storefront-social-login.zip * .[^.]* -x "node_modules/*" ".git/*"
+          artifacts:
+            - public/storefront-social-login.zip
+      - step:
+          name: Deploy Zip
+          deployment: Dev1
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "flits-dev1/theme_code/default"
+                LOCAL_PATH: 'public'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=storefront-social-login.zip"
+    dev2:
+      - step:
+          name: Build
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+            
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "$DEV2_AWS_CDN_S3_BUCKET/theme_code/default/storefront-social-login"
+                LOCAL_PATH: 'build'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=static/*"
+      - step:
+          name: Building Zip
+          script:
+            - apt-get update -y
+            - apt-get install zip unzip -y
+            - zip -r public/storefront-social-login.zip * .[^.]* -x "node_modules/*" ".git/*"
+          artifacts:
+            - public/storefront-social-login.zip
+      - step:
+          name: Deploy Zip
+          deployment: Dev2
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "flits-dev2/theme_code/default"
+                LOCAL_PATH: 'public'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=storefront-social-login.zip"
+    dev3:
+      - step:
+          name: Build
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+            
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "$DEV3_AWS_CDN_S3_BUCKET/theme_code/default/storefront-social-login"
+                LOCAL_PATH: 'build'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=static/*"
+      - step:
+          name: Building Zip
+          script:
+            - apt-get update -y
+            - apt-get install zip unzip -y
+            - zip -r public/storefront-social-login.zip * .[^.]* -x "node_modules/*" ".git/*"
+          artifacts:
+            - public/storefront-social-login.zip
+      - step:
+          name: Deploy Zip
+          deployment: Dev3
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "flits-dev3/theme_code/default"
+                LOCAL_PATH: 'public'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=storefront-social-login.zip"
+    dev4:
+      - step:
+          name: Build
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+            
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "$DEV4_AWS_CDN_S3_BUCKET/theme_code/default/storefront-social-login"
+                LOCAL_PATH: 'build'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=static/*"
+      - step:
+          name: Building Zip
+          script:
+            - apt-get update -y
+            - apt-get install zip unzip -y
+            - zip -r public/storefront-social-login.zip * .[^.]* -x "node_modules/*" ".git/*"
+          artifacts:
+            - public/storefront-social-login.zip
+      - step:
+          name: Deploy Zip
+          deployment: Dev4
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "flits-dev4/theme_code/default"
+                LOCAL_PATH: 'public'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=storefront-social-login.zip"
+    testing:
+      - step:
+          name: Build
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+            
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "$TESTING_AWS_CDN_S3_BUCKET/theme_code/default/storefront-social-login"
+                LOCAL_PATH: 'build'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=static/*"
+      - step:
+          name: Building Zip
+          script:
+            - apt-get update -y
+            - apt-get install zip unzip -y
+            - zip -r public/storefront-social-login.zip * .[^.]* -x "node_modules/*" ".git/*"
+          artifacts:
+            - public/storefront-social-login.zip
+      - step:
+          name: Deploy Zip
+          deployment: Testing
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $DEV_AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $DEV_AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $DEV_AWS_DEFAULT_REGION
+                S3_BUCKET: "flits-testing/theme_code/default"
+                LOCAL_PATH: 'public'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=storefront-social-login.zip"
+    production:
+      - step:
+          name: Build
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+            
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: "$AWS_CDN_S3_BUCKET/theme_code/default/storefront-social-login"
+                LOCAL_PATH: 'build'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=static/*"
+      - step:
+          name: Building Zip
+          script:
+            - apt-get update -y
+            - apt-get install zip unzip -y
+            - zip -r public/storefront-social-login.zip * .[^.]* -x "node_modules/*" ".git/*"
+          artifacts:
+            - public/storefront-social-login.zip
+      - step:
+          name: Deploy Zip
+          deployment: Production
+          script:
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: "flits-live-app/theme_code/default"
+                LOCAL_PATH: 'public'
+                DELETE_FLAG: 'true'
+                EXTRA_ARGS: "--exclude=* --include=storefront-social-login.zip"

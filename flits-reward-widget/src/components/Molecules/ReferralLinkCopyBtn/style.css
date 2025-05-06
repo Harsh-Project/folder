@@ -1,0 +1,70 @@
+.flits-link-copy-btn-main {
+  padding: 11px 26px 11px 26px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0px 4px 24px -4px #0000001f;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(101, 101, 101, 1);
+  margin-top: 20px;
+  width: 100%;
+}
+.flits-link-copy-btn-main input[name="flits_widget_referral_link"] {
+  cursor: not-allowed;
+  border: none !important;
+  width: 80%;
+  padding: 0 12px 0 0 !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 !important;
+  font-size: 13px;
+  line-height: normal;
+  text-indent: unset;
+  margin: 0 !important;
+  height: auto;
+  color: rgba(134, 137, 140, 1);
+  color: var(--flitsWidgetPrimarySecondaryColor);
+}
+.flits-link-copy-btn-main input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.flits-link-copy-btn-main .flits-link-copy-btn {
+  border-left: 1px solid var(--flitsWidgetPrimaryTextColor);
+  padding: 10px 0 10px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: right;
+  color: var(--flitsWidgetPrimaryTextColor);
+  cursor: pointer;
+}
+.flits-link-copy-btn svg {
+  margin-left: 15px;
+  width: 14px;
+  height: 11px;
+}
+.flits-link-copy-btn svg {
+  width: 14px;
+  height: 11px;
+}
+.flits-link-copy-btn svg path {
+  fill: none;
+  stroke: #171717;
+  stroke: green;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 32;
+  stroke-dashoffset: 32;
+  animation: drawTick 1s ease forwards;
+}
+@keyframes drawTick {
+  0% {
+    stroke-dashoffset: 32;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

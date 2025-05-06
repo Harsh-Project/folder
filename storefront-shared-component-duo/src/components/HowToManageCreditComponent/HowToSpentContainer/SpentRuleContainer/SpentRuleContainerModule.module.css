@@ -1,0 +1,244 @@
+.flits_box_card {
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16),
+    0 0 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px #00000029, 0 0 5px #0000001f;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.flits_spend_rules_range_container {
+  background-image: linear-gradient(to right, #7252ff, #17a2ff);
+}
+
+.flits_cart_range_note {
+  margin-bottom: 15px !important;
+  font-size: 12px;
+  text-align: center;
+  color: var(--contentTextColor);
+}
+
+.flits_spend_rule_description {
+  font-size: 14px;
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+.flits_cart_range_slider {
+  list-style: none;
+  position: relative;
+  padding: 0;
+  width: calc(100% - 80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+
+.flits_cart_range_slider::before {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 14px;
+  content: "";
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: 0.5s width;
+  transition: 0.5s width;
+  z-index: 0;
+  background: #25d872;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+  width: 0%;
+  right: unset;
+  z-index: 1;
+}
+
+.flits_cart_range_slider::after {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 14px;
+  content: "";
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: 0.5s width;
+  transition: 0.5s width;
+  z-index: 0;
+}
+
+.flits_cart_range_slider li {
+  padding-top: 40px;
+  text-align: center;
+  position: relative;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 12px;
+  color: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.flits_cart_range_slider li.active {
+  color: var(--contentTextColor);
+}
+
+.flits_cart_range_slider li::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  margin: auto;
+  z-index: 3;
+}
+
+.flits_cart_range_slider li::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  margin: auto;
+  z-index: 3;
+  background: #25d872;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 4;
+}
+
+.flits_cart_range_slider li.active::after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.flits_cart_range_slider li:last-child {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.flits_cart_range_slider li:first-of-type {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.flits_cart_range_slider li:last-child::after {
+  background: #0265d1;
+}
+
+.flits_p_0 {
+  padding: 0 !important;
+}
+
+.flits_divider {
+  margin: 0 3px;
+}
+
+@media screen and (max-width: 860px) {
+  .flits_spend_rule_description {
+    font-size: 12px;
+  }
+  .flits_cart_range_slider::before {
+    height: 2.5px;
+    top: 8px;
+  }
+  .flits_cart_range_slider::after {
+    height: 2.5px;
+    top: 8px;
+  }
+  .flits_cart_range_slider li {
+    padding-top: 25px;
+    width: 17px;
+  }
+  .flits_cart_range_slider li::before {
+    width: 17px;
+    height: 17px;
+  }
+  .flits_cart_range_slider li::after {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_mt_15 {
+    margin-top: 15px !important;
+  }
+  .flits_box_card {
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .flits_spend_rules_range_container {
+    background-image: linear-gradient(to right, #7252ff, #17a2ff);
+  }
+  .flits_cart_range_container {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .flits_cart_range_container {
+    padding: 10px;
+  }
+  .flits_cart_range_slider {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+  .flits_spend_rule_description {
+    font-size: 12px;
+  }
+}

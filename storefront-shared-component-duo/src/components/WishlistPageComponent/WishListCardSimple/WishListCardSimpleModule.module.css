@@ -1,0 +1,138 @@
+.flits_product_item_cart {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 15px 15px 0;
+  width: calc((100% / 3) - 15px);
+  min-width: 120px;
+  position: relative;
+}
+
+.flits_product_item_main {
+  display: block;
+}
+
+.flits_product_item {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.flits_link {
+  color: var(--linkColor) !important;
+  cursor: pointer !important;
+}
+
+.flits_text_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.flits_product_name {
+  font-size: 14px;
+  margin: 0;
+  color: var(--contentTextColor);
+}
+
+.flits_product_image_thumbnail {
+  min-width: 80px;
+  max-width: 100%;
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin: 5px auto;
+  display: block;
+}
+
+.flits_product_image_thumbnail img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.flits_product_price {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--contentTextColor);
+}
+
+.flits_product_action_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 5px 10px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_product_image_thumbnail {
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+  }
+  .flits_product_price {
+    font-size: 12px;
+  }
+  .flits_product_name {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .flits_product_item_cart {
+    width: calc((100% / 3) - 15px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .flits_product_item_cart {
+    width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_product_item_cart {
+    width: calc((100% / 3) - 15px);
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .flits_product_item_cart {
+    width: calc((100% / 3) - 15px);
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .flits_product_item_cart {
+    width: calc(50% - 15px);
+    min-width: 130px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .flits_product_item_cart {
+    width: calc(100% - 15px);
+  }
+}

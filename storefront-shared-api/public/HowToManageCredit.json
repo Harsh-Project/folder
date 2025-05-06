@@ -1,0 +1,20 @@
+[
+  {
+    "component": "HowToEarn",
+    "name": "edit",
+    "label": "flits.navigation.how_to_earn_credit",
+    "type": "button"
+  },
+  {
+    "component": "HowToSpent",
+    "name": "edit",
+    "label": "flits.navigation.how_to_spend_credit",
+    "type": "button"
+  },
+  {
+    "component": "FromStoreOwner",
+    "name": "edit",
+    "label": "flits.navigation.from_admin",
+    "type": "button"
+  }
+]

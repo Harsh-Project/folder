@@ -1,0 +1,166 @@
+.flits_account_box {
+  width: 100%;
+  /* height: 100%; */
+  position: relative;
+}
+
+.flits_with_boundary {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 5px #00000029,0 2px 10px #0000001f;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.flits_container_box {
+  width: 100%;
+  height: 100%;
+}
+
+.flits_mr {
+  padding-right: 50px!important;
+}
+
+
+.flits_navigation_header {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_box_card {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  .flits_with_box_shadow {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  }
+  .flits_box_shadow {
+    box-shadow: 0 2px 5px #00000029,0 2px 10px #0000001f !important;
+  }
+  .flits_get {
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px #00000029,0 2px 10px #0000001f;
+  }
+  .flits_remove_box_shadow {
+    box-shadow: none;
+  }
+  .flits_navigation_header {
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+  }
+  .flits_logout_button {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+  .flits_px_15 {
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+  }
+  .flits_pb_15 {
+    padding-bottom: 15px!important;
+  }
+  .flits_logout_button path {
+    stroke: var(--contentTextColor);
+  }
+  .flits_mt_25 {
+    margin-top: 25px !important;
+  }
+  .flits_user_avatar {
+    margin-right: 0;
+    width: 61px;
+    height: 61px;
+    min-width: 61px;
+    min-height: 61px;
+    border-radius: 100%;
+    background-color: var(--navigationHoverBGColor);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: -30.5px;
+    position: absolute;
+  }
+  .flits_wishlist_product_list {
+    padding-right: 0;
+    padding-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .flits_user_avatar::after {
+    content: attr(data-flits-name);
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navigationTextColor);
+    text-transform: uppercase;
+  }
+  .flits_navigation_header_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_with_boundary {
+    background: #fff;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  .flits_account_box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+  }
+  .flits_mr {
+    padding-right: 0 !important;
+  }
+}

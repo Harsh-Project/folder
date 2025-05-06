@@ -1,0 +1,63 @@
+.flits_row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.flits_row::before,
+.flits_row::after {
+  content: " ";
+  display: table;
+}
+
+.flits_row::after {
+  clear: both;
+}
+
+.flits_d_flex {
+  display: -ms-flexbox !important;
+  display: -webkit-box !important;
+  display: flex !important;
+}
+
+.flits_align_items_center {
+  -ms-flex-align: center !important;
+  -webkit-box-align: center !important;
+  align-items: center !important;
+}
+
+.flits_mt_30 {
+  margin-top: 30px !important;
+}
+
+.flits_button_float {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.flits_button_icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.flits_button_icon svg {
+  fill: var(--contentTextColor);
+  pointer-events: none;
+}
+.flits_desktop {
+  display: block;
+}
+
+.flits_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_mobile {
+    display: block !important;
+  }
+  .flits_desktop {
+    display: none !important;
+  }
+}

@@ -1,0 +1,79 @@
+.flits_button {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 14px;
+    outline: 0;
+    border: none;
+    background: #e0e1e2 none;
+    color: #0009;
+    font-family: inherit;
+    margin: 0 0 0 3.5px;
+    padding: 10px 20px;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    will-change: "";
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.3s all;
+    width: 100%;
+    display: block;
+  }
+  
+  .flits_button:disabled {
+    cursor: default;
+    opacity: .45!important;
+    background-image: none!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    pointer-events: none!important;
+    outline-offset: 0px!important;
+    outline: unset!important;
+  }
+  
+  .flits_primary_btn {
+    background: var(--primaryButtonBGColor);
+    border: 1px solid var(--primaryButtonBGColor);
+    color: var(--primaryButtonTextColor);
+  }
+
+  .flits_primary_btn:hover {
+    background: var(--primaryButtonHoverBGColor)!important;
+    border: 1px solid var(--primaryButtonHoverBGColor)!important;
+    color: var(--primaryButtonTextColor)!important;
+  }
+  
+  .flits_mt_10 {
+    margin-top: 10px !important;
+  }
+
+  .flits_remove_product {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    width: 25px!important;
+    height: 25px;
+    padding: 0;
+    border-radius: 50px;
+    margin: 0!important;
+  }
+
+  .flits_set_show {
+    display: block;
+  }
+
+  @media screen and (max-width: 992px) {
+    .flits_remove_product {
+        display: block!important;
+    }
+  }

@@ -1,0 +1,38 @@
+.flits_product_card {
+  width: 100%;
+  padding: 10px !important;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  border-radius: 5px;
+}
+.flits_top_order_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.flits_product_card {
+  margin-left: 0;
+}
+.flits_top_order_card:first-of-type {
+  margin: 0;
+}
+
+@media screen and (max-width: 654px) {
+  .flits_product_card {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+}

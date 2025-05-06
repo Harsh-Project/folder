@@ -1,0 +1,47 @@
+.flits_link_share_container {
+  position: absolute;
+  width: 100%;
+  top: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flits_need_mobile {
+  display: none;
+}
+@media screen and (max-width: 1025px) {
+  .flits_link_share_container {
+    top: 105px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .flits_link_share_container {
+    top: 95px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_link_share_container {
+    display: none;
+  }
+  .flits_need_mobile {
+    display: flex;
+    top: 0;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 1;
+    width: calc(100% - 70px);
+    margin: -18px 35px 15px;
+  }
+}

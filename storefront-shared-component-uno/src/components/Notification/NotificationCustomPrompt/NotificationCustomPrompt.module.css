@@ -1,0 +1,243 @@
+.flits_width {
+  border-radius: 5px;
+  width: calc(100% - 2.4rem) !important;
+  max-width: 436px !important;
+}
+
+.flits_width * {
+  font-family: inherit !important;
+}
+
+/* NotificationCustomPrompt.module.css */
+.flits_bottom_left {
+  animation-duration: 0.6s !important;
+  animation-name: bottom-left !important;
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+}
+
+.flits_bottom_right {
+  animation-duration: 0.6s !important;
+  animation-name: bottom-right !important;
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+}
+
+.flits_bottom_centered {
+  animation-duration: 0.6s !important;
+  animation-name: bottom-centered !important;
+  position: fixed !important;
+  bottom: 0;
+  left: calc(50% - 1.2rem);
+  transform: translateX(-50%) !important;
+}
+
+.flits_centered {
+  animation-duration: 0.6s !important;
+  animation-name: centered !important;
+  position: fixed !important;
+  top: calc(50% - 1.2rem);
+  left: calc(50% - 1.2rem);
+  transform: translate(-50%, -50%) !important;
+}
+
+.flits_top_right {
+  animation-duration: 0.6s !important;
+  animation-name: top-right !important;
+  position: fixed !important;
+  top: 0;
+  right: 0;
+}
+
+.flits_top_left {
+  animation-duration: 0.6s !important;
+  animation-name: top-left !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
+
+.flits_top_centered {
+  animation-duration: 0.6s !important;
+  animation-name: top-centered !important;
+  position: fixed !important;
+  top: 0;
+  left: calc(50% - 1.2rem);
+  transform: translateX(-50%) !important;
+}
+
+.flits_description {
+  display: flex;
+}
+
+.flits_description_p {
+  font-size: 16px!important;
+  margin: 0!important;
+  line-height: 1.45;
+  text-transform: none!important;
+}
+
+
+
+.flits_close {  height: 20px !important;
+  width: 20px !important;
+}
+
+.flits_title_h2 {
+  font-weight: 600;
+  font-size: 18px!important;
+  margin: 0!important;
+  font-family: inherit;
+  line-height: 1.45;
+  text-transform: none!important;
+}
+
+.flits_image {
+  width: 40px !important;
+  height: 60px;
+}
+
+.flits_title {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flits_title h2 {
+  margin: 0;
+}
+
+.flits_title p {
+  margin: 0;
+  margin-top: 10px !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flits_btn_2 {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.flits_btn_2 button {
+  font-size: 14px;
+  padding: 6px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flits_button_later {
+  color: #3475e0;
+  border: 1px solid rgb(218, 220, 224) !important;
+  background-color: white;
+}
+
+.flits_button_subscribe {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_title_h2 {
+    font-size: 16px !important;
+  }.flits_description_p {
+    font-size: 14px !important;
+  }
+  .flits_btn_2 button {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .flits_title_h2 {
+    font-size: 14px !important;
+  }.flits_description_p {
+    font-size: 12px !important;
+  }
+}
+
+@keyframes bottom-left {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes bottom-right {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes bottom-centered {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes centered {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+@keyframes top-left {
+  0% {
+    opacity: 0;
+    top: -100%;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes top-right {
+  0% {
+    opacity: 0;
+    top: -100%;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes top-centered {
+  0% {
+    opacity: 0;
+    top: -100%;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+

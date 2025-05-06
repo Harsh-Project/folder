@@ -1,0 +1,88 @@
+.flits_col_md_12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flits_input_row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.flits_input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 21px;
+  width: 21px;
+  border-radius: 7px;
+  padding: 8px;
+  outline: 0;
+  appearance: none;
+  position: relative;
+  margin: 0 !important;
+  cursor: pointer;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  background: 0 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  font-size: 15px;
+  color: var(--contentTextColor);
+}
+
+.flits_input[type="checkbox"]::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-left: 0;
+  top: 5px;
+  right: 7px;
+  position: absolute;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.flits_input[type="checkbox"]:checked {
+  background: #8e8e8e;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.flits_input[type="checkbox"]:checked::after {
+  -webkit-transform: rotate(43deg);
+  transform: rotate(43deg);
+  opacity: 1;
+}
+
+.flits_input_label {
+  margin-left: 7px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: var(--contentTextColor);
+  font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+  .flits_col_md_12 {
+    float: left;
+    width: 100%;
+  }
+}

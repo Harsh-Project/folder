@@ -1,0 +1,7 @@
+.flits_credit_log_list {
+  top: -1px;
+  height: calc(100% - 80px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

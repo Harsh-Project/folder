@@ -1,0 +1,97 @@
+.flits_credit_table_head {
+  padding: 2px 20px;
+  background: #f7f8fa;
+  font-size: 18px;
+  color: #5d5d5d;
+  border-top: 1px solid #e8e9ec;
+  border-bottom: 1px solid #e8e9ec;
+}
+
+.flits_row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.flits_row::before {
+  display: table;
+  content: " ";
+}
+
+.flits_row::after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+.flits_col_sm_3 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.flits_col_sm_3 span {
+  font-size: 15px;
+  color: #5d5d5d;
+}
+
+.flits_col_sm_2 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.flits_col_sm_2 span {
+  font-size: 15px;
+  color: #5d5d5d;
+}
+
+.flits_col_sm_4 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.flits_col_sm_4 span {
+  font-size: 15px;
+  color: #5d5d5d;
+}
+
+.flits_text_center {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .flits_col_sm_2 {
+    width: 16.66%;
+    float: left;
+  }
+  .flits_col_sm_3 {
+    width: 25%;
+    float: left;
+  }
+  .flits_col_sm_4 {
+    float: left;
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_col_sm_3 span {
+    font-size: 14px;
+  }
+  .flits_col_sm_4 span {
+    font-size: 14px;
+  }
+  .flits_col_sm_2 span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_credit_table_head {
+    display: none;
+  }
+}

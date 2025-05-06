@@ -1,0 +1,11 @@
+.flits-social-share-main {
+  /* background: #FFFFFF; */
+  /* box-shadow: 0px 4px 18px -4px #0000001A; */
+  padding-right: 10px;
+  border-radius: 10px;
+  line-height: 1;
+  cursor: pointer;
+}
+.flits-social-share-main:hover svg {
+  transform: scale(1.2);
+}

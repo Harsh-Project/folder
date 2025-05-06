@@ -1,0 +1,79 @@
+button.flits-reward-button {
+  padding: 7px 22px 7px 7px !important;
+  border-radius: 30px !important;
+  border: 1px solid #000654 !important;
+  background: #000654;
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  background: var(--flitsWidgetPrimaryColor) !important;
+  border-color: var(--flitsWidgetPrimaryColor) !important;
+  margin: 0 !important;
+  line-height: normal;
+  font-family: inherit !important;
+}
+.flits-reward-button * {
+  font-family: inherit !important;
+}
+.flits-reward-button-icon {
+  padding: 11px;
+  background: white;
+  border-radius: 100%;
+  line-height: 1;
+  height: 46px;
+  width: 46px;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  background: var(--flitsWidgetRewardOpenBtnText);
+}
+.flits-reward-button-icon svg {
+  width: 22px;
+  height: 24px;
+  line-height: 1;
+}
+.flits-reward-button-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  display: inline-block;
+  padding-left: 10px;
+  line-height: 30px;
+  transition: transform 0.3s ease-in-out;
+  font-optical-sizing: auto;
+  color: var(--flitsWidgetRewardOpenBtnText);
+}
+.flits-reward-button:hover .flits-reward-button-icon {
+  transition: transform 0.3s ease-in;
+  transform: scale(1.15);
+}
+.flits-reward-button:hover .flits-reward-button-text {
+  transition: transform 0.1s ease-in;
+  transform: translateX(1px);
+}
+.flits-widget-popup-right {
+  right: 20px !important;
+}
+.flits-widget-popup-left {
+  left: 20px !important;
+}
+@media (max-width: 480px) {
+  button.flits-reward-button {
+    padding: 5px 15px 5px 6px !important;
+  }
+  .flits-reward-button-icon {
+    width: 35px;
+    height: 35px;
+    padding: 07px;
+  }
+  .flits-reward-button-icon svg {
+    height: 20px;
+    width: 18px;
+  }
+  .flits-reward-button-text {
+    font-size: 14px;
+    padding-left: 6px;
+  }
+}

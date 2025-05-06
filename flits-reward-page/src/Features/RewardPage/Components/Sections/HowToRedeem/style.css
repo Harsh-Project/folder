@@ -1,0 +1,40 @@
+/* ways to redeem css start */
+.flits-reward-page-ways-to-redeem {
+  background: rgba(243, 243, 243, 1);
+  width: 100%;
+}
+.flits-reward-page-redeem-row {
+  display: flex;
+  gap: 4%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flits-reward-page-redeem-item {
+  max-width: 48%;
+  flex: 0 0 48%;
+  margin-bottom: 4%;
+  background-color: #fff;
+  text-align: center;
+  padding: 35px 30px;
+}
+.flits-reward-page-redeem-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  margin: 15px 0;
+  color: var(--flitsrewardpagePrimaryTextColor);
+}
+.flits-reward-page-redeem-info {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: var(--flitsrewardpageSecondaryTextColor);
+}
+.flits-reward-page-redeem-info span.money {
+  font-weight: 500;
+}
+.flits-reward-page-redeem-icon svg {
+  width: 32px;
+  height: 32px;
+}
+/* ways to redeem css end */

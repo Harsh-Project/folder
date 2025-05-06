@@ -1,0 +1,106 @@
+.flits_empty_container {
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16),
+    0 0 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px #00000029, 0 0 5px #0000001f;
+  border-radius: 5px;
+  background: #fff;
+  min-height: 350px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-animation: flitsFadeIn 0.7s;
+  animation: flitsFadeIn 0.7s;
+  padding: 15px;
+}
+
+.flits_empty_icon_box {
+  width: 180px;
+}
+
+.flits_empty_text_div {
+  width: auto;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.flits_empty_text {
+  margin: 0;
+  font-size: 16px;
+  color: var(--contentTextColor);
+  text-align: center;
+}
+
+.flits_mb_20 {
+  margin-bottom: 20px!important;
+}
+
+.flits_strong {
+  font-weight: 700;
+}
+
+.flits_button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2;
+  color: #0009;
+  margin: 0;
+  padding: 10px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.flits_primary_btn {
+  background: var(--primaryButtonBGColor)!important;
+  border: 1px solid var(--primaryButtonBGColor)!important;
+  color: var(--primaryButtonTextColor)!important;
+}
+
+.flits_empty_button {
+  -webkit-box-shadow: 0 2px 15px 0 rgba(0,0,0,.16),0 2px 15px 3px rgba(0,0,0,.12);
+  box-shadow: 0 2px 15px #00000029,0 2px 15px 3px #0000001f;
+  margin-left: 0;
+}
+
+.flits_mt_20 {
+  margin-top: 20px!important;
+}
+
+.flits_without_boxshadow {
+  box-shadow: unset
+}
+
+
+@media screen and (max-width: 767px) {
+  .flits_mt_15 {
+    margin-top: 15px;
+  }
+}

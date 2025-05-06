@@ -1,0 +1,20 @@
+.flits_header_title {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  color: var(--contentTextColor);
+  margin-top: 15px;
+}
+
+.flits_header_title strong {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_header_title {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,46 @@
+.flits_credit_box {
+  padding: 15px;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  border-radius: 5px;
+  position: relative;
+}
+
+.flits_mb_15 {
+  margin-bottom: 15px !important;
+}
+
+.flits_text_bold {
+  font-weight: 700;
+  margin: 0;
+  color: var(--contentTextColor) !important;
+}
+
+.flits_text_center {
+  text-align: center;
+}
+
+.flits_h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.flits_row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.flits_row::before {
+  content: " ";
+  display: table;
+}
+
+.flits_row::after {
+  clear: both;
+  content: " ";
+  display: table;
+}

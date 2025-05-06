@@ -1,0 +1,27 @@
+.flits-widget-inside-header {
+  padding: 20px 20px;
+  position: sticky;
+  top: 0;
+  border-radius: 0;
+  z-index: 1;
+  background: #f1f1f1;
+  display: flex;
+  border-radius: 20px 20px 0px 0px;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  background: var(--flitsWidgetPrimaryColor);
+}
+.flits-widget-inside-header h2 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
+  padding-left: 10px;
+  color: var(--flitsWidgetHeaderText);
+}
+.flits-widget-inside-header svg path {
+  stroke: var(--flitsWidgetHeaderText);
+}

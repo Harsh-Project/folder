@@ -1,0 +1,46 @@
+/* how it works section css start */
+.flits-reward-page-how-it {
+  background: rgba(243, 243, 243, 1);
+  width: 100%;
+}
+.flits-reward-page-how-it-inner.flits-reward-page-section-container {
+  max-width: 775px;
+}
+.flits-reward-page-how-it-row {
+  display: flex;
+  justify-content: space-between;
+}
+.flits-reward-page-how-it-row-item {
+  max-width: 174px;
+}
+.flits-reward-page-how-it-step-box {
+  background: #fff;
+  color: var(--flitsrewardpagePrimaryTextColor);
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  width: 117px;
+  margin: 0 auto;
+  height: 117px;
+}
+.flits-reward-page-how-it-box-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+.flits-reward-page-how-it-box-info {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: center;
+  color: var(--flitsrewardpageSecondaryTextColor);
+}
+.flits-reward-page-how-it .flits-reward-page-sub-header {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* how it works section css end */

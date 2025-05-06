@@ -1,0 +1,16 @@
+.flits_button_float {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.flits_button_icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.flits_button_icon svg {
+  fill: var(--contentTextColor);
+  pointer-events: none;
+}

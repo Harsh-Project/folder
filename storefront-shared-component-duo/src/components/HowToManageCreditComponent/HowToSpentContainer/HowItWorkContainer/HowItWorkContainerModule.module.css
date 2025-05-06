@@ -1,0 +1,242 @@
+.flits_box_card {
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16),
+    0 0 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px #00000029, 0 0 5px #0000001f;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.flits_how_it_work_container {
+  position: relative;
+  padding: 50px 60px;
+}
+
+.flits_mt_15 {
+  margin-top: 15px !important;
+}
+
+.flits_how_it_work_box {
+  position: relative;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.flits_how_to_spend_rule_title {
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px !important;
+  color: var(--contentTextColor);
+}
+
+.flits_how_it_work_box ul {
+  list-style: none;
+  position: relative;
+  padding: 0;
+  width: calc(100% - 120px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 60px;
+}
+
+.flits_how_it_work_box ul::before {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 22px;
+  content: "";
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: 0.5s width;
+  transition: 0.5s width;
+}
+
+.flits_how_it_work_box ul li {
+  padding-top: 90px;
+  text-align: center;
+  position: relative;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.flits_how_it_work_box ul li::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  margin: auto;
+}
+
+.flits_how_it_work_box ul li svg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 12.5px;
+  left: 12.5px;
+}
+
+.flits_how_it_work_box ul li p {
+  font-size: 10px;
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  width: 110px;
+  color: var(--contentTextColor);
+}
+
+@media screen and (max-width: 860px) {
+  .flits_how_to_spend_rule_title {
+    margin-bottom: 15px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .flits_how_it_work_container {
+    position: relative;
+    padding: 30px 40px;
+  }
+  .flits_how_it_work_box ul {
+    width: calc(100% - 90px);
+    margin: 0 45px;
+  }
+  .flits_how_it_work_box ul::before {
+    top: 18px;
+    height: 2.5px;
+  }
+  .flits_how_it_work_box ul li {
+    padding-top: 75px;
+    width: 40px;
+  }
+  .flits_how_it_work_box ul li::before {
+    width: 40px;
+    height: 40px;
+  }
+  .flits_how_it_work_box ul li svg {
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 10px;
+  }
+  .flits_how_it_work_box ul li p {
+    top: 50px;
+    font-size: 8px;
+    color: var(--contentTextColor);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_how_to_spend_rule_title {
+    color: #fff;
+  }
+  .flits_box_card {
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .flits_mt_15 {
+    margin-top: 0px !important;
+  }
+  .flits_header_title {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--contentTextColor);
+    margin: -17.5px 35px 0 !important;
+    z-index: 1;
+    width: calc(100% - 70px);
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #17a2ff, #7252ff);
+    color: #fff;
+  }
+  .flits_p_10 {
+    padding: 10px!important;
+  }
+  .flits_how_it_work_box {
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  .flits_how_it_work_box ul li p {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .flits_how_to_spend_rule_title {
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+  .flits_how_it_work_container {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    width: calc(100% - 40px);
+  }
+  .flits_how_it_work_box ul {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+  .flits_how_it_work_box ul::before {
+    top: 14px;
+  }
+  .flits_how_it_work_box ul li {
+    padding-top: 60px;
+    width: 30px;
+  }
+  .flits_how_it_work_box ul li::before {
+    width: 30px;
+    height: 30px;
+  }
+  .flits_how_it_work_box ul li svg {
+    width: 15px;
+    height: 15px;
+    top: 7.5px;
+    left: 7.5px;
+  }
+  .flits_how_it_work_box ul li p {
+    top: 40px;
+    font-size: 6px;
+    width: 65px;
+  }
+}

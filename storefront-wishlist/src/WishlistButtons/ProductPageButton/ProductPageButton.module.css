@@ -1,0 +1,235 @@
+.flits_wishlist_button_product_page {
+  display: flex;
+  margin-top: 10px;
+  max-width: 44rem;
+  font-family: inherit;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.flits_wishlist_button {
+  display: flex;
+  width: 100%;
+  color: #0b0911;
+  align-items: flex-start;
+}
+
+.flits_button_section {
+  color: #0b0911 !important;
+  border-color: var(--before_border_clr);
+  background: var(--before_btn_clr);
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  min-width: 64px;
+  justify-content: center;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 15px;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  font-weight: 400;
+  border: 1px solid var(--before_border_clr);
+  box-shadow: none;
+  padding: 15px;
+  transition-property: border;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.15s;
+}
+.flits_button_click {
+  border-color: var(--after_border_clr);
+  color: white;
+  background-color: var(--after_btn_clr);
+}
+.flits_heart_icon_section {
+  font-weight: 400;
+  color: #0b0911;
+  text-shadow: none;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.flits_heart_icon {
+  color: var(--before_border_clr);
+  width: 20px;
+  fill: var(--before_heart_clr);
+  height: 20px;
+  transition: transform 0.2s;
+}
+.flits_icon_effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+}
+.flits_icon_effect_span {
+  display: block;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  width: 20px;
+  -webkit-transform-origin: 0 2px;
+  transform-origin: 0 2px;
+}
+
+.flits_icon_effect_span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 1.5px;
+  height: 3px;
+  background: #0090e3;
+  animation: fireworkLine 0.5s linear 0.1s;
+}
+
+.flits_icon_effect_span::after {
+  animation: fireworkPoint 0.5s linear 0.1s;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+  background: #f60;
+  -webkit-transform: scale(0, 0);
+  transform: scale(0);
+}
+
+.flits_button_text {
+  color: var(--before_text_clr);
+  margin-left: 8px;
+  margin-top: 3px;
+}
+
+.flits_wishlist_count {
+  position: relative;
+  width: auto;
+  height: 52px;
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  color: #000;
+  font-size: 16px;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid #8e8e8e;
+  background-color: #fff;
+}
+
+.flits_wishlist_count:before {
+  content: "";
+  display: flex;
+  border: 1px solid #8e8e8e;
+  border-right: 0;
+  border-top: 0;
+  background-color: #fff;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: -6px;
+  height: 10px;
+  width: 10px;
+}
+
+.flits_clicked_heart {
+  color: var(--after_border_clr);
+  fill: var(--after_heart_clr);
+}
+
+.flits_clicked_text {
+  color: var(--after_text_clr) !important;
+}
+
+.flits_icon_effect .flits_icon_effect_span:nth-child(2) {
+  -webkit-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.flits_icon_effect .flits_icon_effect_span:nth-child(3) {
+  -webkit-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.flits_icon_effect .flits_icon_effect_span:nth-child(4) {
+  -webkit-transform: rotate(216deg);
+  transform: rotate(216deg);
+}
+.flits_icon_effect .flits_icon_effect_span:nth-child(5) {
+  -webkit-transform: rotate(288deg);
+  transform: rotate(288deg);
+}
+
+@keyframes firecracker {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(45deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fireworkLine {
+  0% {
+    right: 20%;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+
+  25% {
+    right: 20%;
+    width: 6px;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  35% {
+    right: 0;
+    width: 35%;
+  }
+
+  70% {
+    right: 0;
+    width: 4px;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  100% {
+    right: 0;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+}
+
+@keyframes fireworkPoint {
+  30% {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+
+  60% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  100% {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+}

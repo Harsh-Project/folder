@@ -1,0 +1,73 @@
+/* Hero Banner css start */
+.flits-reward-page-banner {
+  position: relative;
+}
+.flits-reward-page-banner-image {
+  width: 100%;
+  line-height: 1;
+  background-color: var(--flitsrewardpagePrimaryButtonBg);
+  line-height: 0.1;
+  max-width: 100%;
+  height: 640px;
+  object-fit: cover;
+  display: block !important;
+}
+.flits-reward-page-banner img {
+  max-width: 100%;
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+}
+.flits-reward-page-banner-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flits-reward-page-banner-content-inner {
+  width: 100%;
+  max-width: 676px;
+  margin: 0 auto;
+  padding: 50px;
+  background: #fff;
+  min-width: 360px;
+}
+.flits-reward-page-banner-button-section {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0 0;
+}
+.flits-reward-page-main[rel="customer"]
+  .flits-reward-page-hero-banner
+  .flits-reward-page-sub-header {
+  font-size: 20px;
+}
+.flits-reward-page-hero-banner .flits-reward-page-sub-header span.money {
+  font-weight: 600;
+}
+/* Hero Banner css end */
+
+/* Responsive css */
+@media (max-width: 767px) {
+  .flits-reward-page-banner-content-inner {
+    min-width: 90%;
+    max-width: 90%;
+    padding: 30px 40px;
+  }
+  .flits-reward-page-hero-banner img,
+  .flits-reward-page-banner-image {
+    height: 709px;
+    object-fit: cover;
+    object-position: right;
+  }
+}
+@media (max-width: 480px) {
+  .flits-reward-page-banner-content-inner {
+    padding: 30px 20px;
+  }
+}

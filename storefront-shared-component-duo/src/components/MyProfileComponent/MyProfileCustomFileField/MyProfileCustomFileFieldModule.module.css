@@ -1,0 +1,240 @@
+.custom_file_input {
+  display: inline-block !important;
+  position: relative !important;
+  width: 100%;
+  padding: 8px;
+  width: 85%;
+  min-height: 39px;
+  text-align: left !important;
+  background: var(--inputBGColor) !important;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flits_input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.file_upload_button {
+  cursor: pointer;
+  padding: 0px 6px;
+  border-radius: 2px;
+  border: 1px solid var(--borderColor);
+  margin: 0 4px 0 0;
+}
+
+.customer_custom_field_required_error_message::before {
+  content: "*";
+}
+
+.file_name_label {
+  opacity: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.flits_file_placeholder {
+  -webkit-text-fill-color: #cbcbcb!important;
+}
+
+.customer_custom_field_file_view {
+  color: var(--contentTextColor);
+  text-decoration: none;
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+  margin-top: 10px;
+  margin-left: 0px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.customer_custom_field_file_view svg {
+  width: 20px;
+  height: 20px;
+}
+
+.customer_custom_field_file_delete {
+  color: var(--contentTextColor);
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+  text-decoration: none;
+  vertical-align: top;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.customer_custom_field_file_delete svg {
+  width: 20px;
+  height: 20px;
+}
+
+.customer_custom_field_file_undo {
+  color: var(--contentTextColor);
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+}
+
+.customer_custom_field_file_undo svg {
+  width: 20px;
+  height: 20px;
+}
+
+.customer_custom_field_required_error_message {
+  color: red !important;
+  margin: 0;
+  word-break: break-all;
+}
+
+.customer_custom_field_description {
+  color: grey;
+  margin-top: 5px;
+}
+
+.customer_custom_field_description_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.flits_full_wrap {
+  display: flex;
+}
+
+.customer_custom_field_description_text {
+  vertical-align: super;
+  margin: 0;
+  word-break: break-all;
+}
+
+.flits_file_input_edit_mode {
+  display: inline-block !important;
+  position: relative !important;
+  width: 100%;
+  padding: 8px;
+  text-align: left !important;
+  background: var(--inputBGColor) !important;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+a:not([href]) {
+  cursor: pointer;
+}
+
+.custom_fields_loading svg {
+  animation: 0.6s linear infinite spinner;
+}
+
+.flits_input[type="file"]:disabled {
+  cursor: not-allowed;
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+}
+
+.flits_input[type="date"]:focus,
+.flits_input[type="email"]:focus,
+.flits_input[type="number"]:focus,
+.flits_input[type="password"]:focus,
+.flits_input[type="tel"]:focus,
+.flits_input[type="text"]:focus,
+.flits_textarea:focus {
+  -webkit-box-shadow: var(--inputBoxShadow);
+  box-shadow: var(--inputBoxShadow);
+  border-color: var(--inputBGColor);
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 961px) {
+  .flits_full_wrap {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .custom_file_input {
+    text-align: right !important;
+    background: 0 0 !important;
+    border: 0;
+    width: 100%;
+    display: flex !important;
+    justify-content: end;
+  }
+  .flits_mobile {
+    text-align: left !important;
+    display: flex !important;
+    justify-content: left;
+  }
+  .flits_input[type="file"] {
+    background: 0 0 !important;
+    border: 0;
+    text-align: left;
+    border-radius: 0;
+    width: 100%;
+  }
+  .customer_custom_field_file_view {
+    margin-top: 3px;
+  }
+  .customer_custom_field_file_view {
+    padding: 8px 8px 0 0;
+  }
+  .customer_custom_field_file_delete {
+    margin-top: 3px;
+    padding: 8px 8px 0 0;
+  }
+  .customer_custom_field_file_undo {
+    margin-top: 3px;
+  }
+  .customer_custom_field_file_undo {
+    margin-top: 3px;
+    padding: 8px 8px 0 0;
+  }
+  .customer_custom_field_file_delete {
+    margin-top: 3px;
+  }
+  .flits_input[type="file"]:disabled {
+    text-align: right;
+    padding: 8px;
+  }
+  .customer_custom_field_description{
+    margin-top: 0px !important;
+  }
+  .customer_custom_field_required_error_message, .customer_custom_field_description {
+    margin-left: 8px !important;
+  }
+  .flits_file_wrap {
+    width: 100%;
+  }
+  .flits_svg,
+  .flits_info_wrap,
+  .flits_full_wrap {
+    display: flex;
+    flex-direction: row;
+  }
+  .flits_error_description_wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}

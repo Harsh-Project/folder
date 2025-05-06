@@ -1,0 +1,79 @@
+.flits-reward-page-snackbar {
+  visibility: hidden;
+  min-width: 330px;
+  background-color: #333;
+  background-color: var(--flitsrewardpagePrimaryButtonBg);
+  color: #fff;
+  color: var(--flitsrewardpagePrimaryButtonText);
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 9999999;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 330px;
+  bottom: 80px;
+  font-size: 16px;
+}
+.flits-reward-page-snackbar.show {
+  visibility: visible;
+  -webkit-animation: sfadein 0.5s;
+  animation: sfadein 0.5s;
+  display: block !important;
+}
+.flits-reward-page-snackbar.show.alert {
+  background-color: rgb(255, 0, 0);
+  background-color: rgba(224, 69, 69, 1);
+  color: white;
+}
+.flits-reward-page-snackbar.show.success {
+  background-color: rgb(57, 167, 6);
+  color: white;
+}
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes sfadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes sfadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 80px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 80px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

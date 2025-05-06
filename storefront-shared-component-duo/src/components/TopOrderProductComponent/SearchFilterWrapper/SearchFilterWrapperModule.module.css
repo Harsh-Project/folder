@@ -1,0 +1,20 @@
+.flits_filter_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_filter_header {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+}

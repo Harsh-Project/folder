@@ -1,0 +1,63 @@
+.flits_ml_10 {
+  margin-left: 10px !important;
+}
+
+.flits_button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: #0009;
+  font-family: inherit;
+  margin: 0 0 0 3.5px;
+  padding: 10px 20px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s all;
+}
+
+.flits_button_icon_wrap {
+  position: relative;
+  padding: 10px 20px 10px 35px;
+}
+
+.flits_navigator_button {
+  color: var(--shareTextColor)!important;
+  background: var(--shareBGColor)!important;
+  border: 1px solid var(--shareBGColor)!important;
+}
+
+.flits_button_icon {
+  width: 35px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  position: absolute;
+  line-height: 1;
+  border-radius: 0;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  text-align: center;
+}
+
+.flits_button_icon svg {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,243 @@
+.flits_tingle_modal_box {
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 40%;
+  border-radius: 0;
+  background: #fff;
+  opacity: 1;
+  cursor: auto;
+  -webkit-transition: -webkit-transform 0.3s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  width: 400px;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.flits_tingle_modal_box *,
+.flits_modal_responsive * {
+  font-family: inherit !important;
+}
+
+.flits_tingle_modal_box_content {
+  padding: 20px;
+}
+
+.flits_close_button {
+  position: absolute !important;
+  top: 2px !important;
+  right: 5px !important;
+  font-size: 30px !important;
+  width: 22px !important;
+  height: 19px !important;
+  font-family: inherit !important;
+  color: rgb(0, 0, 0) !important;
+  cursor: pointer !important;
+}
+
+.flits_modal_responsive {
+  width: 100%;
+  padding: 0 !important;
+  border-radius: 0;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.flits_close_responsive {
+  display: none;
+}
+
+.flits_tingle_modal_popup_header {
+  margin-bottom: 20px;
+}
+
+.flits_tingle_modal_popup_header_image {
+  width: 60px;
+  height: 60px;
+  margin: auto auto 15px;
+}
+
+.flits_h2 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 2rem;
+}
+
+.flits_tingle_modal_popup_header_title {
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.flits_tingle_input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 75%;
+  border-radius: 0;
+  padding: 8px;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: unset;
+  appearance: none;
+  position: relative;
+  margin: auto !important;
+  cursor: text;
+  background: #f2f1f1 !important;
+  border: 1px solid #f2f1f1 !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  height: 36px;
+  font-size: 12px;
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+
+.flits_tingle_modal_popup_action {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.flits_tingle_btn {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #f2f1f1 !important;
+  background-color: #f2f1f1 !important;
+  border: 1px solid #f2f1f1 !important;
+  color: #0009;
+  font-family: inherit;
+  margin: 0;
+  padding: 10px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none !important;
+  appearance: none;
+  border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s all;
+  width: 100%;
+  max-width: 170px;
+  border: 1px solid transparent;
+}
+
+.flits_tingle_primary_btn {
+  background: var(--primaryTingleButtonBGColor) !important;
+  color: var(--primaryTingleButtonTextColor) !important;
+}
+
+.flits_tingle_primary_btn:hover {
+  background: var(--primaryTingleButtonHoverBGColor) !important;
+  color: var(--primaryTingleButtonTextColor) !important;
+}
+
+.flits_tingle_modal_close {
+  position: fixed;
+  top: 0;
+  right: 6px;
+  z-index: 1000;
+  padding: 0;
+  width: auto;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 30px;
+  font-family: inherit;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  top: 10px;
+  right: 15px;
+  opacity: 1;
+  font-weight: lighter;
+  font-size: 35px;
+  line-height: 1;
+}
+
+.flits_tingle_modal_popup_header_image {
+  width: 60px;
+  height: 60px;
+  margin: auto auto 15px;
+}
+
+.flits_tingle_modal_popup_tagline_text {
+  font-size: 13px;
+  text-align: center;
+  color: #000;
+}
+
+.flits_tingle_modal_popup_text {
+  text-align: center;
+  color: #000;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 540px) {
+  .flits_tingle_modal_close {
+    position: relative !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #2c3e50;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    opacity: 1;
+    line-height: 40px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flits_tingle_modal_closeLabel {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 600;
+  }
+  .flits_tingle_modal_box_content {
+    overflow-y: scroll;
+  }
+}

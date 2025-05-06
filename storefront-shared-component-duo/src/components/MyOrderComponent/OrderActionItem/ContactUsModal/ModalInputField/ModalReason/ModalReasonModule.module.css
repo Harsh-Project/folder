@@ -1,0 +1,79 @@
+.flits_col_md_12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.flits_popup_mb_15 {
+    margin-bottom: 15px!important;
+}
+
+.flits_input_wrap {
+    position: relative;
+    width: 100%;
+}
+
+.flits_input_wrap label {
+    font-size: 14px;
+}
+
+.flits_select_row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.flits_input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 30px 8px 8px;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: unset;
+    position: relative;
+    margin: 0;
+    cursor: auto;
+    border: 1px solid;
+    appearance: none;
+    border-color: var(--borderColor);
+    background: 0 0;
+    color: var(--contentTextColor);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    line-height: 1.2!important;
+    font-size: 15px;
+    height: 36px;
+}
+
+.flits_select_arrow {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.flits_form_alert {
+    color: #d20000;
+    position: relative;
+    font-size: 12px;
+}
+
+.flits_error_icon::before {
+    content: "*";
+}
+
+.flits_input_error {
+    border: 1px solid!important;
+    border-color: #d20000!important;
+    background-color: #fff!important;
+  }

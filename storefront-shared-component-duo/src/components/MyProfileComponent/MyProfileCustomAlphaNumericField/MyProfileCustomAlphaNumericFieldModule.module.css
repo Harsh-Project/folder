@@ -1,0 +1,134 @@
+.flits_input[type="text"],
+.flits_input[type="email"],
+.flits_input[type="tel"],
+.flits_input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  appearance: none;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: 0 !important;
+  cursor: text;
+  color: var(--contentTextColor);
+  border: 1px solid;
+  border-color: var(--inputBGColor);
+  background: 0 0 !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  height: 36px;
+  font-size: 16px;
+  opacity: 1;
+  -webkit-opacity: 1;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  background: var(--inputBGColor) !important;
+}
+
+.flits_input[type="text"]:disabled,
+.flits_input[type="text"]:read-only {
+  cursor: not-allowed;
+  color: var(--contentTextColor);
+  -webkit-text-fill-color: var(--contentTextColor) !important;
+  border-color: var(--inputBGColor);
+}
+
+.customer_custom_field_required_error_message {
+  color: red !important;
+  margin: 0;
+  word-break: break-all;
+}
+
+.customer_custom_field_required_error_message::before {
+  content: "*";
+}
+
+.customer_custom_field_description {
+  color: grey;
+  margin-top: 5px;
+}
+
+.customer_custom_field_description_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.customer_custom_field_description_text {
+  vertical-align: super;
+  margin: 0;
+  /* color: var(--contentTextColor) !important; */
+  word-break: break-all;
+}
+
+.flits_input[type="date"]:focus,
+.flits_input[type="email"]:focus,
+.flits_input[type="number"]:focus,
+.flits_input[type="password"]:focus,
+.flits_input[type="tel"]:focus,
+.flits_input[type="text"]:focus,
+.flits_textarea:focus {
+  -webkit-box-shadow: var(--inputBoxShadow);
+  box-shadow: var(--inputBoxShadow);
+  border-color: var(--inputBGColor);
+}
+
+.flits_input::-webkit-input-placeholder {
+  color: var(--contentTextColor) !important;
+}
+.flits_input::-moz-placeholder {
+  color: var(--contentTextColor) !important;
+}
+.flits_input:-ms-input-placeholder {
+  color: var(--contentTextColor) !important;
+}
+.flits_input:-moz-placeholder {
+  color: var(--contentTextColor) !important;
+}
+
+.flits_alphaNumberic_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.flits_input[type=date]::-webkit-input-placeholder,.flits_input[type=email]::-webkit-input-placeholder,.flits_input[type=number]::-webkit-input-placeholder,.flits_input[type=password]::-webkit-input-placeholder,.flits_input[type=tel]::-webkit-input-placeholder,.flits_input[type=text]::-webkit-input-placeholder,.flits-textarea::-webkit-input-placeholder {
+  -webkit-text-fill-color: #cbcbcb!important;
+}
+
+
+@media screen and (max-width: 767px) {
+  .flits_input[type="text"] {
+    background: 0 0 !important;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+  .flits_input[type="text"]:disabled {
+    text-align: right;
+    padding: 8px;
+  }
+  .customer_custom_field_description {
+    margin-left: 8px;
+    margin-top: 0;
+  }
+  .flits_alphaNumberic_wrapper {
+    width: 100%;
+  }
+  .customer_custom_field_required_error_message {
+    margin-left: 8px !important;
+  }
+}

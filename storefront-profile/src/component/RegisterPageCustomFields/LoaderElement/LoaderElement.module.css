@@ -1,0 +1,12 @@
+.custom_fields_loading{
+    height:20px;
+    animation:.6s linear infinite spinner;
+    cursor:pointer;
+    margin:10px;
+    text-align:center;
+}
+@keyframes spinner{
+    to{
+        transform:rotate(360deg)
+    }
+}

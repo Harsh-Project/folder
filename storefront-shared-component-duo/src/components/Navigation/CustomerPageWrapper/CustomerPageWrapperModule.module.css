@@ -1,0 +1,53 @@
+.flits_account_container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 30px auto;
+  color: var(--contentTextColor);
+  line-height: 1.45;
+  max-width: 1170px;
+  font-weight: 400;
+  position: relative;
+  display: block;
+  font-size: 16.8px;
+  box-sizing: border-box;
+  /* font-family: Questrial, sans-serif; */
+}
+
+.flits_account_container * {
+  letter-spacing: 0;
+  line-height: 1.45;
+  box-sizing: border-box;
+  font-family: inherit !important;
+}
+
+.flits_account_container p {
+  margin: 0;
+}
+
+.flits_account_container a {
+  background-color: transparent;
+  color: var(--contentTextColor);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flits_account_container div:empty {
+  display: block;
+}
+
+.flits_clearfix::after,
+.flits_clearfix::before {
+  display: table;
+  content: " ";
+}
+
+.flits_clearfix::after {
+  clear: both;
+}
+
+
+@media screen and (max-width: 767px) {
+  .flits_clearfix {
+    display: none !important;
+  }
+}

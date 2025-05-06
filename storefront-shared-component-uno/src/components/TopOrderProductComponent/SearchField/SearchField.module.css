@@ -1,0 +1,74 @@
+.flits_search_filter {
+  position: relative;
+  color: var(--contentTextColor);
+  width: 305px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.flis_input_wrap {
+  position: relative;
+  width: 100%;
+}
+
+.flits_input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 7px;
+  padding: 8px;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: unset;
+  appearance: none;
+  position: relative;
+  margin: 0 !important;
+  cursor: text;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  background: 0 0 !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  height: 36px;
+  font-size: 16px;
+  color: var(--contentTextColor) !important;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+
+.flits_search {
+  padding: 8px 40px !important;
+}
+
+.flits_search_icon_group_left {
+  left: 0;
+}
+
+.flits_search_icon_group_right {
+  right: 0;
+}
+
+.flits_search_icon_group {
+  position: absolute;
+  top: 0;
+  width: 45px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  color: var(--contentTextColor) !important;
+}
+
+@media screen and (max-width: 654px) {
+  .flits_search_filter {
+    width: 100%;
+    margin-right: 0;
+  }
+}

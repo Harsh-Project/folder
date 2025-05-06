@@ -1,0 +1,27 @@
+.flits_product_action {
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.flits_product_variant_qty_action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 654px) {
+  .flits_product_action {
+    margin-top: 10px;
+    max-width: 100%!important;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .flits_product_variant_qty_action {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,15 @@
+[
+    {
+      "component": "Earn",
+      "type": "local"
+    },
+    {
+      "component": "Spent",
+      "type": "local"
+    },
+    {
+      "component": "Current",
+      "type": "local"
+    }
+  ]
+  

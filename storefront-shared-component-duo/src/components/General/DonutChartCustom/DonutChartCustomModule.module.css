@@ -1,0 +1,34 @@
+.flits_chart_inner_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.flits_outer_circle {
+  pointer-events: none;
+}
+
+.flits_inner_circle {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1025px) {
+    .flits_chart_inner_title {
+      font-size: 8px!important;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .flits_chart_inner_title {
+      font-size: 6px!important;
+    }
+  }
+  

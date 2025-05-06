@@ -1,0 +1,50 @@
+.flits_col_md_6,
+.flits_col_sm_6 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flits_mb_15 {
+  margin-bottom: 15px !important;
+}
+
+.flits_input_wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.flits_mt_15 {
+  margin-top: 15px !important
+}
+
+@media screen and (min-width: 768px) {
+  .flits_col_sm_6 {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_input_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid!important;
+    border-color: #dae1e5!important;
+  }
+  .flits_mt_15 {
+    margin-top: 0px !important
+  }
+  .flits_mb_15 {
+    margin-bottom: 0px !important;
+  }
+}

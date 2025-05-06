@@ -1,0 +1,176 @@
+.flits-widget-popup-main * {
+  letter-spacing: normal !important;
+  font-family:  inherit !important;
+}
+.flits-widget-popup-main {
+  font-optical-sizing: auto;
+  /* width: 100%; */
+  position: fixed;
+  /* bottom: 1px; */
+  bottom: 90px;
+  z-index: -1;
+  /* display: none; */
+  color: var(--flitsWidgetPrimaryTextColor);
+  /* animation: flitsFadeSlideDown .2s ease-in; */
+  opacity: 0;
+}
+.flits-widget-popup-main.active {
+  display: block;
+  opacity: 1;
+  animation: flitsFadeSlideUp 0.2s ease-in;
+  z-index: 999999;
+}
+.flits-widget-popup-inner {
+  width: 100%;
+  max-width: 370px;
+  min-width: 370px;
+  margin: 0 0 0 auto;
+  position: relative;
+  clear: both;
+  background: #fff;
+  /* border-radius: 40px 0px 0px 40px;
+    max-height: calc(100dvh - 53px);
+    min-height: calc(100dvh - 53px); */
+  max-height: calc(100dvh - 134px);
+  min-height: calc(100dvh - 134px);
+  border-radius: 20px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0px 11px 24px 0px rgba(33, 33, 33, 0.1);
+  overflow-x: hidden;
+}
+.flits-widget-popup-inner::-webkit-scrollbar {
+  width: 0px;
+}
+.flits-widget-popup-inner::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.flits-widget-popup-inner::-webkit-scrollbar-thumb {
+  background-color: #000;
+  outline: 1px solid #000;
+}
+.flits-widget-fill-storke-brand {
+  fill: var(--flitsWidgetPrimaryColor);
+  stroke: var(--flitsWidgetPrimaryColor);
+}
+.flits-widget-storke-brand {
+  stroke: var(--flitsWidgetPrimaryColor);
+}
+.flits-widget-fill-brand {
+  fill: var(--flitsWidgetPrimaryColor);
+}
+.flits-widget-popup-main-left {
+  left: 20px !important;
+}
+.flits-widget-popup-main-right {
+  right: 20px !important;
+}
+@media (min-height: 731px) {
+  .flits-widget-popup-inner {
+    max-height: 596px;
+    min-height: 596px;
+  }
+}
+@media (max-height: 710px) {
+  .flits-widget-popup-inner {
+    max-height: calc(100dvh - 105px);
+    min-height: calc(100dvh - 105px);
+  }
+}
+@media (max-width: 480px) {
+  .flits-widget-popup-inner {
+    min-height: 100%;
+    max-height: 100vh;
+    max-height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .flits-widget-popup-main {
+    bottom: 0;
+    width: 100%;
+    right: 0 !important;
+    top: 0;
+    left: 0 !important;
+  }
+  .flits-reward-close-btn {
+    z-index: 999999;
+  }
+  .flits-widget-header {
+    border-radius: 0 0px 40px 40px;
+  }
+  .flits-widget-popup-main {
+    bottom: 1px;
+    right: 0px;
+  }
+  body.flits-reward-widget-open {
+    overflow: hidden !important;
+    /* padding-right: 15px; */
+  }
+  .flits-widget-browser-safari .flits-widget-popup-inner {
+    min-height: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+  }
+}
+.flits-fade-in-animation {
+  animation: fadein 1s;
+}
+.flits-fadeslideIn-animation {
+  animation: flitsfadeSlideIn 0.6s ease;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  /* animation-delay: .2s; */
+  animation-fill-mode: forwards;
+}
+.flits-fadeslideOut-animation {
+  animation: flitsfadeSlideOut 0.3s ease;
+  /* animation-delay:.25s; */
+  animation-fill-mode: forwards;
+  /* transform:translate(-10px); */
+}
+@keyframes flitsfadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translate(20px);
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes flitsfadeSlideOut {
+  0% {
+    opacity: 0;
+    transform: translate(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes flitsFadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes flitsFadeSlideDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}

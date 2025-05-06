@@ -1,0 +1,122 @@
+/* refer freind css start */
+.flits-reward-page-refer-friend .flits-reward-page-header strong {
+  font-weight: 500;
+  line-height: 48px;
+  display: block;
+  color: var(--flitsrewardpageSecondaryTextColor);
+  padding-top: 10px;
+}
+.flits-reward-page-link-copy-btn-main {
+  display: flex;
+  align-items: center;
+  margin: 25px 0 10px;
+}
+.flits-reward-page-link-copy-btn-main
+  input[name="flits_reward_page_referral_link"] {
+  cursor: not-allowed;
+  border: 1px solid var(--flitsrewardpagePrimaryTextColor);
+  width: 80%;
+  padding: 10px !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 10px 0 0 !important;
+  font-size: 16px;
+  line-height: 24px;
+  text-indent: unset;
+  height: auto;
+  color: rgba(100, 100, 100, 1);
+}
+.flits-reward-page-link-copy-btn-main input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.flits-reward-page-link-copy-btn-main .flits-reward-page-link-copy-btn {
+  border: 1px solid var(--flitsrewardpagePrimaryButtonBg);
+  background: var(--flitsrewardpagePrimaryButtonBg);
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;
+  color: var(--flitsrewardpagePrimaryButtonText);
+  cursor: pointer;
+  width: 20%;
+  text-transform: uppercase;
+}
+.flits-reward-page-link-copy-btn svg {
+  width: 14px;
+  height: 11px;
+}
+.flits-reward-page-social-share-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  justify-content: center;
+}
+.flits-reward-page-social-share-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  padding-right: 10px;
+  color: rgba(61, 61, 61, 1);
+}
+.flits-reward-page-link-copy-btn svg path {
+  fill: none;
+  stroke: var(--flitsrewardpagePrimaryButtonText);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 32;
+  stroke-dashoffset: 32;
+  animation: flitsRewardPageDrawTick 1s ease forwards;
+}
+.flits-reward-page-social-share-main {
+  padding: 10px;
+  border-radius: 10px;
+  line-height: 1;
+  cursor: pointer;
+}
+.flits-reward-page-social-share-main:hover {
+  box-shadow: 0px 4px 18px -4px rgba(0, 0, 0, 0.1);
+}
+/* .flits-reward-page-social-share-main svg {
+  width: 24px;
+  height: 24px;
+} */
+/* .flits-reward-page-fb-share-btn.flits-reward-page-social-share-main svg {
+  width: 15px;
+  height: 21px;
+} */
+.flits-reward-page-social-share-main:hover svg {
+  transform: scale(1.2);
+}
+.flits-reward-page-refer-friend .flits-reward-page-banner-image img {
+  object-position: bottom;
+}
+/* refer freind css end */
+
+@keyframes flitsRewardPageDrawTick {
+  0% {
+    stroke-dashoffset: 32;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits-reward-page-social-share-main svg {
+    width: 24px;
+    height: 24px;
+  }
+  .flits-reward-page-social-share-main.flits-reward-page-fb-share-btn svg {
+    width: 28px;
+    height: 28px;
+  }
+  .flits-reward-page-refer-friend .flits-reward-page-banner-image {
+    background-position: center center !important;
+  }
+}

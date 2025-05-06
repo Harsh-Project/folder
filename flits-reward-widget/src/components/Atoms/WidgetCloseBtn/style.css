@@ -1,0 +1,43 @@
+button.flits-reward-close-btn {
+  border-radius: 30px !important;
+  border: 1px solid #eeeeee;
+  background: #eeeeee;
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 21px !important;
+  margin: 0 !important;
+  border-color: var(--flitsWidgetPrimaryColor) !important;
+  background: var(--flitsWidgetPrimaryColor) !important;
+  z-index: 9999999;
+  line-height: normal;
+}
+.flits-reward-close-btn * {
+  font-family:  inherit !important;
+}
+.flits-reward-close-btn svg {
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+}
+.flits-reward-close-btn svg path {
+  stroke: var(--flitsWidgetRewardCloseBtnText);
+}
+.flits-reward-close-btn:hover svg {
+  transition: transform 0.3s ease-in;
+  transform: scale(1.15);
+}
+.flits-widget-popup-close-button-left {
+  left: 20px !important;
+}
+.flits-widget-popup-close-button-right {
+  right: 20px !important;
+}
+@media (max-width: 480px) {
+  button.flits-reward-close-btn {
+    padding: 15px !important;
+  }
+}

@@ -1,0 +1,41 @@
+.flits_chart_container {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+  
+  .flits_chart_title {
+    font-size: 12px;
+    color: var(--contentTextColor);
+    white-space: nowrap;
+  }
+  
+  .flits_p_top {
+    margin-bottom: 3px !important;
+  }
+  
+  .flits_credit_chart {
+    width: 94px;
+    height: 94px;
+    margin: auto;
+  }
+  
+  .flits_credit_chart svg {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  @media screen and (max-width: 1025px) {
+    .flits_credit_chart {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    .flits_credit_chart {
+      width: 56px;
+      height: 56px;
+    }
+  }
+  

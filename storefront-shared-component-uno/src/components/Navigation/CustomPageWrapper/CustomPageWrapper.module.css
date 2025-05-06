@@ -1,0 +1,10 @@
+.flits_tab_box_body {
+  padding: 0 10px;
+  height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .flits_tab_box_body {
+    padding: 10px;
+  }
+}

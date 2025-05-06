@@ -1,0 +1,75 @@
+.flits_row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.customer_custom_field_row {
+  margin-top: 15px;
+}
+
+.flits_row::after,
+.flits_row::before {
+  display: table;
+  content: "";
+}
+
+.flits_row::after {
+  clear: both;
+}
+
+.flits_col_md_6,
+.flits_col_sm_6 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flits_mb_15 {
+  margin-bottom: 15px !important;
+}
+
+.flits_input_wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .flits_width {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flits_col_sm_6 {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .customer_custom_field_row {
+    margin: 0;
+  }
+  .flits_row.customer_custom_field_row > div {
+    margin-bottom: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .flits_input_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid !important;
+    position: relative;
+    align-items: normal;
+    border-color: #dae1e5 !important;
+  }
+}

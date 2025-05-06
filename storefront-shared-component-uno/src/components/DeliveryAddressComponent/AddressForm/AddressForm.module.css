@@ -1,0 +1,29 @@
+.flits_address_form {
+  animation: flitsFadeIn 0.7s;
+}
+
+.flits_input_wrap {
+  position: relative;
+  width: 100%;
+}
+
+.flits_h2 {
+  font-size: 2rem;
+}
+
+.flits_address_form_title {
+  font-weight: 700;
+  margin: 0;
+  color: var(--contentTextColor) !important;
+  margin-bottom: 15px !important;
+  line-height: 1;
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,102 @@
+.flits_order_information {
+  padding: 5px 15px;
+  border-bottom: 1px solid #dae1e5;
+}
+
+.flits_order_information_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.flits_order_information_row:nth-child(2) {
+  display: none;
+}
+
+.flits_order_date {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.flits_order_label {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.flits_order_value {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.flits_view_order_button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.flits_view_order_button span {
+  font-size: 15px;
+  vertical-align: middle;
+  color: var(--contentTextColor);
+}
+
+.flits_view_order_button svg {
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  margin-left: 8px;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  fill: var(--contentTextColor);
+}
+
+.flits_view_order_button.flits_active svg {
+  -webkit-transform: rotate(91deg);
+  transform: rotate(91deg);
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_order_label {
+    font-size: 11px;
+  }
+  .flits_order_date,
+  .flits_order_value,
+  .flits_view_order_button span {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .flits_order_information_row:first-of-type div:nth-child(n + 2) {
+    display: none;
+  }
+  .flits_order_information_row:first-of-type div:last-child {
+    display: block;
+  }
+  .flits_order_information_row:nth-child(2) {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .flits_order_value,
+  .flits_order_date,
+  .flits_view_order_button span,
+  .flits_order_label {
+    font-size: 9px;
+  }
+}

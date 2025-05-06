@@ -1,0 +1,13 @@
+.flits_order_card {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.flits_order_card:first-of-type {
+  margin-top: 0;
+}

@@ -1,0 +1,44 @@
+.flits_address_breakdown {
+  transition: 0.5s all;
+}
+
+.flits_address_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 8px 15px;
+  border-top: 1px solid #dae1e5;
+}
+
+.flits_address_row p:first-of-type {
+  white-space: nowrap;
+}
+
+.flits_strong {
+  font-weight: 700;
+}
+
+.flits_mr_5 {
+  margin-right: 5px !important;
+}
+
+.flits_address_row p {
+  font-size: 15px;
+  color: var(--contentTextColor);
+  margin: 0;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_address_row p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .flits_address_row p {
+    font-size: 9px;
+  }
+}

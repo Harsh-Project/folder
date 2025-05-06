@@ -1,0 +1,20 @@
+.flits_account_body {
+  width: calc(100% - 316px);
+  float: left;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_account_body {
+    width: calc(100% - 260px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_account_body {
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+}

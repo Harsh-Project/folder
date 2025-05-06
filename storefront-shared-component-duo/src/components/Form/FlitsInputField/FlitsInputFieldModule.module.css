@@ -1,0 +1,23 @@
+.flits_input_field[type="email"] {
+  border-radius: 7px;
+  padding: 8px;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  vertical-align: unset;
+  position: relative;
+  margin: 0 !important;
+  cursor: text;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  background: 0 0 !important;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  font-size: 16px;
+  color: var(--contentTextColor) !important;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}

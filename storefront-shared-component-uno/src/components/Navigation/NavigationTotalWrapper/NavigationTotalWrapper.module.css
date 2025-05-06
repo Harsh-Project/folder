@@ -1,0 +1,14 @@
+.flits_tab_box {
+  width: 100%;
+  height: 100%;
+  animation: flitsFadeIn 0.7s;
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

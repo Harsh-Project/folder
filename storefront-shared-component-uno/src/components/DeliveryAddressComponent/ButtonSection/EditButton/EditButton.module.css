@@ -1,0 +1,25 @@
+.flits_action_item {
+  cursor: pointer;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  box-shadow: 0 2px 2px #00000024, 0 1px 5px #0000001f, 0 3px 1px -2px #0003;
+  min-height: 35px;
+  background: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.flits_action_item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--contentTextColor);
+  pointer-events: none;
+}
+
+.flits_action_item:hover svg {
+  fill: var(--contentTextColor);
+}

@@ -1,0 +1,176 @@
+.flits_width {
+  background: rgb(16, 24, 40);
+  border-radius: 8px;
+  padding: 12px;
+  max-width: 405px !important;
+  width: calc(100% - 2.4rem) !important;
+}
+
+.flits_width * {
+  font-family: inherit !important;
+}
+
+/* NotificationCustomPrompt.module.css */
+.flits_bottom_left {
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+}
+
+.flits_bottom_right {
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+}
+
+.flits_bottom_centered {
+  position: fixed !important;
+  animation-name: bottom-centered !important;
+  animation-duration: 0.6s !important;
+  bottom: 0;
+  left: calc(50% - 1.2rem);
+  transform: translateX(-50%) !important;
+}
+
+.flits_centered {
+  position: fixed !important;
+  top: calc(50% - 1.2rem);
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+
+.flits_top_right {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+}
+
+.flits_top_left {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
+
+.flits_top_centered {
+  position: fixed !important;
+  top: 0;
+  left: calc(50% - 1.2rem);
+  transform: translateX(-50%) !important;
+}
+
+.flits_description {
+  display: flex;
+}
+
+.flits_image {
+  width: 60px;
+  height: 60px;
+}
+
+.flits_title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flits_title h2 {
+  margin: 0;
+}
+
+.flits_title p {
+  margin: 0;
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flits_description_p {
+  color: inherit !important;
+  font-size: 16px!important;
+  margin: 0!important;
+  line-height: 1.45;
+  text-transform: none!important;
+}
+
+.flits_title_h2 {
+  font-weight: 600;
+  color: inherit !important;
+  font-size: 18px!important;
+  margin: 0!important;
+  font-family: inherit;
+  line-height: 1.45;
+  text-transform: none!important;
+}
+
+.flits_btn_2 {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.flits_btn_2 button {
+  font-size: 14px;
+  padding: 6px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flits_button_later {
+  color: black;
+  border: none;
+  background-color: white;
+}
+
+.flits_button {
+  top: 8px !important;
+  right: 12px !important;
+}
+
+.flits_button_subscribe {
+  background-color: black;
+  color: white;
+}
+
+.flits_close {
+  color: white;
+  height: 20px !important;
+  width: 20px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_title_h2 {
+    font-size: 16px !important;
+  }.flits_description_p {
+    font-size: 14px !important;
+  }
+  .flits_btn_2 button {
+    font-size: 12px !important;
+  }
+}
+
+@keyframes bottom-centered {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .flits_btn_2 {
+    justify-content: center;
+  }
+}

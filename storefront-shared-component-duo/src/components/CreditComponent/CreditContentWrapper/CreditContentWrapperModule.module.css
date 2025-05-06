@@ -1,0 +1,13 @@
+.flits_store_credit_container {
+  -webkit-animation: flitsFadeIn 0.7s;
+  animation: flitsFadeIn 0.7s;
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

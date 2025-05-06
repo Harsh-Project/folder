@@ -1,0 +1,99 @@
+.flits_modal {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0px !important;
+  border-radius: 10px;
+  opacity: 1;
+  cursor: auto;
+  transform: scale(0.8);
+}
+
+.flits_modal * {
+  font-family: inherit !important;
+}
+
+.flits_close_button {
+  position: absolute !important;
+  top: 2px !important;
+  right: 5px !important;
+  font-size: 30px !important;
+  width: 22px !important;
+  height: 19px !important;
+  font-family: inherit !important;
+  color: rgb(0, 0, 0) !important;
+  cursor: pointer !important;
+  display: none;
+}
+
+.flits_snackbar_popup_box {
+  width: 280px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.flits_snackbar_body {
+  font-size: 14px;
+  color: var(--contentTextColor);
+}
+
+.flits_snackbar_footer {
+  margin-top: 30px;
+}
+
+.flits_ml_5 {
+  margin-left: 5px !important;
+}
+
+.flits_mr_5 {
+  margin-right: 5px !important;
+}
+
+.flits_button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 14px;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2;
+  color: #0009;
+  margin: 0;
+  padding: 10px;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  width: 90px;
+}
+
+.flits_primary_btn {
+  background: var(--primaryButtonBGColor) !important;
+  border: 1px solid var(--primaryButtonBGColor) !important;
+  color: var(--primaryButtonTextColor) !important;
+}
+
+.flits_primary_btn:hover {
+    background: var(--primaryButtonHoverBGColor)!important;
+    border: 1px solid var(--primaryButtonHoverBGColor)!important;
+    color: var(--primaryButtonTextColor)!important;
+}

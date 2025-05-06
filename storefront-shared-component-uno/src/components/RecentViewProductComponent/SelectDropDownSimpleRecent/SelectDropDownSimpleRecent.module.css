@@ -1,0 +1,106 @@
+.flits_select_row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .flits_floating_label {
+    position: relative;
+    margin-top: 40px !important;
+  }
+  
+  .flits_variant_select {
+    min-width: 150px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+  }
+  
+  .flits_floating_label label {
+      font-weight: 400;
+      position: absolute;
+      pointer-events: none;
+      transition: .2s ease all;
+      -moz-transition: .2s ease all;
+      -webkit-transition: .2s ease all;
+      font-size: 15px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden!important;
+      text-overflow: ellipsis;
+      width: 100%;
+      height: 100%;
+      padding: 8px 30px 8px 8px;
+      margin: 0!important;
+      color: var(--contentTextColor);
+      line-height: 1.2;
+      border-radius: 5px;
+  }
+  
+  .flits_floating_change {
+      top: -28px;
+      padding: 0 8px !important;
+      height: auto !important;
+      cursor: pointer;
+      pointer-events: all !important;
+  }
+  
+  .flits_input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 30px 8px 8px;
+    outline: 0;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: unset;
+    position: relative;
+    margin: 0;
+    cursor: auto;
+    border: 1px solid;
+    border-color: var(--borderColor);
+    background: 0 0;
+    color: var(--contentTextColor);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    line-height: 1.2 !important;
+    font-size: 15px;
+    height: 36px;
+  }
+  
+  .flits_highlight {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    margin: 0;
+    color: var(--contentTextColor) !important;
+  }
+  
+  .flits_select_arrow {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .flits_without_select {
+    height: 36px;
+    text-align: center;
+    border-color: var(--borderColor);
+    border-radius: 5px;
+    outline: 0;
+  }
+  

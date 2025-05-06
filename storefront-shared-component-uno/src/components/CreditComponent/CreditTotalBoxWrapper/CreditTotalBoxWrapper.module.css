@@ -1,0 +1,37 @@
+.flits_col_xs_12,
+.flits_col_lg_4,
+.flits_col_md_4,
+.flits_col_sm_4 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flits_col_xs_12 {
+  float: left;
+  width: 33.33%;
+}
+
+.flits_mb_10 {
+  margin-bottom: 10px !important;
+}
+
+.flits_text_center {
+  text-align: center;
+}
+
+.flits_credit_box {
+  padding: 15px;
+  border: 1px solid;
+  border-color: var(--borderColor);
+  border-radius: 5px;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .flits_col_sm_4 {
+    width: 100%;
+    float: left;
+  }
+}

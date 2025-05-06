@@ -1,0 +1,124 @@
+.flits-widget-popup-main .flits-widget-common-box-wrapper {
+  text-align: center;
+}
+.flits-widget-popup-main .flits-widget-login-header {
+  color: rgba(23, 23, 23, 1);
+  color: var(--flitsWidgetPrimaryTextColor);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0 0 8px;
+  text-transform: unset;
+}
+.flits-widget-popup-main .flits-widget-login-subhead {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(23, 23, 23, 1);
+  color: var(--flitsWidgetPrimaryTextColor);
+  margin: 0 0 20px;
+}
+.flits-widget-popup-main .flits-widget-login-description {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: rgba(23, 23, 23, 1);
+  color: var(--flitsWidgetPrimaryTextColor);
+  margin: 0 0 10px;
+}
+/* .flits-widget-login-box-wrapper .flits-widget-login-description{
+    text-align: left;
+} */
+.flits-widget-popup-main .flits-widget-otp-or-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  color: rgba(27, 89, 248, 1);
+  color: var(--flitsWidgetPrimaryLinkColor);
+  cursor: pointer;
+  padding-top: 5px;
+}
+.flits-widget-popup-main .flits-widget-error {
+  color: rgba(224, 69, 69, 1) !important;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 8px;
+  line-height: 14px;
+}
+.flits-widget-popup-main .flits-widget-error:first-letter {
+  text-transform: uppercase;
+}
+.flits-widget-popup-main .flits-widget-otp-app {
+  position: relative;
+  width: 100%;
+  min-height: inherit;
+}
+.flits-widget-login-link p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.flits-widget-login-link p a {
+  text-decoration: underline;
+  display: inline-block;
+  padding-left: 5px;
+  color: var(--flitsWidgetPrimaryLinkColor);
+}
+div[data-flits-login-type="normal"] button.flits-reward-primary-button {
+  min-width: 140px;
+}
+.flits-show-credit-wrapper {
+  box-shadow: 0px 4px 24px -4px #0000001f;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  max-width: 90%;
+  margin: -38px auto 0;
+  box-shadow: var(--flitsWidgetCommonBoxShadow);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.flits-widget-popup-main.scrolled .flits-show-credit-wrapper {
+  margin-top: 20px;
+}
+.flits-no-login-default-view[data-flits-login-type="otp"]
+  .flits-show-credit-wrapper {
+  margin-top: -220px;
+}
+.flits-widget-popup-main.scrolled
+  .flits-no-login-default-view[data-flits-login-type="otp"]
+  .flits-show-credit-wrapper {
+  margin-top: 20px;
+}
+.flits-show-credit-wrapper > .flits-widget-loader-wrap {
+  border-radius: 30px;
+}
+.flits-show-credit-icon {
+  padding: 13px;
+  background: var(--flitsWidgetPrimaryColorBackGround);
+  border-radius: 50%;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.flits-show-credit-icon svg path {
+  fill: var(--flitsWidgetPrimaryColor) !important;
+}
+.flits-show-credit-icon-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flits-show-credit-icon-section h4,
+.flits-show-credit-wrapper h2 {
+  margin: 0;
+  align-items: center;
+}
+
+.flits-show-credit-value {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+}

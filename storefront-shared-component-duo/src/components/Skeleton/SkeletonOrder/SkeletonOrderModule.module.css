@@ -1,0 +1,107 @@
+.flits_order_card {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.flits_order_details {
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  border-radius: 10px 10px 0 0;
+}
+
+.flits_order_information {
+  padding: 5px 15px;
+  border-bottom: 1px solid #dae1e5;
+}
+
+.flits_order_information_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.flits_skeleton_order_box {
+  width: 70px;
+  height: 25px;
+  position: relative;
+}
+
+.flits_skeleton_order_box::after {
+  content: " " !important;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: #dfe3e8;
+  -webkit-animation: SkeletonShimmerAnimation 0.8s linear infinite alternate;
+  animation: SkeletonShimmerAnimation 0.8s linear infinite alternate;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.flits_order_button_grp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.flits_skeleton_order_box {
+  width: 85px;
+  height: 30px;
+  margin: 10px 15px;
+  position: relative;
+}
+
+.flits_skeleton_order_box::after {
+  content: " " !important;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: #dfe3e8;
+  -webkit-animation: SkeletonShimmerAnimation 0.8s linear infinite alternate;
+  animation: SkeletonShimmerAnimation 0.8s linear infinite alternate;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.flits_grand_total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 8px 15px;
+  background: #606060;
+  background: #fff;
+  border-top: 1px solid #dae1e5;
+}

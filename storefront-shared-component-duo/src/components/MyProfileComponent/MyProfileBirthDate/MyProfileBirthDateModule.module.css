@@ -1,0 +1,143 @@
+.flits_dob_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.flits_select_row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.flits_dd_select,
+.flits_mm_select {
+  max-width: 80px;
+}
+
+.flits_input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px 25px 8px 8px;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+  border: 1px solid;
+  border-color: var(--inputBGColor);
+  background: 0 0 !important;
+  color: var(--contentTextColor);
+  -webkit-text-fill-color: var(--contentTextColor);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.2 !important;
+  font-size: 16px;
+  height: 36px;
+  padding: 8px;
+  background: var(--inputBGColor) !important;
+}
+
+.flits_input:disabled {
+  cursor: not-allowed;
+}
+
+.flits_select_arrow {
+  position: absolute;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.flits_input:focus, .flits_input[type="date"]:focus, .flits_input[type="email"]:focus, .flits_input[type="number"]:focus, .flits_input[type="password"]:focus, .flits_input[type="tel"]:focus, .flits_input[type="text"]:focus, .flits_textarea:focus {
+  -webkit-box-shadow: var(--inputBoxShadow);
+  box-shadow: var(--inputBoxShadow);
+  border-color: var(--inputBGColor);
+}
+
+.flits_mx_10 {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_dob_wrap {
+    min-width: auto;
+    width: auto;
+  }
+  .flits_select_row {
+    width: auto;
+  }
+  .flits_mm_select {
+    max-width: 80px;
+  }
+  .flits_dd_select {
+    max-width: 80px;
+  }
+  .flits_input {
+    padding: 8px 25px 8px 8px;
+    background: 0 0!important;
+    border: 0;
+    width: 100%;
+  }
+  .flits_input:disabled {
+    padding: 8px;
+    background: 0 0!important;
+    border: 0;
+    text-align: right;
+    width: 100%;
+  }
+  .flits_mm_select::after,
+  .flits_dd_select::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 1px;
+    background: var(--contentTextColor);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .flits_select_edit::after {
+    display: none;
+  }
+}

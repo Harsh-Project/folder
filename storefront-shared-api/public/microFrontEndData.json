@@ -1,0 +1,367 @@
+{
+  "data": {
+    "accountSettings": {
+      "template": 2,
+      "isCustomized": false,
+      "colorSettings": {
+        "navigationBGColor": "rgb(255, 255, 255)",
+        "navigationTextColor": "rgb(12, 33, 84)",
+        "navigationBorderColor": "rgb(255, 255, 255)",
+        "contentBGColor": "rgb(255, 255, 255, 0)",
+        "contentTextColor": "rgb(0, 0, 0)",
+        "primaryButtonBGColor": "rgb(12, 33, 84)",
+        "primaryButtonTextColor": "rgb(255, 255, 255)",
+        "secondaryButtonBGColor": "rgb(12, 33, 84)",
+        "secondaryButtonTextColor": "rgb(12, 33, 84)",
+        "badgeBGColor": "rgb(12, 33, 84)",
+        "badgeTextColor": "rgb(255, 255, 255)",
+        "linkColor": "rgb(12, 33, 84)"
+      },
+      "isAccountPageInJSON": true,
+      "sections": ["main-account"],
+      "codeVersion": "2.1.5",
+      "themeStoreId": 887
+    },
+    "microfront_remotes": {
+      "pages_template": {
+        "404": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "article": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "blog": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "captcha": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "cart": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "collection": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          },
+          {
+            "component": "storeFrontWishListCollection",
+            "renderType": "remote"
+          }
+        ],
+        "list-collections": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "customers/account": [
+          {
+            "component": "storeFrontNavigation",
+            "renderType": "remote"
+          },
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "customers/activate_account": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "customers/addresses": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "customers/login": [
+          {
+            "component": "storeFrontSocialLogin",
+            "renderType": "remote"
+          }
+        ],
+        "customers/order": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "customers/register": [
+          {
+            "component": "storeFrontSocialLogin",
+            "renderType": "remote"
+          },
+          {
+            "component": "storeFrontReferFriendRegisterPage",
+            "renderType": "remote"
+          },
+          {
+            "component": "storeFrontRegisterPageCustomFields",
+            "renderType": "remote"
+          }
+        ],
+        "customers/reset_password": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "gift_card": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "index": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "metaobject": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "page": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "password": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "policy": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "product": [
+          {
+            "component": "storeFrontWishList",
+            "renderType": "remote"
+          },
+          {
+            "component": "storeFrontRecentlyViewedProductPage",
+            "renderType": "remote"
+          },
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ],
+        "search": [
+          {
+            "component": "storeFrontCreditUsage",
+            "renderType": "remote"
+          }
+        ]
+      },
+      "remotes": {
+        "storeFrontNavigation": {
+          "remoteUrl": "https://localhost:3004/static/store_front_navigation.js",
+          "moduleToLoad": "./storeFrontNavigation",
+          "remoteName": "storeFrontNavigation",
+          "localRoute": "storeFrontNavigation",
+          "skeletonToLoad": "SkeletonNavigation",
+          "states": []
+        },
+        "storeFrontRegisterPageCustomFields": {
+          "remoteUrl": "https://localhost:6001/static/storeFront_myProfile.js",
+          "moduleToLoad": "./storeFrontRegisterPageCustomFields",
+          "remoteName": "storeFrontMyProfile",
+          "localRoute": "storeFrontMyProfile",
+          "required": ["IS_CUSTOM_FIELDS_ENABLE"]
+        },
+        "storeFrontMyProfile": {
+          "remoteUrl": "https://localhost:6001/static/storeFront_myProfile.js",
+          "moduleToLoad": "./storeFrontMyProfile",
+          "remoteName": "storeFrontMyProfile",
+          "localRoute": "storeFrontMyProfile",
+          "skeletonToLoad": "LoadingWithOutShadow",
+          "jsonTemplate": [
+            {
+              "component": "MyProfileForm",
+              "renderType": "local"
+            }
+          ]
+        },
+        "storeFrontChangePassword": {
+          "remoteUrl": "https://localhost:3007/static/store_front_change_password.js",
+          "moduleToLoad": "./storeFrontChangePassword",
+          "remoteName": "storeFrontChangePassword",
+          "localRoute": "storeFrontChangePassword",
+          "skeletonToLoad": "LoadingWithOutShadow",
+          "jsonTemplate": [
+            {
+              "component": "ChangePasswordFormComponent",
+              "renderType": "local"
+            }
+          ]
+        },
+        "storeFrontWishList": {
+          "remoteUrl": "https://localhost:3002/static/storeFront_wishList.js",
+          "moduleToLoad": "./storeFrontWishList",
+          "remoteName": "storeFrontWishList",
+          "localRoute": "storeFrontWishList",
+          "required": ["IS_WISHLIST_ENABLE", "IS_WISHLIST_PAID"]
+        },
+        "storeFrontWishListCollection": {
+          "remoteUrl": "https://localhost:3002/static/storeFront_wishList.js",
+          "moduleToLoad": "./storeFrontWishListCollection",
+          "remoteName": "storeFrontWishList",
+          "localRoute": "storeFrontWishListCollection",
+          "required": ["IS_WISHLIST_ENABLE", "IS_WISHLIST_PAID"]
+        },
+        "storeFrontWishListPage": {
+          "remoteUrl": "https://localhost:3002/static/storeFront_wishList.js",
+          "moduleToLoad": "./storeFrontWishListPage",
+          "remoteName": "storeFrontWishList",
+          "localRoute": "storeFrontWishListPage",
+          "skeletonToLoad": "Loading",
+          "jsonTemplate": [],
+          "required": ["IS_WISHLIST_ENABLE", "IS_WISHLIST_PAID"]
+        },
+        "storeFrontCreditUsage": {
+          "remoteUrl": "https://localhost:3009/static/store_front_credit.js",
+          "moduleToLoad": "./storeFrontCreditUsage",
+          "remoteName": "storeFrontCredit",
+          "localRoute": "storeFrontCreditUsage",
+          "required": ["IS_STORE_CREDIT_PAID", "is_store_credit_enable"],
+          "requiredArray": [["IS_STORE_CREDIT_PAID", "is_store_credit_enable"], ["IS_REFUND_CREDIT_ENABLE"]],
+          "jsonTemplate": []
+        },
+        "storeFrontSocialLogin": {
+          "remoteUrl": "https://localhost:3016/static/store_front_social_login.js",
+          "moduleToLoad": "./storeFrontSocialLogin",
+          "remoteName": "storeFrontSocialLogin",
+          "localRoute": "storeFrontSocialLogin",
+          "required": ["IS_SOCIAL_LOGIN_PAID", "IS_SOCIAL_LOGIN_ENABLE"],
+          "jsonTemplate": []
+        },
+        "storeFrontReferFriendRegisterPage": {
+          "remoteUrl": "https://localhost:3011/static/store_front_refer_friend.js",
+          "moduleToLoad": "./storeFrontReferFriendRegisterPage",
+          "remoteName": "storeFrontReferFriend",
+          "localRoute": "storeFrontReferFriendRegisterPage",
+          "required": ["IS_REFER_PROGRAM_ON", "IS_STORE_CREDIT_PAID", "is_store_credit_enable"]
+        },
+        "storeFrontReferFriend": {
+          "remoteUrl": "https://localhost:3011/static/store_front_refer_friend.js",
+          "moduleToLoad": "./storeFrontReferFriend",
+          "remoteName": "storeFrontReferFriend",
+          "localRoute": "storeFrontReferFriend",
+          "skeletonToLoad": "Loading",
+          "required": ["IS_STORE_CREDIT_PAID", "IS_REFER_PROGRAM_ON", "is_store_credit_enable"]
+        },
+        "storeFrontHowToManageCredit": {
+          "remoteUrl": "https://localhost:3008/static/store_front_how_to_manage_credit.js",
+          "moduleToLoad": "./storeFrontHowToManageCredit",
+          "remoteName": "storeFrontHowToManageCredit",
+          "localRoute": "storeFrontHowToManageCredit",
+          "skeletonToLoad": "Loading",
+          "required": ["is_store_credit_enable","IS_HOW_TO_EARN_CREDIT_DISPLAY", "IS_STORE_CREDIT_PAID"],
+          "jsonTemplate": [
+            {
+              "component": "HowToEarn",
+              "name": "edit",
+              "label": "flits.navigation.how_to_earn_credit",
+              "type": "button"
+            },
+            {
+              "component": "HowToSpent",
+              "name": "edit",
+              "label": "flits.navigation.how_to_spend_credit",
+              "type": "button"
+            },
+            {
+              "component": "FromStoreOwner",
+              "name": "edit",
+              "label": "flits.navigation.from_admin",
+              "type": "button"
+            }
+          ]
+        },
+        "storeFrontCredit": {
+          "remoteUrl": "https://localhost:3009/static/store_front_credit.js",
+          "moduleToLoad": "./storeFrontCredit",
+          "remoteName": "storeFrontCredit",
+          "localRoute": "storeFrontCredit",
+          "skeletonToLoad": "Loading",
+          "required": ["IS_STORE_CREDIT_PAID", "is_store_credit_enable"]
+        },
+        "storeFrontRefundCredit": {
+          "remoteUrl": "https://localhost:3009/static/store_front_credit.js",
+          "moduleToLoad": "./storeFrontRefundCredit",
+          "remoteName": "storeFrontCredit",
+          "localRoute": "storeFrontRefundCredit",
+          "skeletonToLoad": "Loading",
+          "required": ["IS_REFUND_CREDIT_ENABLE"]
+        },
+        "storeFrontOrder": {
+          "remoteUrl": "https://localhost:3014/static/store_front_order.js",
+          "moduleToLoad": "./storeFrontOrder",
+          "remoteName": "storeFrontOrder",
+          "localRoute": "storeFrontOrder",
+          "skeletonToLoad": "Loading"
+        },
+        "storeFrontDeliveryAddress": {
+          "remoteUrl": "https://localhost:3012/static/store_front_delivery_address.js",
+          "moduleToLoad": "./storeFrontDeliveryAddress",
+          "remoteName": "storeFrontDeliveryAddress",
+          "localRoute": "storeFrontDeliveryAddress",
+          "skeletonToLoad": "LoadingWithOutShadow"
+        },
+        "storeFrontRecentlyViewedProducts": {
+          "remoteUrl": "https://localhost:3013/static/store_front_recently_viewed_products.js",
+          "moduleToLoad": "./storeFrontRecentlyViewedProducts",
+          "remoteName": "storeFrontRecentlyViewedProducts",
+          "localRoute": "storeFrontRecentlyViewedProducts",
+          "skeletonToLoad": "Loading",
+          "required": ["is_recently_view_enable"]
+        },
+        "storeFrontRecentlyViewedProductPage": {
+          "remoteUrl": "https://localhost:3013/static/store_front_recently_viewed_products.js",
+          "moduleToLoad": "./storeFrontRecentlyViewedProductPage",
+          "remoteName": "storeFrontRecentlyViewedProducts",
+          "localRoute": "storeFrontRecentlyViewedProductPage",
+          "required": ["is_recently_view_enable"]
+        },
+        "storeFrontTopOrderedProducts": {
+          "remoteUrl": "https://localhost:3015/static/store_front_top_ordered_products.js",
+          "moduleToLoad": "./storeFrontTopOrderedProducts",
+          "remoteName": "storeFrontTopOrderedProducts",
+          "localRoute": "storeFrontTopOrderedProducts",
+          "skeletonToLoad": "LoadingWithOutShadow",
+          "required": ["IS_ADVANCE_DASHBOARD_ENABLE", "IS_ADVANCE_DASHBOARD_PAID"]
+        }
+      }
+    },
+    "multilanguage": "https://localhost:3001/storeFrontLanguageData.json"
+  },
+  "status": true
+}

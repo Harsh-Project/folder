@@ -1,0 +1,91 @@
+.flits_credit_dropdown_contain {
+  display: block;
+  padding-top: 15px;
+}
+
+.flits_row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.flits_row:first-of-type {
+  margin-top: 0;
+}
+
+.flits_row::after,
+.flits_row::before {
+  display: table;
+  content: " ";
+}
+
+.flits_row::after {
+  clear: both;
+}
+
+.flits_col_sm_3,
+.flits_col_sm_4 {
+  padding-left: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+}
+
+.flits_d_flex {
+  display: flex !important;
+}
+
+.flits_align_items_center {
+  -ms-flex-align: center !important;
+  -webkit-box-align: center !important;
+  align-items: center !important;
+}
+
+.flits_row span {
+  display: block;
+  font-size: 14px;
+  color: var(--contentTextColor);
+}
+
+.flits_link {
+  color: var(--linkColor) !important;
+  cursor: pointer !important;
+}
+
+.flits_text_ellipsis {
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flits_text_center {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .flits_col_sm_3 {
+    float: left;
+    width: 25%;
+  }
+  .flits_col_sm_4 {
+    width: 33.33%;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_row span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flits_col_sm_3 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .flits_col_sm_4 {
+    width: 33.33333333%;
+    float: left;
+  }
+}

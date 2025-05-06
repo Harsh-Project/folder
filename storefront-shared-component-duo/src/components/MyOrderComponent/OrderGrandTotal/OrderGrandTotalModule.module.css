@@ -1,0 +1,35 @@
+.flits_grand_total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 8px 15px;
+  background: #606060;
+}
+
+.flits_grand_total p {
+  font-size: 15px;
+  color: #fff;
+  margin: 0;
+}
+
+.flits_strong {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_grand_total p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .flits_grand_total p {
+    font-size: 9px;
+  }
+}

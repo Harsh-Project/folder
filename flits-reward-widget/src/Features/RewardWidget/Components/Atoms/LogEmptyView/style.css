@@ -1,0 +1,38 @@
+.flits-widget-empty-img {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+.flits-widget-empty-img svg {
+  max-width: 100%;
+  height: auto;
+}
+.flits-widget-empty-content {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.flits-widget-popup-main .flits-widget-empty-content h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 0 0 10px;
+  text-transform: unset;
+}
+.flits-widget-popup-main .flits-widget-empty-content p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  margin: 0 0 15px;
+}
+.flits-widget-empty-content a {
+  display: block;
+  color: rgba(27, 89, 248, 1);
+  color: var(--flitsWidgetPrimaryLinkColor);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+}
+a:not([href]) {
+  cursor: pointer;
+}

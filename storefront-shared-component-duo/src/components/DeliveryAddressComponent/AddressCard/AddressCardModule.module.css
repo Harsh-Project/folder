@@ -1,0 +1,101 @@
+.flits_address_card {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px #00000029, 0 2px 10px #0000001f;
+  min-width: 165px;
+  min-height: 150px;
+  width: calc((100% / 3) - 15px);
+  height: 245px;
+  margin: 0 15px 15px 0;
+  padding: 15px;
+  position: relative;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.flits_default_address {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.flits_triangle_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.flits_triangle {
+  float: right;
+  position: relative;
+  border-style: solid;
+  border-width: 0 0 70px 70px;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(249, 0, 0, 0)
+    #25d872;
+  text-align: center;
+}
+
+.flits_triangle_text {
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: -70px;
+  text-transform: uppercase;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  font-size: 12px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.flits_address_details {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.flits_address_item {
+  margin: 0;
+  font-size: 13px;
+  color: var(--contentTextColor);
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 860px) {
+  .flits_address_card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_address_item {
+    font-size: 10px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .flits_address_card {
+    width: calc((100% / 3) - 15px);
+    height: 195px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .flits_address_card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .flits_address_card {
+    width: calc(100% - 15px);
+  }
+}

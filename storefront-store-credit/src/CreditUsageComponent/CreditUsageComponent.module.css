@@ -1,0 +1,55 @@
+.flits_credit_code_div {
+  margin: 10px 5px;
+}
+
+.flits_credit_code_div * {
+  font-family: inherit !important;
+}
+
+.flits_select_row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.flits_select_arrow {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.flits_input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 30px 8px 8px;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: unset;
+    position: relative;
+    margin: 0;
+    cursor: auto;
+    appearance: none;
+    border: 1px solid;
+    border-color: var(--borderColor);
+    background: 0 0;
+    color: var(--contentTextColor);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    line-height: 1.2!important;
+    font-size: 15px;
+    height: 36px;
+    text-align: left !important;
+    white-space: nowrap;
+    overflow: hidden!important;
+    text-overflow: ellipsis;
+}

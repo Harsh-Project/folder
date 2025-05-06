@@ -1,0 +1,32 @@
+.flits_row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.flits_row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.flits_row:before {
+  content: "";
+  display: table;
+}
+
+.flits_text_left {
+  text-align: left;
+}
+
+.flits_col_md_12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .flits_col_md_12 {
+    width: 100%;
+  }
+}

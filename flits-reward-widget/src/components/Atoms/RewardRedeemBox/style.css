@@ -1,0 +1,74 @@
+.flits-reward-redeem-box {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px 0;
+  gap: 20px;
+}
+.flits-reward-redeem-box .flits-reward-redeem-box-btn {
+  padding: 8px 18px 8px 18px;
+  border-radius: 10px;
+  background: #f1f1f1;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  color: #171717;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  min-width: 99px;
+  background: var(--flitsWidgetPrimaryColor);
+  color: var(--flitsWidgetPrimaryButtonText);
+  transition: all 0.3s ease;
+}
+.flits-reward-redeem-box .flits-reward-redeem-box-btn:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.flits-reward-redeem-box-text h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 3px;
+  margin-top: 0;
+  color: #171717;
+  color: var(--flitsWidgetPrimaryTextColor);
+}
+.flits-reward-redeem-box-text p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #86898c;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: var(--flitsWidgetPrimarySecondaryColor);
+}
+.flits-reward-redeem-box-icon {
+  line-height: 1;
+  display: inline-flex;
+}
+.flits-reward-redeem-box-text-icon-wrap {
+  display: flex;
+  align-items: start;
+  width: calc(100% - 100px);
+}
+.flits-reward-redeem-box-text-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+.flits-reward-redeem-box-text-icon-wrap .flits-reward-redeem-box-text {
+  padding-left: 14px;
+}
+.flits-reward-redeem-box.flits-earned-box,
+.flits-reward-redeem-box-btn.flits-earned-box {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.flits-reward-redeem-box .flits-reward-redeem-box-btn svg {
+  height: 12px;
+  width: 15px;
+}
+.flits-reward-redeem-box .flits-reward-redeem-box-btn svg path {
+  stroke: var(--flitsWidgetPrimaryButtonText);
+}

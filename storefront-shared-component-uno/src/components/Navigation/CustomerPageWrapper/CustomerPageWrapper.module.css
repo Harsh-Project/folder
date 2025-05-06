@@ -1,0 +1,48 @@
+.flits_account_page_content {
+    color: rgba(18, 18, 18, 0.75);
+    font-family: inherit;
+    font-weight: 400;
+  }
+
+  .flits_account_page_content * {
+    font-family: inherit !important;
+  }
+
+  .flits_account_page_container {
+    max-width: 100%;
+    width: 1170px;
+    margin: 30px auto 60px;
+    padding: 0 15px;
+    font-size: 15px;
+    font-family: inherit;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  .flits_account_page_container div:empty {
+    display: block;
+  }
+
+  .flits_clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+  @media screen and (min-width: 768px) {
+    .flits_account_page_container {
+      width: 750px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .flits_account_page_container {
+      width: 970px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .flits_account_page_container {
+      width: 1170px;
+    }
+  }

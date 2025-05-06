@@ -1,0 +1,42 @@
+.flits_not_find {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  min-height: 350px;
+  height: calc(100% - 56px);
+  left: 0;
+  right: 0;
+  animation: flitsFadeIn 0.7s;
+}
+
+.flits_not_find p {
+  margin: 0;
+  color: var(--contentTextColor) !important;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .flits_not_find {
+    position: relative;
+  }
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

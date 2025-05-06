@@ -1,0 +1,13 @@
+.flits_order_card {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid;
+    border-color: var(--borderColor);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.flits_order_card:first-of-type {
+    margin: 0;
+}

@@ -1,0 +1,23 @@
+.flits_tab_box_body {
+  padding: 0 10px;
+  height: 100%;
+}
+
+.flits_order_list_container {
+  animation: flitsFadeIn 0.7s;
+}
+
+@media screen and (max-width: 992px) {
+  .flits_tab_box_body {
+    padding: 10px;
+  }
+}
+
+@keyframes flitsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

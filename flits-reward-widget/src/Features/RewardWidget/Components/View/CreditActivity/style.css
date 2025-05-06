@@ -1,0 +1,82 @@
+.flits-widget-credit-log-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.flits-widget-credit-log-box-left {
+  width: 74%;
+}
+.flits-widget-credit-log-box-left h2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: rgba(23, 23, 23, 1);
+  margin: 0 0 3px;
+}
+.flits-widget-credit-log-box-left p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  color: rgba(134, 137, 140, 1);
+  margin: 0;
+}
+.flits-widget-credit-log-box-right {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+  color: rgba(134, 137, 140, 1);
+  width: 26%;
+}
+.flits-widget-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.flits-widget-pagination li {
+  margin: 0 10px;
+}
+.flits-widget-pagination li button {
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.flits-widget-pagination li.active button {
+  background: var(--flitsWidgetPrimaryColor);
+  color: var(--flitsWidgetActivityBtnText);
+}
+.flits-widget-activity-tab-head {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid var(--flitsWidgetPrimaryColor);
+  width: 100%;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.flits-widget-activity-tab {
+  padding: 8px 14px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  transition: background-color 0.3s ease;
+  color: rgba(102, 102, 102, 1);
+  text-align: center;
+}
+.flits-widget-activity-tab.active {
+  background: rgba(213, 212, 212, 1);
+  background: var(--flitsWidgetPrimaryColor);
+  box-shadow: 1px 0px 2px 0px rgba(102, 102, 102, 0.1);
+  color: #fff;
+  color: var(--flitsWidgetActivityBtnText);
+  transition: background-color 0.3s ease;
+}
+.flits-widget-pagination[rel="pages-1"] {
+  display: none;
+}

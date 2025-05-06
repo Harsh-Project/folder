@@ -1,0 +1,152 @@
+.flits-reward-close-btn {
+  /* position: relative; */
+}
+.flits-reward-button {
+  z-index: 9999999;
+}
+.flits-reward-widget-root-container:not(.flits-opening-anim-done)
+  .flits-reward-button {
+  animation: flitsFadeScaleIn 0.2s ease;
+  animation-delay: 0.15s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-iteration-count: 1;
+}
+/* .flits-widget-popup-main.active + .flits-reward-close-btn:before{
+    display: none;
+}
+.flits-reward-close-btn:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  width: 0;
+  height: 0;
+  background-color: var(--flitsWidgetPrimaryColor);
+  border-radius: 40px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: rippleup 0.2s ease-out forwards;
+}
+.flits-reward-widget-root-container:not(.flits-opening-anim-done) .flits-reward-button{
+    animation:flitsFadeScaleIn .2s ease;
+    animation-delay: .15s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    animation-iteration-count: 1;
+}
+.flits-reward-button:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--flitsWidgetPrimaryColor);
+    border-radius: 40px;
+    transform: translate(-50%, -50%);
+    width: 444px;
+    height: 163vh;
+    height: 163dvh;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+}
+.flits-widget-popup-main.active + .flits-reward-button:before{
+    animation: rippledown 0.2s ease-out forwards;
+    z-index: 999999;
+    top: 30px;
+    left: 70px;
+    visibility: visible;
+} */
+#preview-bar-iframe {
+  z-index: 9999 !important;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rippleup {
+  0% {
+    width: 145px;
+    height: 60px;
+    opacity: 0;
+  }
+  100% {
+    width: 648px;
+    height: 163vh;
+    height: 163dvh;
+    opacity: 1;
+  }
+}
+@keyframes rippledown {
+  0% {
+    width: 648px;
+    height: 163vh;
+    height: 163dvh;
+    opacity: 1;
+  }
+  90% {
+    border-radius: 50%;
+  }
+  100% {
+    width: 145px;
+    height: 60px;
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+@keyframes flitsFadeScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+@media (max-width: 480px) {
+  #smile-ui-lite-container {
+    z-index: 9999 !important;
+  }
+  .flits-reward-button:before {
+    width: 200vw;
+    height: 200vh;
+    height: 200dvh;
+  }
+  @keyframes rippleup {
+    0% {
+      width: 145px;
+      height: 60px;
+      opacity: 0;
+    }
+    100% {
+      width: 200vw;
+      height: 200vh;
+      height: 200dvh;
+      opacity: 1;
+    }
+  }
+  @keyframes rippledown {
+    0% {
+      width: 200vw;
+      height: 200vh;
+      height: 200dvh;
+      opacity: 1;
+    }
+    90% {
+      border-radius: 50%;
+    }
+    100% {
+      width: 145px;
+      height: 60px;
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+}

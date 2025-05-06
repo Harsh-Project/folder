@@ -1,0 +1,100 @@
+.flits-how-it-works-main {
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e2e259;
+  box-shadow: 0px 4px 24px -4px #0000001f;
+  box-shadow: var(--flitsWidgetCommonBoxShadow);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 30px 20px;
+  box-shadow: var(--flitsWidgetCommonBoxShadow);
+  animation: flitsFadeSlideUp 0.3s ease-in;
+}
+.flits-widget-login-default-view .flits-how-it-works-main {
+  bottom: 0;
+}
+.flits-how-it-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flits-how-it-head-left p {
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  text-align: left;
+}
+.flits-how-it-head-left {
+  display: flex;
+  align-items: center;
+}
+.flits-how-it-head-close {
+  cursor: pointer;
+}
+.flits-how-it-body {
+  padding: 20px 0;
+}
+.flits-line-container {
+  display: flex;
+  align-items: center;
+}
+.flits-number {
+  margin: 0 10px;
+  background: #f6f5f5;
+  box-shadow: 0px 4px 24px -4px #0000001f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #171717;
+  box-shadow: var(--flitsWidgetCommonBoxShadow);
+  background: var(--flitsWidgetPrimaryColor);
+  color: var(--flitsWidgetPrimaryButtonText);
+}
+.flits-line {
+  flex-grow: 1;
+  border-bottom: 2px dashed black;
+  margin: 0 5px;
+  display: inline-block !important;
+}
+.flits-line-words {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.flits-line-word {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  color: #86898c;
+  width: 33.3333%;
+  color: var(--flitsWidgetPrimarySecondaryColor);
+  text-align: left;
+}
+.flits-line-words .flits-line-word:nth-child(2) {
+  text-align: center;
+}
+.flits-line-words .flits-line-word:nth-child(3) {
+  text-align: center;
+  margin-right: -15px;
+}
+.flits-how-it-head-close svg {
+  width: 10px;
+  height: 10px;
+}
+.flits-how-it-head-close:hover svg {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}

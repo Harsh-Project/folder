@@ -1,0 +1,13 @@
+.flits-reward-page-empty-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.flits-reward-page-empty-content a {
+    margin: 0 auto;
+}
+
+.flits-reward-page-empty-content div {
+    margin-bottom: 20px;
+}

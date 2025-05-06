@@ -1,0 +1,42 @@
+export const handleClose = (
+  dispatch,
+  setLastNameForm,
+  setModal,
+  setLinkForm,
+  setContactForm,
+  setEmailForm,
+  setFirstNameForm,
+  setForm,
+  setMessageForm,
+  setReasonForm,
+  setContactError,
+  setEmailError,
+  setReasonError,
+  setMessageError,
+  setLinkError
+) => {
+  dispatch(setForm(false));
+  dispatch(
+    setFirstNameForm(
+      window?.flitsThemeAppExtensionObjects?.customer?.first_name
+    )
+  );
+  dispatch(
+    setLastNameForm(window?.flitsThemeAppExtensionObjects?.customer?.last_name)
+  );
+  dispatch(setReasonForm(""));
+  dispatch(setMessageForm(""));
+  dispatch(setLinkForm(""));
+  dispatch(
+    setContactForm(window?.flitsThemeAppExtensionObjects?.customer?.contact)
+  );
+  dispatch(
+    setEmailForm(window?.flitsThemeAppExtensionObjects?.customer?.email)
+  );
+  setModal(false);
+  dispatch(setContactError(null));
+  dispatch(setEmailError(null));
+  dispatch(setReasonError(null));
+  dispatch(setMessageError(null));
+  dispatch(setLinkError(null));
+};

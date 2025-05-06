@@ -1,0 +1,74 @@
+.flits_credit_category_box {
+  width: auto;
+  border-radius: 7px;
+  padding: 2px 15px;
+  margin: 0 15px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.flits_credit_category_box:first-of-type {
+  margin-left: 0;
+}
+
+.flits_spent {
+  background: var(--spent);
+}
+
+.flits_credit_category_label {
+  font-size: 12px;
+  color: #fff;
+  margin: 0;
+}
+
+.flits_credit_category_value {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+}
+
+.flits_redirect_link {
+  position: absolute;
+  font-size: 14px;
+  bottom: -25px;
+  font-weight: 500;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: var(--contentTextColor);
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1025px) {
+  .flits_credit_category_value {
+    font-size: 12px;
+  }
+  .flits_credit_category_label {
+    font-size: 10px;
+  }
+  .flits_redirect_link {
+    font-size: 12px;
+    bottom: -25px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .flits_credit_category_value {
+    font-size: 10px;
+  }
+  .flits_redirect_link {
+    font-size: 10px;
+    bottom: -20px;
+  }
+  .flits_credit_category_label {
+    font-size: 8px;
+  }
+  .flits_credit_category_box {
+    padding: 2px 10px;
+    margin: 0 8px;
+  }
+}
+

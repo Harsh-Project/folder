@@ -1,0 +1,164 @@
+.flits-widget-popup-main
+  .flits-widget-point-section
+  .flits-widget-section-head
+  h2 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 10px 0 10px;
+  color: var(--flitsWidgetPrimaryTextColor);
+  text-transform: unset;
+}
+.flits-widget-popup-main .flits-widget-section-head p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  margin: 0 0 20px;
+}
+.flits-widget-inside-body {
+  padding: 20px;
+}
+.flits-widget-popup-main .flits-widget-inside-body-head {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  color: #171717;
+  padding: 10px 0;
+  color: var(--flitsWidgetPrimaryTextColor);
+}
+.flits-widget-popup-main .flits-reward-birth-terms {
+  display: block;
+  margin-top: 5px;
+}
+.defualt-view-wrapper.hide {
+  display: none;
+}
+.flits-widget-sticky-footer {
+  display: block !important;
+  /* padding: 40px; */
+  padding: 0;
+  background: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.77) -127.85%,
+    #ffffff 124.05%
+  );
+  position: sticky;
+  bottom: 0;
+}
+.flits-no-login-default-view[data-flits-login-type="otp"]
+  .flits-widget-otp-main {
+  margin-top: -220px;
+}
+.flits-widget-popup-main.scrolled
+  .flits-no-login-default-view[data-flits-login-type="otp"]
+  .flits-widget-otp-main {
+  margin-top: 20px;
+}
+.flits-no-login-default-view[data-flits-login-type="otp"] .flits-widget-header {
+  padding-bottom: 242px;
+  -webkit-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  -webkit-transform: translate3d(0px, calc(var(--scroll, 0) * -200px), 0px);
+  transform: translate3d(0px, calc(var(--scroll, 0) * -242px), 0px);
+  will-change: transform;
+}
+.flits-no-login-default-view[data-flits-login-type="normal"]
+  .flits-widget-header {
+  -webkit-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  -webkit-transform: translate3d(0px, calc(var(--scroll, 0) * -200px), 0px);
+  transform: translate3d(0px, calc(var(--scroll, 0) * -200px), 0px);
+  will-change: transform;
+}
+.flits-widget-popup-main input::placeholder {
+  font-size: 14px;
+  line-height: 17px;
+  color: #86898c;
+  color: --var(flitsWidgetPrimarySecondaryColor);
+}
+.flits-widget-popup-main .flits-widget-fixed-header h3 {
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+  margin: 0;
+  text-transform: unset;
+}
+.flits-widget-popup-main.scrolled .flits-widget-fixed-header h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+  height: auto;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 1px;
+  font-weight: 300;
+  color: var(--flitsWidgetHeaderText);
+  text-transform: unset;
+}
+.flits-widget-fixed-header {
+  opacity: 0;
+  background: var(--flitsWidgetPrimaryColor);
+  position: sticky;
+  top: 0;
+  height: 0;
+  width: 0;
+}
+.flits-widget-popup-main.scrolled .flits-widget-fixed-header {
+  opacity: 1;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  z-index: 9;
+}
+.flits-widget-otp-main > .flits-widget-loader-wrap {
+  border-radius: 30px;
+}
+.flits-widget-otp-step-3-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.flits-widget-otp-step-3-header svg {
+  margin-right: 10px;
+}
+.flits-widget-otp-step-3-header svg path {
+  stroke: var(--flitsWidgetHeaderText);
+}
+.flits-widget-browser-safari
+  .flits-no-login-default-view[data-flits-login-type="otp"]
+  .flits-widget-header,
+.flits-widget-browser-safari
+  .flits-no-login-default-view[data-flits-login-type="normal"]
+  .flits-widget-header {
+  -webkit-transition: none;
+  transition: none;
+}
+.flits-widget-popup-main .flits-how-it-works {
+  color: #1b59f8;
+  color: var(--flitsWidgetPrimaryLinkColor);
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: left;
+  margin: 5px auto 0;
+  text-align: center;
+  cursor: pointer;
+}
+.flits-widget-popup-main .flits-how-it-works:hover {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+@supports (-webkit-touch-callout: none) {
+  .flits-widget-browser-safari
+    .flits-no-login-default-view[data-flits-login-type="otp"]
+    .flits-widget-header,
+  .flits-widget-browser-safari
+    .flits-no-login-default-view[data-flits-login-type="normal"]
+    .flits-widget-header {
+    -webkit-transition: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,86 @@
+.flits_refund_tab_header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: var(--contentTextColor);
+  justify-content: space-evenly;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 30px;
+  background: transparent;
+  border: 1px solid;
+  border-color: var(--borderColor);
+}
+
+.flits_refund_credit_svg_section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flits_refund_svg {
+  margin-right: 8px;
+}
+
+.flits_refund_svg svg {
+  width: 50px;
+  height: 50px;
+}
+
+.flits_refund_svg_text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.flits_refund_svg_text_1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.flits_refund_svg_text_2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.flits_refund_credit_header_divider {
+  background-color: #c4c4c4;
+  width: 1px;
+}
+
+.flits_refund_credit {
+  font-size: 16px;
+  font-weight: 700;
+  align-self: center;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .flits_refund_tab_header {
+    border-radius: 5px;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flits_refund_tab_header {
+    border-radius: 5px;
+    margin-top: 0px;
+  }
+  .flits_refund_svg_text_1 {
+    font-size: 14px;
+  }
+  .flits_refund_svg_text_2 {
+    font-size: 12px;
+  }
+  .flits_refund_credit {
+    font-size: 14px;
+  }
+  .flits_refund_svg svg {
+    height: 42px;
+    width: 42px;
+  }
+}

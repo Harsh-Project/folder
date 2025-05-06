@@ -1,0 +1,17 @@
+.flits_tab_box_body {
+  padding: 0 10px;
+  height: 100%;
+}
+
+.flits_read_input input:-webkit-autofill,
+.flits_read_input input:-webkit-autofill:hover, 
+.flits_read_input input:-webkit-autofill:focus, 
+.flits_read_input input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+@media screen and (max-width: 992px) {
+  .flits_tab_box_body {
+    padding: 10px;
+  }
+}

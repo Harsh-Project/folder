@@ -1,0 +1,441 @@
+.flits_skeleton_account_container {
+  display: block;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 30px auto;
+  color: var(--contentTextColor);
+  line-height: 1.45;
+  max-width: 1170px;
+  width: 100%;
+  height: 740PX;
+  position: relative
+}
+
+.flits_skeleton_desktop {
+  position: relative;
+  width: 100%
+}
+
+.flits_skeleton_navigation_header .flits_skeleton_user_box {
+  width: calc(100% - 81px)
+}
+
+.flits_skeleton_navigation_header .flits_skeleton_user_box .flits_skeleton_user_name {
+  width: 58%;
+  height: 29px;
+  margin-bottom: 5px
+}
+
+.flits_skeleton_navigation_header .flits_skeleton_user_box .flits_skeleton_time {
+  width: 52%;
+  height: 20px
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box {
+  margin: 15px 0;
+  width: 100%
+}
+
+.flits_skeleton_navigation_header {
+  width: 100%;
+  background: 0 0;
+  padding: 15px;
+  border-radius: 25px;
+  display: -webkit_box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: relative;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12)
+}
+
+.flits_skeleton_user_avatar {
+  -webkit-mask-image: -webkit-radial-gradient(white, #000);
+  margin-right: 20px;
+  width: 61px;
+  height: 61px;
+  border-radius: 100%;
+  display: -webkit_box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden
+}
+
+.flits_skeleton_desktop .flits_skeleton_greeting_header {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width: calc(100% - 445px);
+  height: 43px;
+  margin-left: auto;
+  margin-right: 60px;
+  text-align: center
+}
+
+.flits_skeleton_desktop .flits_skeleton_greeting_header * {
+  visibility: hidden !important
+}
+
+.flits_skeleton_desktop .flits_skeleton_menu_nav {
+  width: 286px;
+  border-radius: 25px;
+  background-color: #ffff;
+  float: left;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  position: relative;
+  top: -88px
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_divider {
+  height: 0;
+  margin: 8px 0;
+  overflow: hidden;
+  border-top: 2px solid #e9ecef
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item {
+  padding: 5px 35px;
+  position: relative;
+  overflow: hidden;
+  height: 33px;
+  width: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item:nth-last-child(2) {
+  margin-bottom: 35px
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_1 {
+  width: 50%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_2 {
+  width: 70%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_3 {
+  width: 50%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_4 {
+  width: 88%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_5 {
+  width: 56%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_6 {
+  width: 70%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_7 {
+  width: 51%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_8 {
+  width: 56%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_9 {
+  width: 61%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_10 {
+  width: 56%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_11 {
+  width: 75%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_12 {
+  width: 42%;
+  height: 100%
+}
+
+.flits_skeleton_desktop .flits_skeleton_account_body {
+  width: calc(100% - 316px);
+  float: left;
+  margin-left: 30px;
+  height: 554px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  padding: 20px;
+  border-radius: 10px
+}
+
+.flits_skeleton_mobile {
+  display: none
+}
+
+.flits_skeleton_mobile .flits_skeleton_slider_menu_nav {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  border-radius: 5px;
+  padding: 27px 15px;
+  height: 100px
+}
+
+.flits_skeleton_mobile .flits_skeleton_menus_list_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.flits_skeleton_mobile .flits_skeleton_menus_list_box .flits_skeleton_menu_item {
+  width: calc(100% / 3);
+  text-align: center
+}
+
+.flits_skeleton_mobile .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_1 {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 10px
+}
+
+.flits_skeleton_mobile .flits_skeleton_menus_list_box .flits_skeleton_menu_item .flits_skeleton_box_2 {
+  width: calc(100% - 30px);
+  height: 15px;
+  margin: auto
+}
+
+.flits_skeleton_mobile .flits_skeleton_mobile_account_body {
+  width: 100%;
+  margin-top: 50px;
+  height: 350px;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  border-radius: 5px
+}
+
+.flits_skeleton_mobile .flits_skeleton_navigation_header {
+  width: 100%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  display: none
+}
+
+.flits_skeleton_mobile .flits_skeleton_navigation_header .flits_skeleton_user_avatar {
+  margin-right: 0;
+  width: 61px;
+  height: 61px;
+  border-radius: 100%;
+  background-color: rgb(153 153 153);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -30.5px;
+  position: absolute
+}
+
+.flits_skeleton_mobile .flits_skeleton_navigation_header .flits_skeleton_user_box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 23px;
+  width: 100%;
+  align-items: center
+}
+
+.flits_skeleton_mobile .flits_skeleton_navigation_header .flits_skeleton_user_box .flits_skeleton_greeting_mobile {
+  width: 90px;
+  height: 20px;
+  margin-bottom: 3px;
+  font-size: 0 !important
+}
+
+.flits_skeleton_mobile .flits_skeleton_navigation_header .flits_skeleton_user_box .flits_skeleton_user_name_mobile {
+  width: 110px;
+  height: 15px;
+  font-size: 0 !important
+}
+
+.flits_skeleton_mobile .flits_skeleton_mobile_container_box {
+  width: 100%;
+  height: 350px;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  border-radius: 5px;
+  margin-top: 25px
+}
+
+.flits_skeleton_box {
+  position: relative
+}
+
+.flits_skeleton_box * {
+  visibility: hidden !important
+}
+
+.flits_skeleton_box:after {
+  content: " " !important;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: #dfe3e8;
+  -webkit-animation: SkeletonShimmerAnimation .8s linear infinite alternate;
+  animation: SkeletonShimmerAnimation .8s linear infinite alternate;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0
+}
+
+@-webkit-keyframes SkeletonShimmerAnimation {
+  0% {
+    opacity: .45
+  }
+
+  to {
+    opacity: .9
+  }
+}
+
+@keyframes SkeletonShimmerAnimation {
+  0% {
+    opacity: .45
+  }
+
+  to {
+    opacity: .9
+  }
+}
+
+.flits_skeleton_account_container .flits_loading_div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.flits_skeleton_account_container .flits_loading_div .flits_spinner {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 5px solid #dee2e6;
+  border-right: 5px solid #dee2e6;
+  border-bottom: 5px solid #dee2e6;
+  border-left: 5px solid rgb(255 255 255);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: FlitsSpinnerAnimation 1.1s infinite linear;
+  animation: FlitsSpinnerAnimation 1.1s infinite linear
+}
+
+.flits_skeleton_account_container .flits_loading_div .flits_spinner:after {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px
+}
+
+.flits_skeleton_account_container .flits_loading_div .flits_loading_text {
+  margin: 0;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #000
+}
+
+@-webkit-keyframes FlitsSpinnerAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes FlitsSpinnerAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@media (max-width:1025px) {
+  .flits_skeleton_desktop .flits_skeleton_navigation_header .flits_skeleton_user_avatar {
+    width: 50px;
+    height: 50px
+  }
+
+  .flits_skeleton_desktop .flits_skeleton_navigation_header .flits_skeleton_user_box {
+    width: calc(100% - 71px)
+  }
+
+  .flits_skeleton_desktop .flits_skeleton_menu_nav {
+    width: 230px
+  }
+
+  .flits_skeleton_desktop .flits_skeleton_menus_list_box .flits_skeleton_menu_item {
+    height: 30px;
+    padding: 5px 28px
+  }
+
+  .flits_skeleton_desktop .flits_skeleton_account_body {
+    height: 510px;
+    width: calc(100% - 260px)
+  }
+}
+
+@media (max-width:767px) {
+  .flits_skeleton_account_container {
+    height: auto;
+    margin-bottom: 0
+  }
+
+  .flits_skeleton_desktop {
+    display: none
+  }
+
+  .flits_skeleton_mobile {
+    display: block
+  }
+}

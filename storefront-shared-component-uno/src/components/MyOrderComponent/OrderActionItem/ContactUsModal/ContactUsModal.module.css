@@ -1,0 +1,139 @@
+.flits_modal {
+  margin: 70px 15px 30px !important;
+  padding: 20px !important;
+  background: #fff;
+  border-radius: 5px;
+  line-height: 1.5;
+  width: auto;
+  overflow: visible !important;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.flits_modal * {
+  font-family: inherit !important;
+}
+
+.flits_popup_icon_text {
+  margin: auto auto 20px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.flits_h3 {
+  line-height: 1.2;
+}
+
+.flits_close_button {
+  position: absolute !important;
+  right: 9px;
+  top: 5px;
+  font-size: 30px !important;
+  width: 22px !important;
+  height: 19px !important;
+  font-family: inherit !important;
+  color: rgb(0, 0, 0) !important;
+  cursor: pointer !important;
+}
+
+.flits_popup_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  box-shadow: 0 0 8px #5fbeaa6e;
+  position: absolute;
+  top: -35px;
+  background: var(--primaryButtonBGColor)!important;
+}
+
+.flits_popup_icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+.flits_popup_text {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.flits_popup_header_title {
+  color: var(--contentTextColor,#656565);
+  margin: auto;
+  font-size: 22px;
+}
+
+.flits_popup_header_sub_text {
+  color: var(--contentTextColor,#656565);
+  margin: 10px 0 0;
+}
+
+.flits_contact_form {
+  margin: 0!important;
+}
+
+.flits_row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.flits_row::before {
+  content: " ";
+  display: table;
+}
+
+.flits_row::after {
+  content: " ";
+  display: table;
+}
+
+.flits_row::after {
+  clear: both;
+}
+
+.flits_input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  min-width: 120px;
+  width: auto;
+  border-radius: 50px;
+  appearance: none;
+  padding: 8px 10px;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  border: 1px solid var(--primaryButtonBGColor);
+  background: var(--primaryButtonBGColor);
+  color: var(--primaryButtonTextColor);
+}
+
+.flits_input:hover {
+  border: 1px solid var(--primaryButtonHoverBGColor)!important;
+  background: var(--primaryButtonHoverBGColor)!important;
+  color: var(--primaryButtonTextColor)!important;
+}
+
+@media screen and (min-width: 700px) {
+  .flits_modal {
+    max-width: 680px !important;
+    margin: 70px auto 0 !important;
+  }
+}
