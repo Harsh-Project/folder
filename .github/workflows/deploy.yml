@@ -12,12 +12,16 @@ on:
         description: 'Code build version'
         required: false
         type: string
-      shopify1:
+      shopify_store:
         description: 'Shopify store'
-        required: false
+        required: true
         type: string
-      shopify2:
+      shopify_access_tokens:
         description: 'Shopify'
+        required: true
+        type: string
+      shopify_unique_identifier:
+        description: 'Shopify unique identifier'
         required: false
         type: string
 
@@ -210,9 +214,10 @@ jobs:
 
       - name: Run Shopify upload script
         env:
-          SHOPIFY1: ${{ github.event.inputs.shopify1 }}      # e.g. your-store.myshopify.com
-          SHOPIFY2: ${{ github.event.inputs.shopify2 }}
-        run: node .github/workflows/scripts/uploadStorefrontFiles.js ./extracted
+          SHOPIFY_STORE: ${{ github.event.inputs.shopify_store }}      # e.g. your-store.myshopify.com
+          SHOPIFY_ACCESS_TOKENS: ${{ github.event.inputs.shopify_access_tokens }}
+          SHOPIFY_UNIQUE_IDENTIFIER: ${{ github.event.inputs.shopify_unique_identifier }}
+        run: node .github/workflows/scripts/uploadFilesToShopify.js ./extracted
 
       - name: Upload logs
         uses: actions/upload-artifact@v4
@@ -221,48 +226,3 @@ jobs:
           path: |
             success.log
             failure.log
-
-        # Upload the zip as a workflow artifact:contentReference[oaicite:8]{index=8}
-
-
-  # (Optional) Upload to Shopify
-  # deploy_shopify:
-  #   name: Deploy to Shopify (optional)
-  #   needs: assemble
-  #   runs-on: ubuntu-latest
-  #   if: ${{ github.ref == 'refs/heads/main' }}
-  #   steps:
-  #     - name: Download storefront-files artifact
-  #       uses: actions/download-artifact@v4
-  #       with:
-  #         path: storefront-files.zip
-
-  #     - name: Upload to Shopify
-  #       run: |
-  #         # Example: use Shopify CLI or API to upload
-  #         shopify app upload --path storefront-files.zip --shop ${{ secrets.SHOPIFY_STORE_URL }} --password ${{ secrets.SHOPIFY_API_PASSWORD }}
-  #       env:
-  #         SHOPIFY_STORE_URL: ${{ secrets.SHOPIFY_STORE_URL }}
-  #         SHOPIFY_API_PASSWORD: ${{ secrets.SHOPIFY_API_PASSWORD }}
-
-  # (Optional) Upload to AWS S3
-  # deploy_s3:
-  #   name: Upload to S3 (optional)
-  #   needs: assemble
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Download storefront-files artifact
-  #       uses: actions/download-artifact@v4
-  #       with:
-  #         path: storefront-files.zip
-
-  #     - name: Configure AWS credentials
-  #       uses: aws-actions/configure-aws-credentials@v2
-  #       with:
-  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         aws-region: us-east-1
-
-  #     - name: Upload to S3
-  #       run: aws s3 cp storefront-files.zip s3://my-shopify-artifacts/storefront-files-${{ github.sha }}.zip
-        # Adjust the S3 bucket/path as needed.
