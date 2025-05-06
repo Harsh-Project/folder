@@ -209,6 +209,14 @@ jobs:
       - name: Unzip storefront-files
         run: unzip -o storefront-files.zip -d ./extracted
 
+      - name: Move all files from all subdirectories to extracted root
+        run: |
+          # Move all files from any nested subdirectory to ./extracted root
+          find ./extracted -mindepth 2 -type f -exec mv -t ./extracted {} +
+
+          # Remove all empty subdirectories after moving files
+          find ./extracted -mindepth 1 -type d -empty -delete
+
       - name: Install dependencies for upload script
         run: npm install axios form-data mime-types p-limit
 
