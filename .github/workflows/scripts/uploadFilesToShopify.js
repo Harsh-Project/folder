@@ -195,7 +195,7 @@ async function main() {
     token: ACCESS_TOKENS[tokenIndex++ % ACCESS_TOKENS.length],
   }));
 
-  const tokenQueues = ACCESS_TOKENS.map((token) => {
+  const workers = ACCESS_TOKENS.flatMap((token) => {
     const assignedFiles = queue.filter((q) => q.token === token);
     const batches = [];
 
@@ -203,24 +203,7 @@ async function main() {
       batches.push(assignedFiles.slice(i, i + CONCURRENCY_PER_TOKEN));
     }
 
-    return { token, batches };
-  });
-
-  function delay(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  await Promise.all(
-    tokenQueues.map(async ({ token, batches }) => {
-      let batchCount = 0;
-
-      for (let i = 0; i < batches.length; i++) {
-        if (batchCount > 0 && batchCount % MAX_BATCHES_PER_MINUTE === 0) {
-          console.log(`⏳ Waiting 60s for token: ${token}...`);
-          await delay(60000);
-        }
-
-        const batch = batches[i];
+    return batches.map((batch) => async () => {
         await Promise.all(
           batch.map(async ({ file }) => {
             try {
@@ -231,11 +214,12 @@ async function main() {
             }
           })
         );
+    });
+  });
 
-        batchCount++;
+  for (const batch of workers) {
+    await batch();
       }
-    })
-  );
 
   // === Summary ===
   console.log("\n=== ✅ Upload Summary ===");
