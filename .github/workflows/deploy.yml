@@ -221,4 +221,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: upload-log
-          path: upload-log.md
+          path: upload-log.json
+
+      - name: Add artifact download link to summary
+        run: echo "Download the [upload-log artifact](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) from the Actions page." >> $GITHUB_STEP_SUMMARY
+
