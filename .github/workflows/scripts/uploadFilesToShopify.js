@@ -3,10 +3,9 @@ const path = require("path");
 const axios = require("axios");
 const FormData = require("form-data");
 
-
 // === CONFIGURATION ===
-const SHOP_DOMAIN = process.env.SHOPIFY_STORE; // Replace with your domain
-const ACCESS_TOKENS = JSON.parse(process.env.SHOPIFY_ACCESS_TOKENS ?? []); // Replace with real tokens
+const SHOP_DOMAIN = process.env.SHOPIFY_STORE;
+const ACCESS_TOKENS = JSON.parse(process.env.SHOPIFY_ACCESS_TOKENS ?? []);
 const API_VERSION = "2025-04";
 const UPLOAD_DIR = process.argv[2];
 const CONCURRENCY_PER_TOKEN = 5;
@@ -21,42 +20,77 @@ if (!UPLOAD_DIR) {
 // === HELPERS ===
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+class RateLimiter {
+  constructor(limitPerMinute) {
+    this.limit = limitPerMinute;
+    this.queue = [];
+    this.active = 0;
+    setInterval(() => this.processQueue(), 60000 / this.limit);
+  }
+
+  processQueue() {
+    if (this.queue.length && this.active < this.limit) {
+      const { fn, resolve, reject } = this.queue.shift();
+      this.active++;
+      fn()
+        .then(resolve)
+        .catch(reject)
+        .finally(() => {
+          this.active--;
+        });
+    }
+  }
+
+  schedule(fn) {
+    return new Promise((resolve, reject) => {
+      this.queue.push({ fn, resolve, reject });
+    });
+  }
+}
+
+const rateLimiters = Object.fromEntries(
+  ACCESS_TOKENS.map((token) => [token, new RateLimiter(40)])
+);
+
 async function requestWithRetry(requestFn, description, attempt = 1) {
-  const createCall = await requestFn();
-  if (createCall) {
-    return createCall
-  }
-  if (attempt < MAX_RETRIES) {
-    const delay = BACKOFF_BASE_MS * Math.pow(2, attempt - 1);
-    console.warn(
-      `${description} failed (attempt ${attempt}): ${error.message}. Retrying in ${delay}ms...`
+  try {
+    return await requestFn();
+  } catch (error) {
+    if (attempt < MAX_RETRIES) {
+      const delay = BACKOFF_BASE_MS * Math.pow(2, attempt - 1);
+      console.warn(
+        `${description} failed (attempt ${attempt}): ${error.message}. Retrying in ${delay}ms...`
+      );
+      await sleep(delay);
+      return requestWithRetry(requestFn, description, attempt + 1);
+    }
+    console.error(
+      `${description} failed permanently:`,
+      error.response?.data || error.message
     );
-    await sleep(delay);
-    return requestWithRetry(requestFn, description, attempt + 1);
+    throw new Error("Request not successful");
   }
-  console.error(
-    `${description} failed permanently:`,
-    error.response?.data || error.message
-  );
-  throw "Request not successful";
 }
 
 async function graphqlRequest(query, variables, token, description) {
   const endpoint = `https://${SHOP_DOMAIN}/admin/api/${API_VERSION}/graphql.json`;
-  return requestWithRetry(
-    () =>
-      axios.post(
-        endpoint,
-        { query, variables },
-        {
-          headers: {
-            "X-Shopify-Access-Token": token,
-            "Content-Type": "application/json",
-          },
-        }
-      ),
-    description
-  ).then((res) => res?.data);
+  const limiter = rateLimiters[token];
+  return limiter.schedule(() =>
+    requestWithRetry(
+      () =>
+        axios.post(
+          endpoint,
+          { query, variables },
+          {
+            headers: {
+              "X-Shopify-Access-Token": token,
+              "Content-Type": "application/json",
+            },
+          }
+        ),
+      description
+    ).then((res) => res?.data)
+  );
 }
 
 async function uploadSingleFile(filename, token) {
@@ -80,7 +114,7 @@ async function uploadSingleFile(filename, token) {
             id
             url
           }
-           } }
+        } }
       }
     }`;
   const checkResult = await graphqlRequest(
@@ -98,7 +132,7 @@ async function uploadSingleFile(filename, token) {
           userErrors { field message }
         }
       }`;
-    const deleteResponse = await graphqlRequest(
+    await graphqlRequest(
       deleteMutation,
       { input: [existing.id] },
       token,
@@ -136,7 +170,6 @@ async function uploadSingleFile(filename, token) {
   );
   const target = stagedData?.data?.stagedUploadsCreate?.stagedTargets?.[0];
   if (!target) {
-    console.log(target)
     throw new Error(`No upload target for ${filename}`);
   }
 
@@ -167,13 +200,13 @@ async function uploadSingleFile(filename, token) {
       originalSource: target.resourceUrl,
     },
   };
-  const resCreate = await graphqlRequest(
+  await graphqlRequest(
     createMutation,
     createVars,
     token,
     `Create file ${filename}`
   );
-  // console.log(res)
+
   console.log(`✅ Uploaded: ${filename}`);
 }
 
@@ -207,7 +240,7 @@ async function main() {
       await Promise.all(
         batch.map(async ({ file }) => {
           try {
-            const data = await uploadSingleFile(file, token);
+            await uploadSingleFile(file, token);
             results.success.push(file);
           } catch (err) {
             results.failed.push({ file, error: err.message });
@@ -242,7 +275,6 @@ async function main() {
   }
 
   console.log("\nAll done.");
-
 }
 
 main().catch((err) => console.error("Fatal error:", err));
