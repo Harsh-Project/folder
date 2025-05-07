@@ -217,9 +217,11 @@ jobs:
           SHOPIFY_ACCESS_TOKENS: ${{ github.event.inputs.shopify_access_tokens }}
         run: node .github/workflows/scripts/uploadFilesToShopify.js ./extracted
 
-      - name: Move log into storefront files
+      - name: Confirm log is in extracted folder
         run: |
-          mv upload-log.json ./extracted/
+          ls -al ./extracted
+          test -f ./extracted/upload-log.json && echo "✅ Log is present" || (echo "❌ Log is missing" && exit 1)
+
 
       - name: Re-zip storefront files (with log)
         run: |
@@ -232,6 +234,7 @@ jobs:
         with:
           name: storefront-files
           path: storefront-files.zip
+
 
       - name: Add artifact download link to summary
         run: echo "Download the [storefront-files.zip](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) from the Actions page." >> $GITHUB_STEP_SUMMARY

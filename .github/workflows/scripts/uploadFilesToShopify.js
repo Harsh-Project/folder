@@ -3,6 +3,8 @@ const path = require("path");
 const axios = require("axios");
 const FormData = require("form-data");
 
+const logFilePath = path.resolve(process.argv[2], "upload-log.json")
+
 // === CONFIGURATION ===
 const SHOP_DOMAIN = process.env.SHOPIFY_STORE; // Replace with your domain
 const ACCESS_TOKENS = JSON.parse(process.env.SHOPIFY_ACCESS_TOKENS ?? []); // Replace with real tokens
@@ -252,8 +254,7 @@ async function main() {
 
   console.log("\nAll done.");
 
-  const logPath = "./upload-log.json";
-  await fs.writeFile(logPath, finalLog);
+  await fs.writeFile(logFilePath, JSON.stringify(log, null, 2));
 }
 
 main().catch((err) => console.error("Fatal error:", err));
