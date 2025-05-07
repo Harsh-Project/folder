@@ -23,26 +23,23 @@ const finalLog = {}
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function requestWithRetry(requestFn, description, attempt = 1) {
-  try {
-    return await requestFn();
-  } catch (error) {
-    const status = error.response?.status;
-    const retriable =
-      !status || status === 429 || (status >= 500 && status < 600);
-    if (retriable && attempt < MAX_RETRIES) {
-      const delay = BACKOFF_BASE_MS * Math.pow(2, attempt - 1);
-      console.warn(
-        `${description} failed (attempt ${attempt}): ${error.message}. Retrying in ${delay}ms...`
-      );
-      await sleep(delay);
-      return requestWithRetry(requestFn, description, attempt + 1);
-    }
-    console.error(
-      `${description} failed permanently:`,
-      error.response?.data || error.message
-    );
-    throw error;
+  const createCall = await requestFn();
+  if(createCall && createCall?.data) {
+    return createCall
   }
+  if (attempt < MAX_RETRIES) {
+    const delay = BACKOFF_BASE_MS * Math.pow(2, attempt - 1);
+    console.warn(
+      `${description} failed (attempt ${attempt}): ${error.message}. Retrying in ${delay}ms...`
+    );
+    await sleep(delay);
+    return requestWithRetry(requestFn, description, attempt + 1);
+  }
+  console.error(
+    `${description} failed permanently:`,
+    error.response?.data || error.message
+  );
+  throw "Request not successful";
 }
 
 async function graphqlRequest(query, variables, token, description) {
