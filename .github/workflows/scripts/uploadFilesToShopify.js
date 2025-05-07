@@ -3,7 +3,6 @@ const path = require("path");
 const axios = require("axios");
 const FormData = require("form-data");
 
-const logFilePath = path.resolve(process.argv[2], "upload-log.json")
 
 // === CONFIGURATION ===
 const SHOP_DOMAIN = process.env.SHOPIFY_STORE; // Replace with your domain
@@ -19,14 +18,12 @@ if (!UPLOAD_DIR) {
   process.exit(1);
 }
 
-const finalLog = {}
-
 // === HELPERS ===
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function requestWithRetry(requestFn, description, attempt = 1) {
   const createCall = await requestFn();
-  if(createCall) {
+  if (createCall) {
     return createCall
   }
   if (attempt < MAX_RETRIES) {
@@ -65,9 +62,6 @@ async function graphqlRequest(query, variables, token, description) {
 async function uploadSingleFile(filename, token) {
   const filepath = path.join(UPLOAD_DIR, filename);
   const fileContent = await fs.readFile(filepath);
-  finalLog[filename] = {
-    filename
-  }
   const fileSize = fileContent.length;
 
   let mimeType = "application/octet-stream";
@@ -96,7 +90,6 @@ async function uploadSingleFile(filename, token) {
     `Check if ${filename} exists`
   );
   const existing = checkResult?.data?.files?.edges?.[0]?.node;
-  finalLog[filename].existing = existing
   if (existing) {
     const deleteMutation = `
       mutation fileDelete($input: [ID!]!) {
@@ -111,7 +104,6 @@ async function uploadSingleFile(filename, token) {
       token,
       `Deleting ${filename}`
     );
-    finalLog[filename].deleteResponse = deleteResponse
     console.log(`Deleted existing file: ${filename}`);
   }
 
@@ -143,7 +135,6 @@ async function uploadSingleFile(filename, token) {
     `Stage upload for ${filename}`
   );
   const target = stagedData?.data?.stagedUploadsCreate?.stagedTargets?.[0];
-  finalLog[filename].target = target
   if (!target) {
     console.log(target)
     throw new Error(`No upload target for ${filename}`);
@@ -182,10 +173,8 @@ async function uploadSingleFile(filename, token) {
     token,
     `Create file ${filename}`
   );
-  finalLog[filename].resCreate = resCreate
   // console.log(res)
   console.log(`✅ Uploaded: ${filename}`);
-  return finalLog
 }
 
 // === MAIN ===
@@ -254,7 +243,6 @@ async function main() {
 
   console.log("\nAll done.");
 
-  await fs.writeFile(logFilePath, JSON.stringify(log, null, 2));
 }
 
 main().catch((err) => console.error("Fatal error:", err));
