@@ -17,6 +17,8 @@ if (!UPLOAD_DIR) {
   process.exit(1);
 }
 
+const finalLog = {}
+
 // === HELPERS ===
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -64,6 +66,9 @@ async function graphqlRequest(query, variables, token, description) {
 async function uploadSingleFile(filename, token) {
   const filepath = path.join(UPLOAD_DIR, filename);
   const fileContent = await fs.readFile(filepath);
+  finalLog[filename] = {
+    filename
+  }
   const fileSize = fileContent.length;
 
   let mimeType = "application/octet-stream";
@@ -92,6 +97,7 @@ async function uploadSingleFile(filename, token) {
     `Check if ${filename} exists`
   );
   const existing = checkResult?.data?.files?.edges?.[0]?.node;
+  finalLog[filename].existing = existing
   if (existing) {
     const deleteMutation = `
       mutation fileDelete($input: [ID!]!) {
@@ -100,12 +106,13 @@ async function uploadSingleFile(filename, token) {
           userErrors { field message }
         }
       }`;
-    await graphqlRequest(
+    const deleteResponse = await graphqlRequest(
       deleteMutation,
       { input: [existing.id] },
       token,
       `Deleting ${filename}`
     );
+    finalLog[filename].deleteResponse = deleteResponse
     console.log(`Deleted existing file: ${filename}`);
   }
 
@@ -137,7 +144,11 @@ async function uploadSingleFile(filename, token) {
     `Stage upload for ${filename}`
   );
   const target = stagedData?.data?.stagedUploadsCreate?.stagedTargets?.[0];
-  if (!target) throw new Error(`No upload target for ${filename}`);
+  finalLog[filename].target = target
+  if (!target) {
+    console.log(target)
+    throw new Error(`No upload target for ${filename}`);
+  }
 
   const form = new FormData();
   target.parameters.forEach((p) => form.append(p.name, p.value));
@@ -162,18 +173,20 @@ async function uploadSingleFile(filename, token) {
     files: {
       filename,
       contentType: "FILE",
-      alt: SHOP_DOMAIN+filename,
+      alt: SHOP_DOMAIN + filename,
       originalSource: target.resourceUrl,
     },
   };
-  await graphqlRequest(
+  const resCreate = await graphqlRequest(
     createMutation,
     createVars,
     token,
     `Create file ${filename}`
   );
+  finalLog[filename].resCreate = resCreate
   // console.log(res)
   console.log(`✅ Uploaded: ${filename}`);
+  return finalLog
 }
 
 // === MAIN ===
@@ -206,7 +219,7 @@ async function main() {
       await Promise.all(
         batch.map(async ({ file }) => {
           try {
-            await uploadSingleFile(file, token);
+            const data = await uploadSingleFile(file, token);
             results.success.push(file);
           } catch (err) {
             results.failed.push({ file, error: err.message });
@@ -241,6 +254,9 @@ async function main() {
   }
 
   console.log("\nAll done.");
+
+  const logPath = "./upload-log.json";
+  await fs.writeFile(logPath, finalLog);
 }
 
 main().catch((err) => console.error("Fatal error:", err));
