@@ -20,37 +20,6 @@ if (!UPLOAD_DIR) {
 // === HELPERS ===
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-class RateLimiter {
-  constructor(limitPerMinute) {
-    this.limit = limitPerMinute;
-    this.queue = [];
-    this.active = 0;
-    setInterval(() => this.processQueue(), 60000 / this.limit);
-  }
-
-  processQueue() {
-    if (this.queue.length && this.active < this.limit) {
-      const { fn, resolve, reject } = this.queue.shift();
-      this.active++;
-      fn()
-        .then(resolve)
-        .catch(reject)
-        .finally(() => {
-          this.active--;
-        });
-    }
-  }
-
-  schedule(fn) {
-    return new Promise((resolve, reject) => {
-      this.queue.push({ fn, resolve, reject });
-    });
-  }
-}
-
-const rateLimiters = Object.fromEntries(
-  ACCESS_TOKENS.map((token) => [token, new RateLimiter(40)])
-);
 
 async function requestWithRetry(requestFn, description, attempt = 1) {
   try {
@@ -74,22 +43,20 @@ async function requestWithRetry(requestFn, description, attempt = 1) {
 
 async function graphqlRequest(query, variables, token, description) {
   const endpoint = `https://${SHOP_DOMAIN}/admin/api/${API_VERSION}/graphql.json`;
-  const limiter = rateLimiters[token];
-  return limiter.schedule(() =>
-    requestWithRetry(
-      () =>
-        axios.post(
-          endpoint,
-          { query, variables },
-          {
-            headers: {
-              "X-Shopify-Access-Token": token,
-              "Content-Type": "application/json",
-            },
-          }
-        ),
-      description
-    ).then((res) => res?.data)
+  return requestWithRetry(
+    () =>
+      axios.post(
+        endpoint,
+        { query, variables },
+        {
+          headers: {
+            "X-Shopify-Access-Token": token,
+            "Content-Type": "application/json",
+          },
+        }
+      ),
+    description
+  ).then((res) => res?.data
   );
 }
 
@@ -228,7 +195,7 @@ async function main() {
     token: ACCESS_TOKENS[tokenIndex++ % ACCESS_TOKENS.length],
   }));
 
-  const workers = ACCESS_TOKENS.flatMap((token) => {
+  const tokenQueues = ACCESS_TOKENS.map((token) => {
     const assignedFiles = queue.filter((q) => q.token === token);
     const batches = [];
 
@@ -236,23 +203,39 @@ async function main() {
       batches.push(assignedFiles.slice(i, i + CONCURRENCY_PER_TOKEN));
     }
 
-    return batches.map((batch) => async () => {
-      await Promise.all(
-        batch.map(async ({ file }) => {
-          try {
-            await uploadSingleFile(file, token);
-            results.success.push(file);
-          } catch (err) {
-            results.failed.push({ file, error: err.message });
-          }
-        })
-      );
-    });
+    return { token, batches };
   });
 
-  for (const batch of workers) {
-    await batch();
+  function delay(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
+
+  await Promise.all(
+    tokenQueues.map(async ({ token, batches }) => {
+      let batchCount = 0;
+
+      for (let i = 0; i < batches.length; i++) {
+        if (batchCount > 0 && batchCount % MAX_BATCHES_PER_MINUTE === 0) {
+          console.log(`⏳ Waiting 60s for token: ${token}...`);
+          await delay(60000);
+        }
+
+        const batch = batches[i];
+        await Promise.all(
+          batch.map(async ({ file }) => {
+            try {
+              await uploadSingleFile(file, token);
+              results.success.push(file);
+            } catch (err) {
+              results.failed.push({ file, error: err.message });
+            }
+          })
+        );
+
+        batchCount++;
+      }
+    })
+  );
 
   // === Summary ===
   console.log("\n=== ✅ Upload Summary ===");
