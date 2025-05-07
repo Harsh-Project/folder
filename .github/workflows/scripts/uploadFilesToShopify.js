@@ -163,7 +163,7 @@ async function uploadSingleFile(filename, token) {
     files: {
       filename,
       contentType: "FILE",
-      alt: "123"+SHOP_DOMAIN + filename+"123",
+      alt: "123" + SHOP_DOMAIN + filename + "123",
       originalSource: target.resourceUrl,
     },
   };
@@ -203,7 +203,7 @@ async function main() {
       batches.push(assignedFiles.slice(i, i + CONCURRENCY_PER_TOKEN));
     }
 
-    return batches.map((batch) => async () => {
+    return batches.map((batch, index) => async () => {
       await Promise.all(
         batch.map(async ({ file }) => {
           try {
@@ -214,6 +214,10 @@ async function main() {
           }
         })
       );
+
+      if ((index + 1) * CONCURRENCY_PER_TOKEN * 2 >= 40) {
+        await sleep(60000)
+      }
     });
   });
 
