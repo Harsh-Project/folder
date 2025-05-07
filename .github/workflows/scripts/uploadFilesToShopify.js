@@ -24,7 +24,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function requestWithRetry(requestFn, description, attempt = 1) {
   const createCall = await requestFn();
-  if(createCall && createCall?.data) {
+  if(createCall) {
     return createCall
   }
   if (attempt < MAX_RETRIES) {
@@ -57,7 +57,7 @@ async function graphqlRequest(query, variables, token, description) {
         }
       ),
     description
-  ).then((res) => res.data);
+  ).then((res) => res?.data);
 }
 
 async function uploadSingleFile(filename, token) {
