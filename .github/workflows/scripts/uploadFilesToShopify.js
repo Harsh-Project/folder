@@ -163,7 +163,7 @@ async function uploadSingleFile(filename, token) {
     files: {
       filename,
       contentType: "FILE",
-      alt: SHOP_DOMAIN + filename,
+      alt: "123"+SHOP_DOMAIN + filename+"123",
       originalSource: target.resourceUrl,
     },
   };
@@ -204,22 +204,22 @@ async function main() {
     }
 
     return batches.map((batch) => async () => {
-        await Promise.all(
-          batch.map(async ({ file }) => {
-            try {
-              await uploadSingleFile(file, token);
-              results.success.push(file);
-            } catch (err) {
-              results.failed.push({ file, error: err.message });
-            }
-          })
-        );
+      await Promise.all(
+        batch.map(async ({ file }) => {
+          try {
+            await uploadSingleFile(file, token);
+            results.success.push(file);
+          } catch (err) {
+            results.failed.push({ file, error: err.message });
+          }
+        })
+      );
     });
   });
 
   for (const batch of workers) {
     await batch();
-      }
+  }
 
   // === Summary ===
   console.log("\n=== ✅ Upload Summary ===");
