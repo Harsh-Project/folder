@@ -20,10 +20,6 @@ on:
         description: 'Shopify'
         required: true
         type: string
-      shopify_unique_identifier:
-        description: 'Shopify unique identifier'
-        required: false
-        type: string
 
 jobs:
   build_projects:
@@ -219,7 +215,6 @@ jobs:
         env:
           SHOPIFY_STORE: ${{ github.event.inputs.shopify_store }}      # e.g. your-store.myshopify.com
           SHOPIFY_ACCESS_TOKENS: ${{ github.event.inputs.shopify_access_tokens }}
-          SHOPIFY_UNIQUE_IDENTIFIER: ${{ github.event.inputs.shopify_unique_identifier }}
         run: node .github/workflows/scripts/uploadFilesToShopify.js ./extracted
 
       - name: Upload logs
